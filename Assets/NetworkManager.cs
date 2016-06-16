@@ -1,15 +1,12 @@
 ﻿using UnityEngine;
-using System.Collections;
 using UnityEngine.UI;
+using System.Collections;
+using System.Collections.Generic;
 
 public class NetworkManager : MonoBehaviour {
     public InputField nameInput;
     public Button enterRoom;
-    public Text rankName1;
-    public Text rankName2;
-    public Text rankName3;
-    public Text rankName4;
-    public Text rankName5;
+	public GameManager GM;
 
     private Text[] rankTexts;
     private string errorMessage;
@@ -17,8 +14,8 @@ public class NetworkManager : MonoBehaviour {
 
     void Start()
     {
+		GM = gameObject.GetComponent<GameManager>();
         PhotonNetwork.ConnectUsingSettings("1.7");
-        rankTexts = new Text[5] { rankName1, rankName2, rankName3, rankName4, rankName5 };
     }
     void Update()
     {
@@ -38,4 +35,15 @@ public class NetworkManager : MonoBehaviour {
     {
         //PhotonNetwork.Instantiate( "balla", transform.position, transform.rotation, 0); 
     }
+
+	[PunRPC]
+	void updateGMScore(float score)
+	{
+		GM.updateScore(PhotonNetwork.playerName, score);
+	}
+	[PunRPC]
+	void updateGMPlayers(List<string> names)
+	{
+		GM.updatePlayers(names);
+	}
 }
