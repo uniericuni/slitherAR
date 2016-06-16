@@ -26,8 +26,14 @@ struct IEnumerator_t287207039;
 struct Il2CppObject;
 // System.Collections.Generic.ICollection`1<Vuforia.TargetFinder/TargetSearchResult>
 struct ICollection_1_t76214800;
+// System.Collections.ObjectModel.ReadOnlyCollection`1<Vuforia.TargetFinder/TargetSearchResult>
+struct ReadOnlyCollection_1_t2773528762;
 // Vuforia.TargetFinder/TargetSearchResult[]
 struct TargetSearchResultU5BU5D_t2556575283;
+// System.Predicate`1<Vuforia.TargetFinder/TargetSearchResult>
+struct Predicate_1_t181347312;
+// System.Comparison`1<Vuforia.TargetFinder/TargetSearchResult>
+struct Comparison_1_t2314058290;
 
 #include "codegen/il2cpp-codegen.h"
 #include "mscorlib_System_Array2840145358.h"
@@ -74,9 +80,18 @@ extern "C"  void List_1_System_Collections_IList_Remove_m1172085307_gshared (Lis
 // System.Boolean System.Collections.Generic.List`1<Vuforia.TargetFinder/TargetSearchResult>::System.Collections.Generic.ICollection<T>.get_IsReadOnly()
 extern "C"  bool List_1_System_Collections_Generic_ICollectionU3CTU3E_get_IsReadOnly_m1829819843_gshared (List_1_t407342383 * __this, const MethodInfo* method);
 #define List_1_System_Collections_Generic_ICollectionU3CTU3E_get_IsReadOnly_m1829819843(__this, method) ((  bool (*) (List_1_t407342383 *, const MethodInfo*))List_1_System_Collections_Generic_ICollectionU3CTU3E_get_IsReadOnly_m1829819843_gshared)(__this, method)
+// System.Boolean System.Collections.Generic.List`1<Vuforia.TargetFinder/TargetSearchResult>::System.Collections.ICollection.get_IsSynchronized()
+extern "C"  bool List_1_System_Collections_ICollection_get_IsSynchronized_m3647768538_gshared (List_1_t407342383 * __this, const MethodInfo* method);
+#define List_1_System_Collections_ICollection_get_IsSynchronized_m3647768538(__this, method) ((  bool (*) (List_1_t407342383 *, const MethodInfo*))List_1_System_Collections_ICollection_get_IsSynchronized_m3647768538_gshared)(__this, method)
 // System.Object System.Collections.Generic.List`1<Vuforia.TargetFinder/TargetSearchResult>::System.Collections.ICollection.get_SyncRoot()
 extern "C"  Il2CppObject * List_1_System_Collections_ICollection_get_SyncRoot_m2957236998_gshared (List_1_t407342383 * __this, const MethodInfo* method);
 #define List_1_System_Collections_ICollection_get_SyncRoot_m2957236998(__this, method) ((  Il2CppObject * (*) (List_1_t407342383 *, const MethodInfo*))List_1_System_Collections_ICollection_get_SyncRoot_m2957236998_gshared)(__this, method)
+// System.Boolean System.Collections.Generic.List`1<Vuforia.TargetFinder/TargetSearchResult>::System.Collections.IList.get_IsFixedSize()
+extern "C"  bool List_1_System_Collections_IList_get_IsFixedSize_m3206830385_gshared (List_1_t407342383 * __this, const MethodInfo* method);
+#define List_1_System_Collections_IList_get_IsFixedSize_m3206830385(__this, method) ((  bool (*) (List_1_t407342383 *, const MethodInfo*))List_1_System_Collections_IList_get_IsFixedSize_m3206830385_gshared)(__this, method)
+// System.Boolean System.Collections.Generic.List`1<Vuforia.TargetFinder/TargetSearchResult>::System.Collections.IList.get_IsReadOnly()
+extern "C"  bool List_1_System_Collections_IList_get_IsReadOnly_m1942928296_gshared (List_1_t407342383 * __this, const MethodInfo* method);
+#define List_1_System_Collections_IList_get_IsReadOnly_m1942928296(__this, method) ((  bool (*) (List_1_t407342383 *, const MethodInfo*))List_1_System_Collections_IList_get_IsReadOnly_m1942928296_gshared)(__this, method)
 // System.Object System.Collections.Generic.List`1<Vuforia.TargetFinder/TargetSearchResult>::System.Collections.IList.get_Item(System.Int32)
 extern "C"  Il2CppObject * List_1_System_Collections_IList_get_Item_m3996984077_gshared (List_1_t407342383 * __this, int32_t ___index0, const MethodInfo* method);
 #define List_1_System_Collections_IList_get_Item_m3996984077(__this, ___index0, method) ((  Il2CppObject * (*) (List_1_t407342383 *, int32_t, const MethodInfo*))List_1_System_Collections_IList_get_Item_m3996984077_gshared)(__this, ___index0, method)
@@ -98,6 +113,9 @@ extern "C"  void List_1_AddEnumerable_m1705327808_gshared (List_1_t407342383 * _
 // System.Void System.Collections.Generic.List`1<Vuforia.TargetFinder/TargetSearchResult>::AddRange(System.Collections.Generic.IEnumerable`1<T>)
 extern "C"  void List_1_AddRange_m2633546199_gshared (List_1_t407342383 * __this, Il2CppObject* ___collection0, const MethodInfo* method);
 #define List_1_AddRange_m2633546199(__this, ___collection0, method) ((  void (*) (List_1_t407342383 *, Il2CppObject*, const MethodInfo*))List_1_AddRange_m2633546199_gshared)(__this, ___collection0, method)
+// System.Collections.ObjectModel.ReadOnlyCollection`1<T> System.Collections.Generic.List`1<Vuforia.TargetFinder/TargetSearchResult>::AsReadOnly()
+extern "C"  ReadOnlyCollection_1_t2773528762 * List_1_AsReadOnly_m1098129394_gshared (List_1_t407342383 * __this, const MethodInfo* method);
+#define List_1_AsReadOnly_m1098129394(__this, method) ((  ReadOnlyCollection_1_t2773528762 * (*) (List_1_t407342383 *, const MethodInfo*))List_1_AsReadOnly_m1098129394_gshared)(__this, method)
 // System.Void System.Collections.Generic.List`1<Vuforia.TargetFinder/TargetSearchResult>::Clear()
 extern "C"  void List_1_Clear_m1919770979_gshared (List_1_t407342383 * __this, const MethodInfo* method);
 #define List_1_Clear_m1919770979(__this, method) ((  void (*) (List_1_t407342383 *, const MethodInfo*))List_1_Clear_m1919770979_gshared)(__this, method)
@@ -107,6 +125,15 @@ extern "C"  bool List_1_Contains_m2557723537_gshared (List_1_t407342383 * __this
 // System.Void System.Collections.Generic.List`1<Vuforia.TargetFinder/TargetSearchResult>::CopyTo(T[],System.Int32)
 extern "C"  void List_1_CopyTo_m3164788855_gshared (List_1_t407342383 * __this, TargetSearchResultU5BU5D_t2556575283* ___array0, int32_t ___arrayIndex1, const MethodInfo* method);
 #define List_1_CopyTo_m3164788855(__this, ___array0, ___arrayIndex1, method) ((  void (*) (List_1_t407342383 *, TargetSearchResultU5BU5D_t2556575283*, int32_t, const MethodInfo*))List_1_CopyTo_m3164788855_gshared)(__this, ___array0, ___arrayIndex1, method)
+// T System.Collections.Generic.List`1<Vuforia.TargetFinder/TargetSearchResult>::Find(System.Predicate`1<T>)
+extern "C"  TargetSearchResult_t3905350710  List_1_Find_m1434927313_gshared (List_1_t407342383 * __this, Predicate_1_t181347312 * ___match0, const MethodInfo* method);
+#define List_1_Find_m1434927313(__this, ___match0, method) ((  TargetSearchResult_t3905350710  (*) (List_1_t407342383 *, Predicate_1_t181347312 *, const MethodInfo*))List_1_Find_m1434927313_gshared)(__this, ___match0, method)
+// System.Void System.Collections.Generic.List`1<Vuforia.TargetFinder/TargetSearchResult>::CheckMatch(System.Predicate`1<T>)
+extern "C"  void List_1_CheckMatch_m1299569740_gshared (Il2CppObject * __this /* static, unused */, Predicate_1_t181347312 * ___match0, const MethodInfo* method);
+#define List_1_CheckMatch_m1299569740(__this /* static, unused */, ___match0, method) ((  void (*) (Il2CppObject * /* static, unused */, Predicate_1_t181347312 *, const MethodInfo*))List_1_CheckMatch_m1299569740_gshared)(__this /* static, unused */, ___match0, method)
+// System.Int32 System.Collections.Generic.List`1<Vuforia.TargetFinder/TargetSearchResult>::GetIndex(System.Int32,System.Int32,System.Predicate`1<T>)
+extern "C"  int32_t List_1_GetIndex_m3790918257_gshared (List_1_t407342383 * __this, int32_t ___startIndex0, int32_t ___count1, Predicate_1_t181347312 * ___match2, const MethodInfo* method);
+#define List_1_GetIndex_m3790918257(__this, ___startIndex0, ___count1, ___match2, method) ((  int32_t (*) (List_1_t407342383 *, int32_t, int32_t, Predicate_1_t181347312 *, const MethodInfo*))List_1_GetIndex_m3790918257_gshared)(__this, ___startIndex0, ___count1, ___match2, method)
 // System.Collections.Generic.List`1/Enumerator<T> System.Collections.Generic.List`1<Vuforia.TargetFinder/TargetSearchResult>::GetEnumerator()
 extern "C"  Enumerator_t2788092671  List_1_GetEnumerator_m1131907150_gshared (List_1_t407342383 * __this, const MethodInfo* method);
 #define List_1_GetEnumerator_m1131907150(__this, method) ((  Enumerator_t2788092671  (*) (List_1_t407342383 *, const MethodInfo*))List_1_GetEnumerator_m1131907150_gshared)(__this, method)
@@ -128,12 +155,27 @@ extern "C"  void List_1_CheckCollection_m205273763_gshared (List_1_t407342383 * 
 // System.Boolean System.Collections.Generic.List`1<Vuforia.TargetFinder/TargetSearchResult>::Remove(T)
 extern "C"  bool List_1_Remove_m2889233356_gshared (List_1_t407342383 * __this, TargetSearchResult_t3905350710  ___item0, const MethodInfo* method);
 #define List_1_Remove_m2889233356(__this, ___item0, method) ((  bool (*) (List_1_t407342383 *, TargetSearchResult_t3905350710 , const MethodInfo*))List_1_Remove_m2889233356_gshared)(__this, ___item0, method)
+// System.Int32 System.Collections.Generic.List`1<Vuforia.TargetFinder/TargetSearchResult>::RemoveAll(System.Predicate`1<T>)
+extern "C"  int32_t List_1_RemoveAll_m1881120958_gshared (List_1_t407342383 * __this, Predicate_1_t181347312 * ___match0, const MethodInfo* method);
+#define List_1_RemoveAll_m1881120958(__this, ___match0, method) ((  int32_t (*) (List_1_t407342383 *, Predicate_1_t181347312 *, const MethodInfo*))List_1_RemoveAll_m1881120958_gshared)(__this, ___match0, method)
 // System.Void System.Collections.Generic.List`1<Vuforia.TargetFinder/TargetSearchResult>::RemoveAt(System.Int32)
 extern "C"  void List_1_RemoveAt_m142619252_gshared (List_1_t407342383 * __this, int32_t ___index0, const MethodInfo* method);
 #define List_1_RemoveAt_m142619252(__this, ___index0, method) ((  void (*) (List_1_t407342383 *, int32_t, const MethodInfo*))List_1_RemoveAt_m142619252_gshared)(__this, ___index0, method)
+// System.Void System.Collections.Generic.List`1<Vuforia.TargetFinder/TargetSearchResult>::Reverse()
+extern "C"  void List_1_Reverse_m4021627768_gshared (List_1_t407342383 * __this, const MethodInfo* method);
+#define List_1_Reverse_m4021627768(__this, method) ((  void (*) (List_1_t407342383 *, const MethodInfo*))List_1_Reverse_m4021627768_gshared)(__this, method)
+// System.Void System.Collections.Generic.List`1<Vuforia.TargetFinder/TargetSearchResult>::Sort()
+extern "C"  void List_1_Sort_m3986851626_gshared (List_1_t407342383 * __this, const MethodInfo* method);
+#define List_1_Sort_m3986851626(__this, method) ((  void (*) (List_1_t407342383 *, const MethodInfo*))List_1_Sort_m3986851626_gshared)(__this, method)
+// System.Void System.Collections.Generic.List`1<Vuforia.TargetFinder/TargetSearchResult>::Sort(System.Comparison`1<T>)
+extern "C"  void List_1_Sort_m631011325_gshared (List_1_t407342383 * __this, Comparison_1_t2314058290 * ___comparison0, const MethodInfo* method);
+#define List_1_Sort_m631011325(__this, ___comparison0, method) ((  void (*) (List_1_t407342383 *, Comparison_1_t2314058290 *, const MethodInfo*))List_1_Sort_m631011325_gshared)(__this, ___comparison0, method)
 // T[] System.Collections.Generic.List`1<Vuforia.TargetFinder/TargetSearchResult>::ToArray()
 extern "C"  TargetSearchResultU5BU5D_t2556575283* List_1_ToArray_m302001847_gshared (List_1_t407342383 * __this, const MethodInfo* method);
 #define List_1_ToArray_m302001847(__this, method) ((  TargetSearchResultU5BU5D_t2556575283* (*) (List_1_t407342383 *, const MethodInfo*))List_1_ToArray_m302001847_gshared)(__this, method)
+// System.Void System.Collections.Generic.List`1<Vuforia.TargetFinder/TargetSearchResult>::TrimExcess()
+extern "C"  void List_1_TrimExcess_m2874548035_gshared (List_1_t407342383 * __this, const MethodInfo* method);
+#define List_1_TrimExcess_m2874548035(__this, method) ((  void (*) (List_1_t407342383 *, const MethodInfo*))List_1_TrimExcess_m2874548035_gshared)(__this, method)
 // System.Int32 System.Collections.Generic.List`1<Vuforia.TargetFinder/TargetSearchResult>::get_Capacity()
 extern "C"  int32_t List_1_get_Capacity_m3327764971_gshared (List_1_t407342383 * __this, const MethodInfo* method);
 #define List_1_get_Capacity_m3327764971(__this, method) ((  int32_t (*) (List_1_t407342383 *, const MethodInfo*))List_1_get_Capacity_m3327764971_gshared)(__this, method)

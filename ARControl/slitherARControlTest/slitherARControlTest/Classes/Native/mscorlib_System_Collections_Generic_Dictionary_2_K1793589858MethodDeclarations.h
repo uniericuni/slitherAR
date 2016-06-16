@@ -59,6 +59,9 @@ extern "C"  Il2CppObject * KeyCollection_System_Collections_IEnumerable_GetEnume
 // System.Boolean System.Collections.Generic.Dictionary`2/KeyCollection<Vuforia.Image/PIXEL_FORMAT,System.Object>::System.Collections.Generic.ICollection<TKey>.get_IsReadOnly()
 extern "C"  bool KeyCollection_System_Collections_Generic_ICollectionU3CTKeyU3E_get_IsReadOnly_m275314979_gshared (KeyCollection_t1793589858 * __this, const MethodInfo* method);
 #define KeyCollection_System_Collections_Generic_ICollectionU3CTKeyU3E_get_IsReadOnly_m275314979(__this, method) ((  bool (*) (KeyCollection_t1793589858 *, const MethodInfo*))KeyCollection_System_Collections_Generic_ICollectionU3CTKeyU3E_get_IsReadOnly_m275314979_gshared)(__this, method)
+// System.Boolean System.Collections.Generic.Dictionary`2/KeyCollection<Vuforia.Image/PIXEL_FORMAT,System.Object>::System.Collections.ICollection.get_IsSynchronized()
+extern "C"  bool KeyCollection_System_Collections_ICollection_get_IsSynchronized_m3726016917_gshared (KeyCollection_t1793589858 * __this, const MethodInfo* method);
+#define KeyCollection_System_Collections_ICollection_get_IsSynchronized_m3726016917(__this, method) ((  bool (*) (KeyCollection_t1793589858 *, const MethodInfo*))KeyCollection_System_Collections_ICollection_get_IsSynchronized_m3726016917_gshared)(__this, method)
 // System.Object System.Collections.Generic.Dictionary`2/KeyCollection<Vuforia.Image/PIXEL_FORMAT,System.Object>::System.Collections.ICollection.get_SyncRoot()
 extern "C"  Il2CppObject * KeyCollection_System_Collections_ICollection_get_SyncRoot_m1646127943_gshared (KeyCollection_t1793589858 * __this, const MethodInfo* method);
 #define KeyCollection_System_Collections_ICollection_get_SyncRoot_m1646127943(__this, method) ((  Il2CppObject * (*) (KeyCollection_t1793589858 *, const MethodInfo*))KeyCollection_System_Collections_ICollection_get_SyncRoot_m1646127943_gshared)(__this, method)

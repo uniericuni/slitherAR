@@ -32,6 +32,8 @@
 #define Dictionary_2_System_Collections_IDictionary_Add_m4211091762(__this, ___key0, ___value1, method) ((  void (*) (Dictionary_2_t1438973871 *, Il2CppObject *, Il2CppObject *, const MethodInfo*))Dictionary_2_System_Collections_IDictionary_Add_m1160841441_gshared)(__this, ___key0, ___value1, method)
 // System.Void System.Collections.Generic.Dictionary`2<Vuforia.Image/PIXEL_FORMAT,Vuforia.Image>::System.Collections.IDictionary.Remove(System.Object)
 #define Dictionary_2_System_Collections_IDictionary_Remove_m2136904189(__this, ___key0, method) ((  void (*) (Dictionary_2_t1438973871 *, Il2CppObject *, const MethodInfo*))Dictionary_2_System_Collections_IDictionary_Remove_m4196182446_gshared)(__this, ___key0, method)
+// System.Boolean System.Collections.Generic.Dictionary`2<Vuforia.Image/PIXEL_FORMAT,Vuforia.Image>::System.Collections.ICollection.get_IsSynchronized()
+#define Dictionary_2_System_Collections_ICollection_get_IsSynchronized_m4203828372(__this, method) ((  bool (*) (Dictionary_2_t1438973871 *, const MethodInfo*))Dictionary_2_System_Collections_ICollection_get_IsSynchronized_m113836739_gshared)(__this, method)
 // System.Object System.Collections.Generic.Dictionary`2<Vuforia.Image/PIXEL_FORMAT,Vuforia.Image>::System.Collections.ICollection.get_SyncRoot()
 #define Dictionary_2_System_Collections_ICollection_get_SyncRoot_m3544985286(__this, method) ((  Il2CppObject * (*) (Dictionary_2_t1438973871 *, const MethodInfo*))Dictionary_2_System_Collections_ICollection_get_SyncRoot_m363981877_gshared)(__this, method)
 // System.Boolean System.Collections.Generic.Dictionary`2<Vuforia.Image/PIXEL_FORMAT,Vuforia.Image>::System.Collections.Generic.ICollection<System.Collections.Generic.KeyValuePair<TKey,TValue>>.get_IsReadOnly()

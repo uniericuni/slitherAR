@@ -69,6 +69,9 @@ extern "C"  void Dictionary_2_System_Collections_IDictionary_Add_m1160841441_gsh
 // System.Void System.Collections.Generic.Dictionary`2<Vuforia.Image/PIXEL_FORMAT,System.Object>::System.Collections.IDictionary.Remove(System.Object)
 extern "C"  void Dictionary_2_System_Collections_IDictionary_Remove_m4196182446_gshared (Dictionary_2_t3765281874 * __this, Il2CppObject * ___key0, const MethodInfo* method);
 #define Dictionary_2_System_Collections_IDictionary_Remove_m4196182446(__this, ___key0, method) ((  void (*) (Dictionary_2_t3765281874 *, Il2CppObject *, const MethodInfo*))Dictionary_2_System_Collections_IDictionary_Remove_m4196182446_gshared)(__this, ___key0, method)
+// System.Boolean System.Collections.Generic.Dictionary`2<Vuforia.Image/PIXEL_FORMAT,System.Object>::System.Collections.ICollection.get_IsSynchronized()
+extern "C"  bool Dictionary_2_System_Collections_ICollection_get_IsSynchronized_m113836739_gshared (Dictionary_2_t3765281874 * __this, const MethodInfo* method);
+#define Dictionary_2_System_Collections_ICollection_get_IsSynchronized_m113836739(__this, method) ((  bool (*) (Dictionary_2_t3765281874 *, const MethodInfo*))Dictionary_2_System_Collections_ICollection_get_IsSynchronized_m113836739_gshared)(__this, method)
 // System.Object System.Collections.Generic.Dictionary`2<Vuforia.Image/PIXEL_FORMAT,System.Object>::System.Collections.ICollection.get_SyncRoot()
 extern "C"  Il2CppObject * Dictionary_2_System_Collections_ICollection_get_SyncRoot_m363981877_gshared (Dictionary_2_t3765281874 * __this, const MethodInfo* method);
 #define Dictionary_2_System_Collections_ICollection_get_SyncRoot_m363981877(__this, method) ((  Il2CppObject * (*) (Dictionary_2_t3765281874 *, const MethodInfo*))Dictionary_2_System_Collections_ICollection_get_SyncRoot_m363981877_gshared)(__this, method)

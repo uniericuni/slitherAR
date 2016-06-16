@@ -69,6 +69,9 @@ extern "C"  void Dictionary_2_System_Collections_IDictionary_Add_m1051243044_gsh
 // System.Void System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.VuforiaManagerImpl/TrackableResultData>::System.Collections.IDictionary.Remove(System.Object)
 extern "C"  void Dictionary_2_System_Collections_IDictionary_Remove_m3077712971_gshared (Dictionary_2_t2980980203 * __this, Il2CppObject * ___key0, const MethodInfo* method);
 #define Dictionary_2_System_Collections_IDictionary_Remove_m3077712971(__this, ___key0, method) ((  void (*) (Dictionary_2_t2980980203 *, Il2CppObject *, const MethodInfo*))Dictionary_2_System_Collections_IDictionary_Remove_m3077712971_gshared)(__this, ___key0, method)
+// System.Boolean System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.VuforiaManagerImpl/TrackableResultData>::System.Collections.ICollection.get_IsSynchronized()
+extern "C"  bool Dictionary_2_System_Collections_ICollection_get_IsSynchronized_m2965113410_gshared (Dictionary_2_t2980980203 * __this, const MethodInfo* method);
+#define Dictionary_2_System_Collections_ICollection_get_IsSynchronized_m2965113410(__this, method) ((  bool (*) (Dictionary_2_t2980980203 *, const MethodInfo*))Dictionary_2_System_Collections_ICollection_get_IsSynchronized_m2965113410_gshared)(__this, method)
 // System.Object System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.VuforiaManagerImpl/TrackableResultData>::System.Collections.ICollection.get_SyncRoot()
 extern "C"  Il2CppObject * Dictionary_2_System_Collections_ICollection_get_SyncRoot_m2282753326_gshared (Dictionary_2_t2980980203 * __this, const MethodInfo* method);
 #define Dictionary_2_System_Collections_ICollection_get_SyncRoot_m2282753326(__this, method) ((  Il2CppObject * (*) (Dictionary_2_t2980980203 *, const MethodInfo*))Dictionary_2_System_Collections_ICollection_get_SyncRoot_m2282753326_gshared)(__this, method)

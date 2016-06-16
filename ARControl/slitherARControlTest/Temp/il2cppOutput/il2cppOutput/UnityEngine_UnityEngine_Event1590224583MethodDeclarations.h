@@ -27,7 +27,10 @@ struct String_t;
 #include "UnityEngine_UnityEngine_EventModifiers3870720879.h"
 #include "UnityEngine_UnityEngine_KeyCode2371581209.h"
 #include "mscorlib_System_IntPtr676692020.h"
+#include "UnityEngine_UnityEngine_Event1590224583.h"
 
+// System.Void UnityEngine.Event::.ctor()
+extern "C"  void Event__ctor_m1609448063 (Event_t1590224583 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Event::.ctor(System.Int32)
 extern "C"  void Event__ctor_m66398544 (Event_t1590224583 * __this, int32_t ___displayIndex0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Event::Finalize()
@@ -52,6 +55,8 @@ extern "C"  String_t* Event_ToString_m3661517518 (Event_t1590224583 * __this, co
 extern "C"  void Event_Init_m3525277126 (Event_t1590224583 * __this, int32_t ___displayIndex0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Event::Cleanup()
 extern "C"  void Event_Cleanup_m3160122945 (Event_t1590224583 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.EventType UnityEngine.Event::get_rawType()
+extern "C"  int32_t Event_get_rawType_m696564524 (Event_t1590224583 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.EventType UnityEngine.Event::get_type()
 extern "C"  int32_t Event_get_type_m2209939250 (Event_t1590224583 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Event::Internal_GetMousePosition(UnityEngine.Vector2&)
@@ -68,6 +73,8 @@ extern "C"  int32_t Event_get_keyCode_m1820698462 (Event_t1590224583 * __this, c
 extern "C"  void Event_Internal_SetNativeEvent_m930902932 (Il2CppObject * __this /* static, unused */, IntPtr_t ___ptr0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Event::set_displayIndex(System.Int32)
 extern "C"  void Event_set_displayIndex_m4130090435 (Event_t1590224583 * __this, int32_t ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Boolean UnityEngine.Event::PopEvent(UnityEngine.Event)
+extern "C"  bool Event_PopEvent_m2790075015 (Il2CppObject * __this /* static, unused */, Event_t1590224583 * ___outEvent0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 
 // Methods for marshaling
 struct Event_t1590224583;

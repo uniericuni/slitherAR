@@ -32,6 +32,8 @@
 #define Dictionary_2_System_Collections_IDictionary_Add_m496763431(__this, ___key0, ___value1, method) ((  void (*) (Dictionary_2_t653023078 *, Il2CppObject *, Il2CppObject *, const MethodInfo*))Dictionary_2_System_Collections_IDictionary_Add_m2894265824_gshared)(__this, ___key0, ___value1, method)
 // System.Void System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.WordAbstractBehaviour>::System.Collections.IDictionary.Remove(System.Object)
 #define Dictionary_2_System_Collections_IDictionary_Remove_m2417016872(__this, ___key0, method) ((  void (*) (Dictionary_2_t653023078 *, Il2CppObject *, const MethodInfo*))Dictionary_2_System_Collections_IDictionary_Remove_m127000079_gshared)(__this, ___key0, method)
+// System.Boolean System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.WordAbstractBehaviour>::System.Collections.ICollection.get_IsSynchronized()
+#define Dictionary_2_System_Collections_ICollection_get_IsSynchronized_m3826506889(__this, method) ((  bool (*) (Dictionary_2_t653023078 *, const MethodInfo*))Dictionary_2_System_Collections_ICollection_get_IsSynchronized_m4062325186_gshared)(__this, method)
 // System.Object System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.WordAbstractBehaviour>::System.Collections.ICollection.get_SyncRoot()
 #define Dictionary_2_System_Collections_ICollection_get_SyncRoot_m3839295931(__this, method) ((  Il2CppObject * (*) (Dictionary_2_t653023078 *, const MethodInfo*))Dictionary_2_System_Collections_ICollection_get_SyncRoot_m4065571764_gshared)(__this, method)
 // System.Boolean System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.WordAbstractBehaviour>::System.Collections.Generic.ICollection<System.Collections.Generic.KeyValuePair<TKey,TValue>>.get_IsReadOnly()

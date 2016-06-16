@@ -258,15 +258,15 @@ extern "C"  Il2CppObject * Enumerable_First_TisIl2CppObject_m3984298619_gshared 
 // !!0 System.Linq.Enumerable::First<Vuforia.WordAbstractBehaviour>(System.Collections.Generic.IEnumerable`1<!!0>)
 #define Enumerable_First_TisWordAbstractBehaviour_t162212295_m2234178178(__this /* static, unused */, p0, method) ((  WordAbstractBehaviour_t162212295 * (*) (Il2CppObject * /* static, unused */, Il2CppObject*, const MethodInfo*))Enumerable_First_TisIl2CppObject_m3984298619_gshared)(__this /* static, unused */, p0, method)
 // !!0 UnityEngine.Object::Instantiate<System.Object>(!!0)
-extern "C"  Il2CppObject * Object_Instantiate_TisIl2CppObject_m2029006109_gshared (Il2CppObject * __this /* static, unused */, Il2CppObject * p0, const MethodInfo* method);
-#define Object_Instantiate_TisIl2CppObject_m2029006109(__this /* static, unused */, p0, method) ((  Il2CppObject * (*) (Il2CppObject * /* static, unused */, Il2CppObject *, const MethodInfo*))Object_Instantiate_TisIl2CppObject_m2029006109_gshared)(__this /* static, unused */, p0, method)
+extern "C"  Il2CppObject * Object_Instantiate_TisIl2CppObject_m3133387403_gshared (Il2CppObject * __this /* static, unused */, Il2CppObject * p0, const MethodInfo* method);
+#define Object_Instantiate_TisIl2CppObject_m3133387403(__this /* static, unused */, p0, method) ((  Il2CppObject * (*) (Il2CppObject * /* static, unused */, Il2CppObject *, const MethodInfo*))Object_Instantiate_TisIl2CppObject_m3133387403_gshared)(__this /* static, unused */, p0, method)
 // !!0 UnityEngine.Object::Instantiate<UnityEngine.GameObject>(!!0)
-#define Object_Instantiate_TisGameObject_t4012695102_m2929803663(__this /* static, unused */, p0, method) ((  GameObject_t4012695102 * (*) (Il2CppObject * /* static, unused */, GameObject_t4012695102 *, const MethodInfo*))Object_Instantiate_TisIl2CppObject_m2029006109_gshared)(__this /* static, unused */, p0, method)
+#define Object_Instantiate_TisGameObject_t4012695102_m3917608929(__this /* static, unused */, p0, method) ((  GameObject_t4012695102 * (*) (Il2CppObject * /* static, unused */, GameObject_t4012695102 *, const MethodInfo*))Object_Instantiate_TisIl2CppObject_m3133387403_gshared)(__this /* static, unused */, p0, method)
 // !!0 UnityEngine.GameObject::GetComponent<System.Object>()
-extern "C"  Il2CppObject * GameObject_GetComponent_TisIl2CppObject_m1994270962_gshared (GameObject_t4012695102 * __this, const MethodInfo* method);
-#define GameObject_GetComponent_TisIl2CppObject_m1994270962(__this, method) ((  Il2CppObject * (*) (GameObject_t4012695102 *, const MethodInfo*))GameObject_GetComponent_TisIl2CppObject_m1994270962_gshared)(__this, method)
+extern "C"  Il2CppObject * GameObject_GetComponent_TisIl2CppObject_m2447772384_gshared (GameObject_t4012695102 * __this, const MethodInfo* method);
+#define GameObject_GetComponent_TisIl2CppObject_m2447772384(__this, method) ((  Il2CppObject * (*) (GameObject_t4012695102 *, const MethodInfo*))GameObject_GetComponent_TisIl2CppObject_m2447772384_gshared)(__this, method)
 // !!0 UnityEngine.GameObject::GetComponent<Vuforia.WordAbstractBehaviour>()
-#define GameObject_GetComponent_TisWordAbstractBehaviour_t162212295_m3321454987(__this, method) ((  WordAbstractBehaviour_t162212295 * (*) (GameObject_t4012695102 *, const MethodInfo*))GameObject_GetComponent_TisIl2CppObject_m1994270962_gshared)(__this, method)
+#define GameObject_GetComponent_TisWordAbstractBehaviour_t162212295_m3321454987(__this, method) ((  WordAbstractBehaviour_t162212295 * (*) (GameObject_t4012695102 *, const MethodInfo*))GameObject_GetComponent_TisIl2CppObject_m2447772384_gshared)(__this, method)
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
@@ -1610,7 +1610,7 @@ extern "C"  bool WordManagerImpl_TryGetWordBehaviour_m4053186798 (WordManagerImp
 		int32_t L_2 = InterfaceFuncInvoker0< int32_t >::Invoke(1 /* System.Int32 Vuforia.Trackable::get_ID() */, Trackable_t1174201883_il2cpp_TypeInfo_var, L_1);
 		WordAbstractBehaviour_t162212295 ** L_3 = ___behaviour1;
 		NullCheck(L_0);
-		bool L_4 = VirtFuncInvoker2< bool, int32_t, WordAbstractBehaviour_t162212295 ** >::Invoke(30 /* System.Boolean System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.WordAbstractBehaviour>::TryGetValue(!0,!1&) */, L_0, L_2, L_3);
+		bool L_4 = VirtFuncInvoker2< bool, int32_t, WordAbstractBehaviour_t162212295 ** >::Invoke(31 /* System.Boolean System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.WordAbstractBehaviour>::TryGetValue(!0,!1&) */, L_0, L_2, L_3);
 		return L_4;
 	}
 }
@@ -1749,10 +1749,10 @@ IL_0018:
 		Dictionary_2_t2596869168 * L_7 = __this->get_mWordBehaviours_7();
 		String_t* L_8 = V_1;
 		NullCheck(L_7);
-		List_1_t959171264 * L_9 = VirtFuncInvoker1< List_1_t959171264 *, String_t* >::Invoke(23 /* !1 System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>>::get_Item(!0) */, L_7, L_8);
+		List_1_t959171264 * L_9 = VirtFuncInvoker1< List_1_t959171264 *, String_t* >::Invoke(24 /* !1 System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>>::get_Item(!0) */, L_7, L_8);
 		WordAbstractBehaviour_t162212295 * L_10 = ___behaviour0;
 		NullCheck(L_9);
-		bool L_11 = VirtFuncInvoker1< bool, WordAbstractBehaviour_t162212295 * >::Invoke(21 /* System.Boolean System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>::Contains(!0) */, L_9, L_10);
+		bool L_11 = VirtFuncInvoker1< bool, WordAbstractBehaviour_t162212295 * >::Invoke(24 /* System.Boolean System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>::Contains(!0) */, L_9, L_10);
 		if (!L_11)
 		{
 			goto IL_0088;
@@ -1762,16 +1762,16 @@ IL_0018:
 		Dictionary_2_t2596869168 * L_12 = __this->get_mWordBehaviours_7();
 		String_t* L_13 = V_1;
 		NullCheck(L_12);
-		List_1_t959171264 * L_14 = VirtFuncInvoker1< List_1_t959171264 *, String_t* >::Invoke(23 /* !1 System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>>::get_Item(!0) */, L_12, L_13);
+		List_1_t959171264 * L_14 = VirtFuncInvoker1< List_1_t959171264 *, String_t* >::Invoke(24 /* !1 System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>>::get_Item(!0) */, L_12, L_13);
 		WordAbstractBehaviour_t162212295 * L_15 = ___behaviour0;
 		NullCheck(L_14);
-		VirtFuncInvoker1< bool, WordAbstractBehaviour_t162212295 * >::Invoke(23 /* System.Boolean System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>::Remove(!0) */, L_14, L_15);
+		VirtFuncInvoker1< bool, WordAbstractBehaviour_t162212295 * >::Invoke(26 /* System.Boolean System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>::Remove(!0) */, L_14, L_15);
 		Dictionary_2_t2596869168 * L_16 = __this->get_mWordBehaviours_7();
 		String_t* L_17 = V_1;
 		NullCheck(L_16);
-		List_1_t959171264 * L_18 = VirtFuncInvoker1< List_1_t959171264 *, String_t* >::Invoke(23 /* !1 System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>>::get_Item(!0) */, L_16, L_17);
+		List_1_t959171264 * L_18 = VirtFuncInvoker1< List_1_t959171264 *, String_t* >::Invoke(24 /* !1 System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>>::get_Item(!0) */, L_16, L_17);
 		NullCheck(L_18);
-		int32_t L_19 = VirtFuncInvoker0< int32_t >::Invoke(17 /* System.Int32 System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>::get_Count() */, L_18);
+		int32_t L_19 = VirtFuncInvoker0< int32_t >::Invoke(20 /* System.Int32 System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>::get_Count() */, L_18);
 		if (L_19)
 		{
 			goto IL_0064;
@@ -1781,7 +1781,7 @@ IL_0018:
 		Dictionary_2_t2596869168 * L_20 = __this->get_mWordBehaviours_7();
 		String_t* L_21 = V_1;
 		NullCheck(L_20);
-		VirtFuncInvoker1< bool, String_t* >::Invoke(29 /* System.Boolean System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>>::Remove(!0) */, L_20, L_21);
+		VirtFuncInvoker1< bool, String_t* >::Invoke(30 /* System.Boolean System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>>::Remove(!0) */, L_20, L_21);
 	}
 
 IL_0064:
@@ -1800,7 +1800,7 @@ IL_0064:
 		List_1_t959171264 * L_25 = __this->get_mWordBehavioursMarkedForDeletion_5();
 		WordAbstractBehaviour_t162212295 * L_26 = ___behaviour0;
 		NullCheck(L_25);
-		VirtActionInvoker1< WordAbstractBehaviour_t162212295 * >::Invoke(19 /* System.Void System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>::Add(!0) */, L_25, L_26);
+		VirtActionInvoker1< WordAbstractBehaviour_t162212295 * >::Invoke(22 /* System.Void System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>::Add(!0) */, L_25, L_26);
 		goto IL_0088;
 	}
 
@@ -1908,7 +1908,7 @@ extern "C"  void WordManagerImpl_InitializeWordBehaviourTemplates_m1764045013 (W
 	{
 		Dictionary_2_t2596869168 * L_4 = __this->get_mWordBehaviours_7();
 		NullCheck(L_4);
-		bool L_5 = VirtFuncInvoker1< bool, String_t* >::Invoke(26 /* System.Boolean System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>>::ContainsKey(!0) */, L_4, _stringLiteral3437510368);
+		bool L_5 = VirtFuncInvoker1< bool, String_t* >::Invoke(27 /* System.Boolean System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>>::ContainsKey(!0) */, L_4, _stringLiteral3437510368);
 		if (!L_5)
 		{
 			goto IL_008f;
@@ -1917,7 +1917,7 @@ extern "C"  void WordManagerImpl_InitializeWordBehaviourTemplates_m1764045013 (W
 	{
 		Dictionary_2_t2596869168 * L_6 = __this->get_mWordBehaviours_7();
 		NullCheck(L_6);
-		List_1_t959171264 * L_7 = VirtFuncInvoker1< List_1_t959171264 *, String_t* >::Invoke(23 /* !1 System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>>::get_Item(!0) */, L_6, _stringLiteral3437510368);
+		List_1_t959171264 * L_7 = VirtFuncInvoker1< List_1_t959171264 *, String_t* >::Invoke(24 /* !1 System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>>::get_Item(!0) */, L_6, _stringLiteral3437510368);
 		NullCheck(L_7);
 		Enumerator_t3339921552  L_8 = List_1_GetEnumerator_m4086231608(L_7, /*hidden argument*/List_1_GetEnumerator_m4086231608_MethodInfo_var);
 		V_9 = L_8;
@@ -1937,7 +1937,7 @@ IL_004b:
 			List_1_t959171264 * L_10 = V_0;
 			WordAbstractBehaviour_t162212295 * L_11 = V_1;
 			NullCheck(L_10);
-			VirtActionInvoker1< WordAbstractBehaviour_t162212295 * >::Invoke(19 /* System.Void System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>::Add(!0) */, L_10, L_11);
+			VirtActionInvoker1< WordAbstractBehaviour_t162212295 * >::Invoke(22 /* System.Void System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>::Add(!0) */, L_10, L_11);
 			WordAbstractBehaviour_t162212295 * L_12 = V_1;
 			NullCheck(L_12);
 			GameObject_t4012695102 * L_13 = Component_get_gameObject_m1170635899(L_12, /*hidden argument*/NULL);
@@ -1979,7 +1979,7 @@ IL_007e:
 	{
 		Dictionary_2_t2596869168 * L_15 = __this->get_mWordBehaviours_7();
 		NullCheck(L_15);
-		VirtFuncInvoker1< bool, String_t* >::Invoke(29 /* System.Boolean System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>>::Remove(!0) */, L_15, _stringLiteral3437510368);
+		VirtFuncInvoker1< bool, String_t* >::Invoke(30 /* System.Boolean System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>>::Remove(!0) */, L_15, _stringLiteral3437510368);
 	}
 
 IL_008f:
@@ -2005,7 +2005,7 @@ IL_00ac:
 		List_1_t959171264 * L_22 = V_0;
 		WordAbstractBehaviour_t162212295 * L_23 = V_3;
 		NullCheck(L_22);
-		bool L_24 = VirtFuncInvoker1< bool, WordAbstractBehaviour_t162212295 * >::Invoke(21 /* System.Boolean System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>::Contains(!0) */, L_22, L_23);
+		bool L_24 = VirtFuncInvoker1< bool, WordAbstractBehaviour_t162212295 * >::Invoke(24 /* System.Boolean System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>::Contains(!0) */, L_22, L_23);
 		if (L_24)
 		{
 			goto IL_011e;
@@ -2043,7 +2043,7 @@ IL_00da:
 		Dictionary_2_t2596869168 * L_31 = __this->get_mWordBehaviours_7();
 		String_t* L_32 = V_5;
 		NullCheck(L_31);
-		bool L_33 = VirtFuncInvoker1< bool, String_t* >::Invoke(26 /* System.Boolean System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>>::ContainsKey(!0) */, L_31, L_32);
+		bool L_33 = VirtFuncInvoker1< bool, String_t* >::Invoke(27 /* System.Boolean System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>>::ContainsKey(!0) */, L_31, L_32);
 		if (L_33)
 		{
 			goto IL_011e;
@@ -2058,10 +2058,10 @@ IL_00da:
 		List_1_t959171264 * L_37 = V_6;
 		WordAbstractBehaviour_t162212295 * L_38 = V_3;
 		NullCheck(L_37);
-		VirtActionInvoker1< WordAbstractBehaviour_t162212295 * >::Invoke(19 /* System.Void System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>::Add(!0) */, L_37, L_38);
+		VirtActionInvoker1< WordAbstractBehaviour_t162212295 * >::Invoke(22 /* System.Void System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>::Add(!0) */, L_37, L_38);
 		List_1_t959171264 * L_39 = V_6;
 		NullCheck(L_34);
-		VirtActionInvoker2< String_t*, List_1_t959171264 * >::Invoke(24 /* System.Void System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>>::set_Item(!0,!1) */, L_34, L_35, L_39);
+		VirtActionInvoker2< String_t*, List_1_t959171264 * >::Invoke(25 /* System.Void System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>>::set_Item(!0,!1) */, L_34, L_35, L_39);
 		String_t* L_40 = V_5;
 		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
 		bool L_41 = String_op_Equality_m1260523650(NULL /*static, unused*/, L_40, _stringLiteral3437510368, /*hidden argument*/NULL);
@@ -2093,7 +2093,7 @@ IL_0124:
 	{
 		Dictionary_2_t2596869168 * L_45 = __this->get_mWordBehaviours_7();
 		NullCheck(L_45);
-		bool L_46 = VirtFuncInvoker1< bool, String_t* >::Invoke(26 /* System.Boolean System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>>::ContainsKey(!0) */, L_45, _stringLiteral3437510368);
+		bool L_46 = VirtFuncInvoker1< bool, String_t* >::Invoke(27 /* System.Boolean System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>>::ContainsKey(!0) */, L_45, _stringLiteral3437510368);
 		if (L_46)
 		{
 			goto IL_016e;
@@ -2109,10 +2109,10 @@ IL_0124:
 		List_1_t959171264 * L_50 = V_8;
 		WordAbstractBehaviour_t162212295 * L_51 = V_7;
 		NullCheck(L_50);
-		VirtActionInvoker1< WordAbstractBehaviour_t162212295 * >::Invoke(19 /* System.Void System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>::Add(!0) */, L_50, L_51);
+		VirtActionInvoker1< WordAbstractBehaviour_t162212295 * >::Invoke(22 /* System.Void System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>::Add(!0) */, L_50, L_51);
 		List_1_t959171264 * L_52 = V_8;
 		NullCheck(L_48);
-		VirtActionInvoker2< String_t*, List_1_t959171264 * >::Invoke(25 /* System.Void System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>>::Add(!0,!1) */, L_48, _stringLiteral3437510368, L_52);
+		VirtActionInvoker2< String_t*, List_1_t959171264 * >::Invoke(26 /* System.Void System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>>::Add(!0,!1) */, L_48, _stringLiteral3437510368, L_52);
 		__this->set_mAutomaticTemplate_8((bool)1);
 	}
 
@@ -2120,7 +2120,7 @@ IL_016e:
 	{
 		List_1_t959171264 * L_53 = __this->get_mWordBehavioursMarkedForDeletion_5();
 		NullCheck(L_53);
-		VirtActionInvoker0::Invoke(20 /* System.Void System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>::Clear() */, L_53);
+		VirtActionInvoker0::Invoke(23 /* System.Void System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>::Clear() */, L_53);
 		return;
 	}
 }
@@ -2177,7 +2177,7 @@ IL_0014:
 			V_0 = L_3;
 			List_1_t959171264 * L_4 = V_0;
 			NullCheck(L_4);
-			int32_t L_5 = VirtFuncInvoker0< int32_t >::Invoke(17 /* System.Int32 System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>::get_Count() */, L_4);
+			int32_t L_5 = VirtFuncInvoker0< int32_t >::Invoke(20 /* System.Int32 System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>::get_Count() */, L_4);
 			V_1 = ((int32_t)((int32_t)L_5-(int32_t)1));
 			goto IL_0041;
 		}
@@ -2187,7 +2187,7 @@ IL_0027:
 			List_1_t959171264 * L_6 = V_0;
 			int32_t L_7 = V_1;
 			NullCheck(L_6);
-			WordAbstractBehaviour_t162212295 * L_8 = VirtFuncInvoker1< WordAbstractBehaviour_t162212295 *, int32_t >::Invoke(28 /* !0 System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>::get_Item(System.Int32) */, L_6, L_7);
+			WordAbstractBehaviour_t162212295 * L_8 = VirtFuncInvoker1< WordAbstractBehaviour_t162212295 *, int32_t >::Invoke(31 /* !0 System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>::get_Item(System.Int32) */, L_6, L_7);
 			bool L_9 = Object_op_Equality_m3964590952(NULL /*static, unused*/, L_8, (Object_t3878351788 *)NULL, /*hidden argument*/NULL);
 			if (!L_9)
 			{
@@ -2200,7 +2200,7 @@ IL_0036:
 			List_1_t959171264 * L_10 = V_0;
 			int32_t L_11 = V_1;
 			NullCheck(L_10);
-			VirtActionInvoker1< int32_t >::Invoke(27 /* System.Void System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>::RemoveAt(System.Int32) */, L_10, L_11);
+			VirtActionInvoker1< int32_t >::Invoke(30 /* System.Void System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>::RemoveAt(System.Int32) */, L_10, L_11);
 		}
 
 IL_003d:
@@ -2273,9 +2273,9 @@ IL_0077:
 		Dictionary_2_t2596869168 * L_22 = __this->get_mWordBehaviours_7();
 		String_t* L_23 = V_3;
 		NullCheck(L_22);
-		List_1_t959171264 * L_24 = VirtFuncInvoker1< List_1_t959171264 *, String_t* >::Invoke(23 /* !1 System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>>::get_Item(!0) */, L_22, L_23);
+		List_1_t959171264 * L_24 = VirtFuncInvoker1< List_1_t959171264 *, String_t* >::Invoke(24 /* !1 System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>>::get_Item(!0) */, L_22, L_23);
 		NullCheck(L_24);
-		int32_t L_25 = VirtFuncInvoker0< int32_t >::Invoke(17 /* System.Int32 System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>::get_Count() */, L_24);
+		int32_t L_25 = VirtFuncInvoker0< int32_t >::Invoke(20 /* System.Int32 System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>::get_Count() */, L_24);
 		if (L_25)
 		{
 			goto IL_009d;
@@ -2285,7 +2285,7 @@ IL_0077:
 		Dictionary_2_t2596869168 * L_26 = __this->get_mWordBehaviours_7();
 		String_t* L_27 = V_3;
 		NullCheck(L_26);
-		VirtFuncInvoker1< bool, String_t* >::Invoke(29 /* System.Boolean System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>>::Remove(!0) */, L_26, L_27);
+		VirtFuncInvoker1< bool, String_t* >::Invoke(30 /* System.Boolean System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>>::Remove(!0) */, L_26, L_27);
 	}
 
 IL_009d:
@@ -2412,22 +2412,22 @@ extern "C"  void WordManagerImpl_CleanupWordBehaviours_m241774215 (WordManagerIm
 	{
 		List_1_t2668553718 * L_0 = __this->get_mNewWords_2();
 		NullCheck(L_0);
-		VirtActionInvoker0::Invoke(20 /* System.Void System.Collections.Generic.List`1<Vuforia.WordResult>::Clear() */, L_0);
+		VirtActionInvoker0::Invoke(23 /* System.Void System.Collections.Generic.List`1<Vuforia.WordResult>::Clear() */, L_0);
 		List_1_t3534666041 * L_1 = __this->get_mLostWords_3();
 		NullCheck(L_1);
-		VirtActionInvoker0::Invoke(20 /* System.Void System.Collections.Generic.List`1<Vuforia.Word>::Clear() */, L_1);
+		VirtActionInvoker0::Invoke(23 /* System.Void System.Collections.Generic.List`1<Vuforia.Word>::Clear() */, L_1);
 		List_1_t3534666041 * L_2 = __this->get_mWaitingQueue_6();
 		NullCheck(L_2);
-		VirtActionInvoker0::Invoke(20 /* System.Void System.Collections.Generic.List`1<Vuforia.Word>::Clear() */, L_2);
+		VirtActionInvoker0::Invoke(23 /* System.Void System.Collections.Generic.List`1<Vuforia.Word>::Clear() */, L_2);
 		Dictionary_2_t2362405532 * L_3 = __this->get_mTrackedWords_1();
 		NullCheck(L_3);
-		VirtActionInvoker0::Invoke(12 /* System.Void System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.WordResult>::Clear() */, L_3);
+		VirtActionInvoker0::Invoke(13 /* System.Void System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.WordResult>::Clear() */, L_3);
 		Dictionary_2_t653023078 * L_4 = __this->get_mActiveWordBehaviours_4();
 		NullCheck(L_4);
-		VirtActionInvoker0::Invoke(12 /* System.Void System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.WordAbstractBehaviour>::Clear() */, L_4);
+		VirtActionInvoker0::Invoke(13 /* System.Void System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.WordAbstractBehaviour>::Clear() */, L_4);
 		Dictionary_2_t2596869168 * L_5 = __this->get_mWordBehaviours_7();
 		NullCheck(L_5);
-		VirtActionInvoker0::Invoke(12 /* System.Void System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>>::Clear() */, L_5);
+		VirtActionInvoker0::Invoke(13 /* System.Void System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>>::Clear() */, L_5);
 		return;
 	}
 }
@@ -2480,10 +2480,10 @@ extern "C"  void WordManagerImpl_UpdateWords_m942394850 (WordManagerImpl_t310757
 	{
 		List_1_t2668553718 * L_0 = __this->get_mNewWords_2();
 		NullCheck(L_0);
-		VirtActionInvoker0::Invoke(20 /* System.Void System.Collections.Generic.List`1<Vuforia.WordResult>::Clear() */, L_0);
+		VirtActionInvoker0::Invoke(23 /* System.Void System.Collections.Generic.List`1<Vuforia.WordResult>::Clear() */, L_0);
 		List_1_t3534666041 * L_1 = __this->get_mLostWords_3();
 		NullCheck(L_1);
-		VirtActionInvoker0::Invoke(20 /* System.Void System.Collections.Generic.List`1<Vuforia.Word>::Clear() */, L_1);
+		VirtActionInvoker0::Invoke(23 /* System.Void System.Collections.Generic.List`1<Vuforia.Word>::Clear() */, L_1);
 		Il2CppObject* L_2 = ___newWordData0;
 		NullCheck(L_2);
 		Il2CppObject* L_3 = InterfaceFuncInvoker0< Il2CppObject* >::Invoke(0 /* System.Collections.Generic.IEnumerator`1<!0> System.Collections.Generic.IEnumerable`1<Vuforia.VuforiaManagerImpl/WordData>::GetEnumerator() */, IEnumerable_1_t2964689640_il2cpp_TypeInfo_var, L_2);
@@ -2506,7 +2506,7 @@ IL_0020:
 			Dictionary_2_t2362405532 * L_6 = __this->get_mTrackedWords_1();
 			int32_t L_7 = (&V_0)->get_id_1();
 			NullCheck(L_6);
-			bool L_8 = VirtFuncInvoker1< bool, int32_t >::Invoke(26 /* System.Boolean System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.WordResult>::ContainsKey(!0) */, L_6, L_7);
+			bool L_8 = VirtFuncInvoker1< bool, int32_t >::Invoke(27 /* System.Boolean System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.WordResult>::ContainsKey(!0) */, L_6, L_7);
 			if (L_8)
 			{
 				goto IL_0082;
@@ -2531,11 +2531,11 @@ IL_003c:
 			int32_t L_17 = (&V_0)->get_id_1();
 			WordResultImpl_t3143421885 * L_18 = V_2;
 			NullCheck(L_16);
-			VirtActionInvoker2< int32_t, WordResult_t1871594749 * >::Invoke(25 /* System.Void System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.WordResult>::Add(!0,!1) */, L_16, L_17, L_18);
+			VirtActionInvoker2< int32_t, WordResult_t1871594749 * >::Invoke(26 /* System.Void System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.WordResult>::Add(!0,!1) */, L_16, L_17, L_18);
 			List_1_t2668553718 * L_19 = __this->get_mNewWords_2();
 			WordResultImpl_t3143421885 * L_20 = V_2;
 			NullCheck(L_19);
-			VirtActionInvoker1< WordResult_t1871594749 * >::Invoke(19 /* System.Void System.Collections.Generic.List`1<Vuforia.WordResult>::Add(!0) */, L_19, L_20);
+			VirtActionInvoker1< WordResult_t1871594749 * >::Invoke(22 /* System.Void System.Collections.Generic.List`1<Vuforia.WordResult>::Add(!0) */, L_19, L_20);
 		}
 
 IL_0082:
@@ -2615,7 +2615,7 @@ IL_00a9:
 			List_1_t3644373756 * L_30 = V_3;
 			int32_t L_31 = (&V_4)->get_id_3();
 			NullCheck(L_30);
-			VirtActionInvoker1< int32_t >::Invoke(19 /* System.Void System.Collections.Generic.List`1<System.Int32>::Add(!0) */, L_30, L_31);
+			VirtActionInvoker1< int32_t >::Invoke(22 /* System.Void System.Collections.Generic.List`1<System.Int32>::Add(!0) */, L_30, L_31);
 		}
 
 IL_00bf:
@@ -2695,7 +2695,7 @@ IL_00f3:
 			List_1_t3644373756 * L_42 = V_3;
 			int32_t L_43 = V_6;
 			NullCheck(L_42);
-			bool L_44 = VirtFuncInvoker1< bool, int32_t >::Invoke(21 /* System.Boolean System.Collections.Generic.List`1<System.Int32>::Contains(!0) */, L_42, L_43);
+			bool L_44 = VirtFuncInvoker1< bool, int32_t >::Invoke(24 /* System.Boolean System.Collections.Generic.List`1<System.Int32>::Contains(!0) */, L_42, L_43);
 			if (L_44)
 			{
 				goto IL_0131;
@@ -2708,15 +2708,15 @@ IL_0106:
 			Dictionary_2_t2362405532 * L_46 = __this->get_mTrackedWords_1();
 			int32_t L_47 = V_6;
 			NullCheck(L_46);
-			WordResult_t1871594749 * L_48 = VirtFuncInvoker1< WordResult_t1871594749 *, int32_t >::Invoke(23 /* !1 System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.WordResult>::get_Item(!0) */, L_46, L_47);
+			WordResult_t1871594749 * L_48 = VirtFuncInvoker1< WordResult_t1871594749 *, int32_t >::Invoke(24 /* !1 System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.WordResult>::get_Item(!0) */, L_46, L_47);
 			NullCheck(L_48);
 			Il2CppObject * L_49 = VirtFuncInvoker0< Il2CppObject * >::Invoke(4 /* Vuforia.Word Vuforia.WordResult::get_Word() */, L_48);
 			NullCheck(L_45);
-			VirtActionInvoker1< Il2CppObject * >::Invoke(19 /* System.Void System.Collections.Generic.List`1<Vuforia.Word>::Add(!0) */, L_45, L_49);
+			VirtActionInvoker1< Il2CppObject * >::Invoke(22 /* System.Void System.Collections.Generic.List`1<Vuforia.Word>::Add(!0) */, L_45, L_49);
 			Dictionary_2_t2362405532 * L_50 = __this->get_mTrackedWords_1();
 			int32_t L_51 = V_6;
 			NullCheck(L_50);
-			VirtFuncInvoker1< bool, int32_t >::Invoke(29 /* System.Boolean System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.WordResult>::Remove(!0) */, L_50, L_51);
+			VirtFuncInvoker1< bool, int32_t >::Invoke(30 /* System.Boolean System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.WordResult>::Remove(!0) */, L_50, L_51);
 		}
 
 IL_0131:
@@ -2876,7 +2876,7 @@ IL_0074:
 			Dictionary_2_t2362405532 * L_16 = __this->get_mTrackedWords_1();
 			int32_t L_17 = (&V_3)->get_id_3();
 			NullCheck(L_16);
-			WordResult_t1871594749 * L_18 = VirtFuncInvoker1< WordResult_t1871594749 *, int32_t >::Invoke(23 /* !1 System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.WordResult>::get_Item(!0) */, L_16, L_17);
+			WordResult_t1871594749 * L_18 = VirtFuncInvoker1< WordResult_t1871594749 *, int32_t >::Invoke(24 /* !1 System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.WordResult>::get_Item(!0) */, L_16, L_17);
 			V_4 = ((WordResultImpl_t3143421885 *)CastclassClass(L_18, WordResultImpl_t3143421885_il2cpp_TypeInfo_var));
 			Transform_t284553113 * L_19 = ___arCameraTransform0;
 			PoseData_t807317499  L_20 = (&V_3)->get_pose_0();
@@ -3053,7 +3053,7 @@ IL_0016:
 			NullCheck(L_6);
 			int32_t L_7 = InterfaceFuncInvoker0< int32_t >::Invoke(1 /* System.Int32 Vuforia.Trackable::get_ID() */, Trackable_t1174201883_il2cpp_TypeInfo_var, L_6);
 			NullCheck(L_5);
-			bool L_8 = VirtFuncInvoker1< bool, int32_t >::Invoke(26 /* System.Boolean System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.WordResult>::ContainsKey(!0) */, L_5, L_7);
+			bool L_8 = VirtFuncInvoker1< bool, int32_t >::Invoke(27 /* System.Boolean System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.WordResult>::ContainsKey(!0) */, L_5, L_7);
 			if (!L_8)
 			{
 				goto IL_0061;
@@ -3067,7 +3067,7 @@ IL_0031:
 			NullCheck(L_10);
 			int32_t L_11 = InterfaceFuncInvoker0< int32_t >::Invoke(1 /* System.Int32 Vuforia.Trackable::get_ID() */, Trackable_t1174201883_il2cpp_TypeInfo_var, L_10);
 			NullCheck(L_9);
-			WordResult_t1871594749 * L_12 = VirtFuncInvoker1< WordResult_t1871594749 *, int32_t >::Invoke(23 /* !1 System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.WordResult>::get_Item(!0) */, L_9, L_11);
+			WordResult_t1871594749 * L_12 = VirtFuncInvoker1< WordResult_t1871594749 *, int32_t >::Invoke(24 /* !1 System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.WordResult>::get_Item(!0) */, L_9, L_11);
 			V_2 = L_12;
 			WordResult_t1871594749 * L_13 = V_2;
 			WordAbstractBehaviour_t162212295 * L_14 = WordManagerImpl_AssociateWordBehaviour_m596166131(__this, L_13, /*hidden argument*/NULL);
@@ -3083,7 +3083,7 @@ IL_0052:
 			List_1_t3534666041 * L_16 = __this->get_mWaitingQueue_6();
 			Il2CppObject * L_17 = V_1;
 			NullCheck(L_16);
-			VirtFuncInvoker1< bool, Il2CppObject * >::Invoke(23 /* System.Boolean System.Collections.Generic.List`1<Vuforia.Word>::Remove(!0) */, L_16, L_17);
+			VirtFuncInvoker1< bool, Il2CppObject * >::Invoke(26 /* System.Boolean System.Collections.Generic.List`1<Vuforia.Word>::Remove(!0) */, L_16, L_17);
 			goto IL_006e;
 		}
 
@@ -3092,7 +3092,7 @@ IL_0061:
 			List_1_t3534666041 * L_18 = __this->get_mWaitingQueue_6();
 			Il2CppObject * L_19 = V_1;
 			NullCheck(L_18);
-			VirtFuncInvoker1< bool, Il2CppObject * >::Invoke(23 /* System.Boolean System.Collections.Generic.List`1<Vuforia.Word>::Remove(!0) */, L_18, L_19);
+			VirtFuncInvoker1< bool, Il2CppObject * >::Invoke(26 /* System.Boolean System.Collections.Generic.List`1<Vuforia.Word>::Remove(!0) */, L_18, L_19);
 		}
 
 IL_006e:
@@ -3163,7 +3163,7 @@ IL_00b1:
 			NullCheck(L_29);
 			Il2CppObject * L_30 = VirtFuncInvoker0< Il2CppObject * >::Invoke(4 /* Vuforia.Word Vuforia.WordResult::get_Word() */, L_29);
 			NullCheck(L_28);
-			VirtActionInvoker1< Il2CppObject * >::Invoke(19 /* System.Void System.Collections.Generic.List`1<Vuforia.Word>::Add(!0) */, L_28, L_30);
+			VirtActionInvoker1< Il2CppObject * >::Invoke(22 /* System.Void System.Collections.Generic.List`1<Vuforia.Word>::Add(!0) */, L_28, L_30);
 		}
 
 IL_00c2:
@@ -3251,7 +3251,7 @@ IL_000e:
 			NullCheck(L_4);
 			int32_t L_5 = InterfaceFuncInvoker0< int32_t >::Invoke(1 /* System.Int32 Vuforia.Trackable::get_ID() */, Trackable_t1174201883_il2cpp_TypeInfo_var, L_4);
 			NullCheck(L_3);
-			bool L_6 = VirtFuncInvoker1< bool, int32_t >::Invoke(26 /* System.Boolean System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.WordAbstractBehaviour>::ContainsKey(!0) */, L_3, L_5);
+			bool L_6 = VirtFuncInvoker1< bool, int32_t >::Invoke(27 /* System.Boolean System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.WordAbstractBehaviour>::ContainsKey(!0) */, L_3, L_5);
 			if (!L_6)
 			{
 				goto IL_005a;
@@ -3265,7 +3265,7 @@ IL_0029:
 			NullCheck(L_8);
 			int32_t L_9 = InterfaceFuncInvoker0< int32_t >::Invoke(1 /* System.Int32 Vuforia.Trackable::get_ID() */, Trackable_t1174201883_il2cpp_TypeInfo_var, L_8);
 			NullCheck(L_7);
-			WordAbstractBehaviour_t162212295 * L_10 = VirtFuncInvoker1< WordAbstractBehaviour_t162212295 *, int32_t >::Invoke(23 /* !1 System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.WordAbstractBehaviour>::get_Item(!0) */, L_7, L_9);
+			WordAbstractBehaviour_t162212295 * L_10 = VirtFuncInvoker1< WordAbstractBehaviour_t162212295 *, int32_t >::Invoke(24 /* !1 System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.WordAbstractBehaviour>::get_Item(!0) */, L_7, L_9);
 			V_1 = L_10;
 			WordAbstractBehaviour_t162212295 * L_11 = V_1;
 			NullCheck(L_11);
@@ -3278,7 +3278,7 @@ IL_0029:
 			NullCheck(L_14);
 			int32_t L_15 = InterfaceFuncInvoker0< int32_t >::Invoke(1 /* System.Int32 Vuforia.Trackable::get_ID() */, Trackable_t1174201883_il2cpp_TypeInfo_var, L_14);
 			NullCheck(L_13);
-			VirtFuncInvoker1< bool, int32_t >::Invoke(29 /* System.Boolean System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.WordAbstractBehaviour>::Remove(!0) */, L_13, L_15);
+			VirtFuncInvoker1< bool, int32_t >::Invoke(30 /* System.Boolean System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.WordAbstractBehaviour>::Remove(!0) */, L_13, L_15);
 		}
 
 IL_005a:
@@ -3374,7 +3374,7 @@ IL_0012:
 			Dictionary_2_t2362405532 * L_3 = __this->get_mTrackedWords_1();
 			int32_t L_4 = KeyValuePair_2_get_Key_m2156977237((&V_0), /*hidden argument*/KeyValuePair_2_get_Key_m2156977237_MethodInfo_var);
 			NullCheck(L_3);
-			bool L_5 = VirtFuncInvoker1< bool, int32_t >::Invoke(26 /* System.Boolean System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.WordResult>::ContainsKey(!0) */, L_3, L_4);
+			bool L_5 = VirtFuncInvoker1< bool, int32_t >::Invoke(27 /* System.Boolean System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.WordResult>::ContainsKey(!0) */, L_3, L_4);
 			if (!L_5)
 			{
 				goto IL_00da;
@@ -3386,7 +3386,7 @@ IL_0031:
 			Dictionary_2_t2362405532 * L_6 = __this->get_mTrackedWords_1();
 			int32_t L_7 = KeyValuePair_2_get_Key_m2156977237((&V_0), /*hidden argument*/KeyValuePair_2_get_Key_m2156977237_MethodInfo_var);
 			NullCheck(L_6);
-			WordResult_t1871594749 * L_8 = VirtFuncInvoker1< WordResult_t1871594749 *, int32_t >::Invoke(23 /* !1 System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.WordResult>::get_Item(!0) */, L_6, L_7);
+			WordResult_t1871594749 * L_8 = VirtFuncInvoker1< WordResult_t1871594749 *, int32_t >::Invoke(24 /* !1 System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.WordResult>::get_Item(!0) */, L_6, L_7);
 			V_1 = L_8;
 			WordResult_t1871594749 * L_9 = V_1;
 			NullCheck(L_9);
@@ -3517,7 +3517,7 @@ extern "C"  WordAbstractBehaviour_t162212295 * WordManagerImpl_AssociateWordBeha
 		Dictionary_2_t2596869168 * L_4 = __this->get_mWordBehaviours_7();
 		String_t* L_5 = V_0;
 		NullCheck(L_4);
-		bool L_6 = VirtFuncInvoker1< bool, String_t* >::Invoke(26 /* System.Boolean System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>>::ContainsKey(!0) */, L_4, L_5);
+		bool L_6 = VirtFuncInvoker1< bool, String_t* >::Invoke(27 /* System.Boolean System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>>::ContainsKey(!0) */, L_4, L_5);
 		if (!L_6)
 		{
 			goto IL_002e;
@@ -3527,7 +3527,7 @@ extern "C"  WordAbstractBehaviour_t162212295 * WordManagerImpl_AssociateWordBeha
 		Dictionary_2_t2596869168 * L_7 = __this->get_mWordBehaviours_7();
 		String_t* L_8 = V_0;
 		NullCheck(L_7);
-		List_1_t959171264 * L_9 = VirtFuncInvoker1< List_1_t959171264 *, String_t* >::Invoke(23 /* !1 System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>>::get_Item(!0) */, L_7, L_8);
+		List_1_t959171264 * L_9 = VirtFuncInvoker1< List_1_t959171264 *, String_t* >::Invoke(24 /* !1 System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>>::get_Item(!0) */, L_7, L_8);
 		V_1 = L_9;
 		goto IL_0065;
 	}
@@ -3536,7 +3536,7 @@ IL_002e:
 	{
 		Dictionary_2_t2596869168 * L_10 = __this->get_mWordBehaviours_7();
 		NullCheck(L_10);
-		bool L_11 = VirtFuncInvoker1< bool, String_t* >::Invoke(26 /* System.Boolean System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>>::ContainsKey(!0) */, L_10, _stringLiteral3437510368);
+		bool L_11 = VirtFuncInvoker1< bool, String_t* >::Invoke(27 /* System.Boolean System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>>::ContainsKey(!0) */, L_10, _stringLiteral3437510368);
 		if (!L_11)
 		{
 			goto IL_0053;
@@ -3545,7 +3545,7 @@ IL_002e:
 	{
 		Dictionary_2_t2596869168 * L_12 = __this->get_mWordBehaviours_7();
 		NullCheck(L_12);
-		List_1_t959171264 * L_13 = VirtFuncInvoker1< List_1_t959171264 *, String_t* >::Invoke(23 /* !1 System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>>::get_Item(!0) */, L_12, _stringLiteral3437510368);
+		List_1_t959171264 * L_13 = VirtFuncInvoker1< List_1_t959171264 *, String_t* >::Invoke(24 /* !1 System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>>::get_Item(!0) */, L_12, _stringLiteral3437510368);
 		V_1 = L_13;
 		goto IL_0065;
 	}
@@ -3633,7 +3633,7 @@ IL_00a4:
 	{
 		List_1_t959171264 * L_25 = V_1;
 		NullCheck(L_25);
-		int32_t L_26 = VirtFuncInvoker0< int32_t >::Invoke(17 /* System.Int32 System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>::get_Count() */, L_25);
+		int32_t L_26 = VirtFuncInvoker0< int32_t >::Invoke(20 /* System.Int32 System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>::get_Count() */, L_25);
 		int32_t L_27 = __this->get_mMaxInstances_9();
 		if ((((int32_t)L_26) >= ((int32_t)L_27)))
 		{
@@ -3648,7 +3648,7 @@ IL_00a4:
 		List_1_t959171264 * L_31 = V_1;
 		WordAbstractBehaviour_t162212295 * L_32 = V_3;
 		NullCheck(L_31);
-		VirtActionInvoker1< WordAbstractBehaviour_t162212295 * >::Invoke(19 /* System.Void System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>::Add(!0) */, L_31, L_32);
+		VirtActionInvoker1< WordAbstractBehaviour_t162212295 * >::Invoke(22 /* System.Void System.Collections.Generic.List`1<Vuforia.WordAbstractBehaviour>::Add(!0) */, L_31, L_32);
 		WordResult_t1871594749 * L_33 = ___wordResult0;
 		WordAbstractBehaviour_t162212295 * L_34 = V_3;
 		WordAbstractBehaviour_t162212295 * L_35 = WordManagerImpl_AssociateWordBehaviour_m2994818138(__this, L_33, L_34, /*hidden argument*/NULL);
@@ -3686,7 +3686,7 @@ extern "C"  WordAbstractBehaviour_t162212295 * WordManagerImpl_AssociateWordBeha
 	{
 		Dictionary_2_t653023078 * L_0 = __this->get_mActiveWordBehaviours_4();
 		NullCheck(L_0);
-		int32_t L_1 = VirtFuncInvoker0< int32_t >::Invoke(9 /* System.Int32 System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.WordAbstractBehaviour>::get_Count() */, L_0);
+		int32_t L_1 = VirtFuncInvoker0< int32_t >::Invoke(10 /* System.Int32 System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.WordAbstractBehaviour>::get_Count() */, L_0);
 		int32_t L_2 = __this->get_mMaxInstances_9();
 		if ((((int32_t)L_1) < ((int32_t)L_2)))
 		{
@@ -3723,13 +3723,13 @@ IL_0015:
 		int32_t L_14 = InterfaceFuncInvoker0< int32_t >::Invoke(1 /* System.Int32 Vuforia.Trackable::get_ID() */, Trackable_t1174201883_il2cpp_TypeInfo_var, L_13);
 		WordAbstractBehaviour_t162212295 * L_15 = V_1;
 		NullCheck(L_12);
-		VirtActionInvoker2< int32_t, WordAbstractBehaviour_t162212295 * >::Invoke(25 /* System.Void System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.WordAbstractBehaviour>::Add(!0,!1) */, L_12, L_14, L_15);
+		VirtActionInvoker2< int32_t, WordAbstractBehaviour_t162212295 * >::Invoke(26 /* System.Void System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.WordAbstractBehaviour>::Add(!0,!1) */, L_12, L_14, L_15);
 		WordAbstractBehaviour_t162212295 * L_16 = V_1;
 		return L_16;
 	}
 }
 // Vuforia.WordAbstractBehaviour Vuforia.WordManagerImpl::InstantiateWordBehaviour(Vuforia.WordAbstractBehaviour)
-extern const MethodInfo* Object_Instantiate_TisGameObject_t4012695102_m2929803663_MethodInfo_var;
+extern const MethodInfo* Object_Instantiate_TisGameObject_t4012695102_m3917608929_MethodInfo_var;
 extern const MethodInfo* GameObject_GetComponent_TisWordAbstractBehaviour_t162212295_m3321454987_MethodInfo_var;
 extern const uint32_t WordManagerImpl_InstantiateWordBehaviour_m2269759987_MetadataUsageId;
 extern "C"  WordAbstractBehaviour_t162212295 * WordManagerImpl_InstantiateWordBehaviour_m2269759987 (Il2CppObject * __this /* static, unused */, WordAbstractBehaviour_t162212295 * ___input0, const MethodInfo* method)
@@ -3745,7 +3745,7 @@ extern "C"  WordAbstractBehaviour_t162212295 * WordManagerImpl_InstantiateWordBe
 		WordAbstractBehaviour_t162212295 * L_0 = ___input0;
 		NullCheck(L_0);
 		GameObject_t4012695102 * L_1 = Component_get_gameObject_m1170635899(L_0, /*hidden argument*/NULL);
-		GameObject_t4012695102 * L_2 = Object_Instantiate_TisGameObject_t4012695102_m2929803663(NULL /*static, unused*/, L_1, /*hidden argument*/Object_Instantiate_TisGameObject_t4012695102_m2929803663_MethodInfo_var);
+		GameObject_t4012695102 * L_2 = Object_Instantiate_TisGameObject_t4012695102_m3917608929(NULL /*static, unused*/, L_1, /*hidden argument*/Object_Instantiate_TisGameObject_t4012695102_m3917608929_MethodInfo_var);
 		V_0 = L_2;
 		GameObject_t4012695102 * L_3 = V_0;
 		NullCheck(L_3);

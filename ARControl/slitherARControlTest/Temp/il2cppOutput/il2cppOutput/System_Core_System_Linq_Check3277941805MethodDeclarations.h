@@ -20,3 +20,5 @@ struct Il2CppObject;
 
 // System.Void System.Linq.Check::Source(System.Object)
 extern "C"  void Check_Source_m228347543 (Il2CppObject * __this /* static, unused */, Il2CppObject * ___source0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void System.Linq.Check::SourceAndPredicate(System.Object,System.Object)
+extern "C"  void Check_SourceAndPredicate_m2252398949 (Il2CppObject * __this /* static, unused */, Il2CppObject * ___source0, Il2CppObject * ___predicate1, const MethodInfo* method) IL2CPP_METHOD_ATTR;

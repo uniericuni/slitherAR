@@ -15,6 +15,7 @@ struct GameObject_t4012695102;
 
 #include "UnityEngine_UnityEngine_MonoBehaviour3012272455.h"
 #include "UnityEngine_UnityEngine_Vector33525329789.h"
+#include "UnityEngine_UnityEngine_RaycastHit46221527.h"
 
 #ifdef __clang__
 #pragma clang diagnostic push
@@ -26,8 +27,8 @@ struct GameObject_t4012695102;
 struct  onPlane_t2955063229  : public MonoBehaviour_t3012272455
 {
 public:
-	// UnityEngine.GameObject onPlane::battlePlane
-	GameObject_t4012695102 * ___battlePlane_2;
+	// UnityEngine.GameObject onPlane::cube
+	GameObject_t4012695102 * ___cube_2;
 	// UnityEngine.Vector3 onPlane::planeNorm
 	Vector3_t3525329789  ___planeNorm_3;
 	// UnityEngine.Vector3 onPlane::planeOrigin
@@ -40,15 +41,19 @@ public:
 	float ___z_7;
 	// System.Single onPlane::y
 	float ___y_8;
+	// UnityEngine.RaycastHit onPlane::hit
+	RaycastHit_t46221527  ___hit_9;
+	// System.Single onPlane::time
+	float ___time_10;
 
 public:
-	inline static int32_t get_offset_of_battlePlane_2() { return static_cast<int32_t>(offsetof(onPlane_t2955063229, ___battlePlane_2)); }
-	inline GameObject_t4012695102 * get_battlePlane_2() const { return ___battlePlane_2; }
-	inline GameObject_t4012695102 ** get_address_of_battlePlane_2() { return &___battlePlane_2; }
-	inline void set_battlePlane_2(GameObject_t4012695102 * value)
+	inline static int32_t get_offset_of_cube_2() { return static_cast<int32_t>(offsetof(onPlane_t2955063229, ___cube_2)); }
+	inline GameObject_t4012695102 * get_cube_2() const { return ___cube_2; }
+	inline GameObject_t4012695102 ** get_address_of_cube_2() { return &___cube_2; }
+	inline void set_cube_2(GameObject_t4012695102 * value)
 	{
-		___battlePlane_2 = value;
-		Il2CppCodeGenWriteBarrier(&___battlePlane_2, value);
+		___cube_2 = value;
+		Il2CppCodeGenWriteBarrier(&___cube_2, value);
 	}
 
 	inline static int32_t get_offset_of_planeNorm_3() { return static_cast<int32_t>(offsetof(onPlane_t2955063229, ___planeNorm_3)); }
@@ -97,6 +102,22 @@ public:
 	inline void set_y_8(float value)
 	{
 		___y_8 = value;
+	}
+
+	inline static int32_t get_offset_of_hit_9() { return static_cast<int32_t>(offsetof(onPlane_t2955063229, ___hit_9)); }
+	inline RaycastHit_t46221527  get_hit_9() const { return ___hit_9; }
+	inline RaycastHit_t46221527 * get_address_of_hit_9() { return &___hit_9; }
+	inline void set_hit_9(RaycastHit_t46221527  value)
+	{
+		___hit_9 = value;
+	}
+
+	inline static int32_t get_offset_of_time_10() { return static_cast<int32_t>(offsetof(onPlane_t2955063229, ___time_10)); }
+	inline float get_time_10() const { return ___time_10; }
+	inline float* get_address_of_time_10() { return &___time_10; }
+	inline void set_time_10(float value)
+	{
+		___time_10 = value;
 	}
 };
 

@@ -215,9 +215,15 @@ extern "C" void U24ArrayTypeU24256_t2366142880_marshal_pinvoke_cleanup ();
 extern "C" void AnimationCurve_t3342907448_marshal_pinvoke ();
 extern "C" void AnimationCurve_t3342907448_marshal_pinvoke_back ();
 extern "C" void AnimationCurve_t3342907448_marshal_pinvoke_cleanup ();
+extern "C" void AnimatorClipInfo_t4255364242_marshal_pinvoke ();
+extern "C" void AnimatorClipInfo_t4255364242_marshal_pinvoke_back ();
+extern "C" void AnimatorClipInfo_t4255364242_marshal_pinvoke_cleanup ();
 extern "C" void AnimatorStateInfo_t4162640357_marshal_pinvoke ();
 extern "C" void AnimatorStateInfo_t4162640357_marshal_pinvoke_back ();
 extern "C" void AnimatorStateInfo_t4162640357_marshal_pinvoke_cleanup ();
+extern "C" void AnimatorTransitionInfo_t2791832279_marshal_pinvoke ();
+extern "C" void AnimatorTransitionInfo_t2791832279_marshal_pinvoke_back ();
+extern "C" void AnimatorTransitionInfo_t2791832279_marshal_pinvoke_cleanup ();
 extern "C" void AssetBundleRequest_t920637194_marshal_pinvoke ();
 extern "C" void AssetBundleRequest_t920637194_marshal_pinvoke_back ();
 extern "C" void AssetBundleRequest_t920637194_marshal_pinvoke_cleanup ();
@@ -242,6 +248,9 @@ extern "C" void Coroutine_t2246592261_marshal_pinvoke_cleanup ();
 extern "C" void CullingGroupEvent_t2364738776_marshal_pinvoke ();
 extern "C" void CullingGroupEvent_t2364738776_marshal_pinvoke_back ();
 extern "C" void CullingGroupEvent_t2364738776_marshal_pinvoke_cleanup ();
+extern "C" void DrivenRectTransformTracker_t3675273953_marshal_pinvoke ();
+extern "C" void DrivenRectTransformTracker_t3675273953_marshal_pinvoke_back ();
+extern "C" void DrivenRectTransformTracker_t3675273953_marshal_pinvoke_cleanup ();
 extern "C" void Event_t1590224583_marshal_pinvoke ();
 extern "C" void Event_t1590224583_marshal_pinvoke_back ();
 extern "C" void Event_t1590224583_marshal_pinvoke_cleanup ();
@@ -254,6 +263,12 @@ extern "C" void Gradient_t1677180829_marshal_pinvoke_cleanup ();
 extern "C" void HostData_t1286475231_marshal_pinvoke ();
 extern "C" void HostData_t1286475231_marshal_pinvoke_back ();
 extern "C" void HostData_t1286475231_marshal_pinvoke_cleanup ();
+extern "C" void HumanBone_t3114874302_marshal_pinvoke ();
+extern "C" void HumanBone_t3114874302_marshal_pinvoke_back ();
+extern "C" void HumanBone_t3114874302_marshal_pinvoke_cleanup ();
+extern "C" void HumanLimit_t3638947579_marshal_pinvoke ();
+extern "C" void HumanLimit_t3638947579_marshal_pinvoke_back ();
+extern "C" void HumanLimit_t3638947579_marshal_pinvoke_cleanup ();
 extern "C" void Internal_DrawArguments_t1561977533_marshal_pinvoke ();
 extern "C" void Internal_DrawArguments_t1561977533_marshal_pinvoke_back ();
 extern "C" void Internal_DrawArguments_t1561977533_marshal_pinvoke_cleanup ();
@@ -263,6 +278,9 @@ extern "C" void Internal_DrawWithTextSelectionArguments_t43446288_marshal_pinvok
 extern "C" void Keyframe_t2095052507_marshal_pinvoke ();
 extern "C" void Keyframe_t2095052507_marshal_pinvoke_back ();
 extern "C" void Keyframe_t2095052507_marshal_pinvoke_cleanup ();
+extern "C" void LayerMask_t1862190090_marshal_pinvoke ();
+extern "C" void LayerMask_t1862190090_marshal_pinvoke_back ();
+extern "C" void LayerMask_t1862190090_marshal_pinvoke_cleanup ();
 extern "C" void Mathf_t1597001355_marshal_pinvoke ();
 extern "C" void Mathf_t1597001355_marshal_pinvoke_back ();
 extern "C" void Mathf_t1597001355_marshal_pinvoke_cleanup ();
@@ -299,6 +317,9 @@ extern "C" void RenderBuffer_t1942909411_marshal_pinvoke_cleanup ();
 extern "C" void ScriptableObject_t184905905_marshal_pinvoke ();
 extern "C" void ScriptableObject_t184905905_marshal_pinvoke_back ();
 extern "C" void ScriptableObject_t184905905_marshal_pinvoke_cleanup ();
+extern "C" void SkeletonBone_t3129897246_marshal_pinvoke ();
+extern "C" void SkeletonBone_t3129897246_marshal_pinvoke_back ();
+extern "C" void SkeletonBone_t3129897246_marshal_pinvoke_cleanup ();
 extern "C" void GcAchievementData_t1317012096_marshal_pinvoke ();
 extern "C" void GcAchievementData_t1317012096_marshal_pinvoke_back ();
 extern "C" void GcAchievementData_t1317012096_marshal_pinvoke_cleanup ();
@@ -308,6 +329,27 @@ extern "C" void GcScoreData_t2223678307_marshal_pinvoke_cleanup ();
 extern "C" void Range_t938821841_marshal_pinvoke ();
 extern "C" void Range_t938821841_marshal_pinvoke_back ();
 extern "C" void Range_t938821841_marshal_pinvoke_cleanup ();
+extern "C" void SortingLayer_t1789336218_marshal_pinvoke ();
+extern "C" void SortingLayer_t1789336218_marshal_pinvoke_back ();
+extern "C" void SortingLayer_t1789336218_marshal_pinvoke_cleanup ();
+extern "C" void Touch_t1603883884_marshal_pinvoke ();
+extern "C" void Touch_t1603883884_marshal_pinvoke_back ();
+extern "C" void Touch_t1603883884_marshal_pinvoke_cleanup ();
+extern "C" void TouchScreenKeyboard_InternalConstructorHelperArguments_t3502143717_marshal_pinvoke ();
+extern "C" void TouchScreenKeyboard_InternalConstructorHelperArguments_t3502143717_marshal_pinvoke_back ();
+extern "C" void TouchScreenKeyboard_InternalConstructorHelperArguments_t3502143717_marshal_pinvoke_cleanup ();
+extern "C" void TrackedReference_t3599015854_marshal_pinvoke ();
+extern "C" void TrackedReference_t3599015854_marshal_pinvoke_back ();
+extern "C" void TrackedReference_t3599015854_marshal_pinvoke_cleanup ();
+extern "C" void UICharInfo_t403820581_marshal_pinvoke ();
+extern "C" void UICharInfo_t403820581_marshal_pinvoke_back ();
+extern "C" void UICharInfo_t403820581_marshal_pinvoke_cleanup ();
+extern "C" void UILineInfo_t156921283_marshal_pinvoke ();
+extern "C" void UILineInfo_t156921283_marshal_pinvoke_back ();
+extern "C" void UILineInfo_t156921283_marshal_pinvoke_cleanup ();
+extern "C" void UIVertex_t2260061605_marshal_pinvoke ();
+extern "C" void UIVertex_t2260061605_marshal_pinvoke_back ();
+extern "C" void UIVertex_t2260061605_marshal_pinvoke_cleanup ();
 extern "C" void Vector2_t3525329788_marshal_pinvoke ();
 extern "C" void Vector2_t3525329788_marshal_pinvoke_back ();
 extern "C" void Vector2_t3525329788_marshal_pinvoke_cleanup ();
@@ -329,6 +371,12 @@ extern "C" void YieldInstruction_t3557331758_marshal_pinvoke_cleanup ();
 extern "C" void MathfInternal_t681132919_marshal_pinvoke ();
 extern "C" void MathfInternal_t681132919_marshal_pinvoke_back ();
 extern "C" void MathfInternal_t681132919_marshal_pinvoke_cleanup ();
+extern "C" void U24ArrayTypeU2412_t214874489_marshal_pinvoke ();
+extern "C" void U24ArrayTypeU2412_t214874489_marshal_pinvoke_back ();
+extern "C" void U24ArrayTypeU2412_t214874489_marshal_pinvoke_cleanup ();
+extern "C" void ColorBlock_t2245020947_marshal_pinvoke ();
+extern "C" void ColorBlock_t2245020947_marshal_pinvoke_back ();
+extern "C" void ColorBlock_t2245020947_marshal_pinvoke_cleanup ();
 extern "C" void __StaticArrayInitTypeSizeU3D24_t1873314761_marshal_pinvoke ();
 extern "C" void __StaticArrayInitTypeSizeU3D24_t1873314761_marshal_pinvoke_back ();
 extern "C" void __StaticArrayInitTypeSizeU3D24_t1873314761_marshal_pinvoke_cleanup ();
@@ -425,7 +473,7 @@ extern "C" void VideoTextureInfo_t267285774_marshal_pinvoke_cleanup ();
 extern "C" void ProfileData_t1845074131_marshal_pinvoke ();
 extern "C" void ProfileData_t1845074131_marshal_pinvoke_back ();
 extern "C" void ProfileData_t1845074131_marshal_pinvoke_cleanup ();
-extern const Il2CppMarshalingFunctions g_MarshalingFunctions[139] = 
+extern const Il2CppMarshalingFunctions g_MarshalingFunctions[155] = 
 {
 	{ U24ArrayTypeU241024_t335950518_marshal_pinvoke, U24ArrayTypeU241024_t335950518_marshal_pinvoke_back, U24ArrayTypeU241024_t335950518_marshal_pinvoke_cleanup },
 	{ U24ArrayTypeU2412_t214874486_marshal_pinvoke, U24ArrayTypeU2412_t214874486_marshal_pinvoke_back, U24ArrayTypeU2412_t214874486_marshal_pinvoke_cleanup },
@@ -495,7 +543,9 @@ extern const Il2CppMarshalingFunctions g_MarshalingFunctions[139] =
 	{ U24ArrayTypeU24136_t2366141856_marshal_pinvoke, U24ArrayTypeU24136_t2366141856_marshal_pinvoke_back, U24ArrayTypeU24136_t2366141856_marshal_pinvoke_cleanup },
 	{ U24ArrayTypeU24256_t2366142880_marshal_pinvoke, U24ArrayTypeU24256_t2366142880_marshal_pinvoke_back, U24ArrayTypeU24256_t2366142880_marshal_pinvoke_cleanup },
 	{ AnimationCurve_t3342907448_marshal_pinvoke, AnimationCurve_t3342907448_marshal_pinvoke_back, AnimationCurve_t3342907448_marshal_pinvoke_cleanup },
+	{ AnimatorClipInfo_t4255364242_marshal_pinvoke, AnimatorClipInfo_t4255364242_marshal_pinvoke_back, AnimatorClipInfo_t4255364242_marshal_pinvoke_cleanup },
 	{ AnimatorStateInfo_t4162640357_marshal_pinvoke, AnimatorStateInfo_t4162640357_marshal_pinvoke_back, AnimatorStateInfo_t4162640357_marshal_pinvoke_cleanup },
+	{ AnimatorTransitionInfo_t2791832279_marshal_pinvoke, AnimatorTransitionInfo_t2791832279_marshal_pinvoke_back, AnimatorTransitionInfo_t2791832279_marshal_pinvoke_cleanup },
 	{ AssetBundleRequest_t920637194_marshal_pinvoke, AssetBundleRequest_t920637194_marshal_pinvoke_back, AssetBundleRequest_t920637194_marshal_pinvoke_cleanup },
 	{ AsyncOperation_t3374395064_marshal_pinvoke, AsyncOperation_t3374395064_marshal_pinvoke_back, AsyncOperation_t3374395064_marshal_pinvoke_cleanup },
 	{ Bounds_t3518514978_marshal_pinvoke, Bounds_t3518514978_marshal_pinvoke_back, Bounds_t3518514978_marshal_pinvoke_cleanup },
@@ -504,13 +554,17 @@ extern const Il2CppMarshalingFunctions g_MarshalingFunctions[139] =
 	{ ContactPoint_t2951122365_marshal_pinvoke, ContactPoint_t2951122365_marshal_pinvoke_back, ContactPoint_t2951122365_marshal_pinvoke_cleanup },
 	{ Coroutine_t2246592261_marshal_pinvoke, Coroutine_t2246592261_marshal_pinvoke_back, Coroutine_t2246592261_marshal_pinvoke_cleanup },
 	{ CullingGroupEvent_t2364738776_marshal_pinvoke, CullingGroupEvent_t2364738776_marshal_pinvoke_back, CullingGroupEvent_t2364738776_marshal_pinvoke_cleanup },
+	{ DrivenRectTransformTracker_t3675273953_marshal_pinvoke, DrivenRectTransformTracker_t3675273953_marshal_pinvoke_back, DrivenRectTransformTracker_t3675273953_marshal_pinvoke_cleanup },
 	{ Event_t1590224583_marshal_pinvoke, Event_t1590224583_marshal_pinvoke_back, Event_t1590224583_marshal_pinvoke_cleanup },
 	{ FrameData_t4009178800_marshal_pinvoke, FrameData_t4009178800_marshal_pinvoke_back, FrameData_t4009178800_marshal_pinvoke_cleanup },
 	{ Gradient_t1677180829_marshal_pinvoke, Gradient_t1677180829_marshal_pinvoke_back, Gradient_t1677180829_marshal_pinvoke_cleanup },
 	{ HostData_t1286475231_marshal_pinvoke, HostData_t1286475231_marshal_pinvoke_back, HostData_t1286475231_marshal_pinvoke_cleanup },
+	{ HumanBone_t3114874302_marshal_pinvoke, HumanBone_t3114874302_marshal_pinvoke_back, HumanBone_t3114874302_marshal_pinvoke_cleanup },
+	{ HumanLimit_t3638947579_marshal_pinvoke, HumanLimit_t3638947579_marshal_pinvoke_back, HumanLimit_t3638947579_marshal_pinvoke_cleanup },
 	{ Internal_DrawArguments_t1561977533_marshal_pinvoke, Internal_DrawArguments_t1561977533_marshal_pinvoke_back, Internal_DrawArguments_t1561977533_marshal_pinvoke_cleanup },
 	{ Internal_DrawWithTextSelectionArguments_t43446288_marshal_pinvoke, Internal_DrawWithTextSelectionArguments_t43446288_marshal_pinvoke_back, Internal_DrawWithTextSelectionArguments_t43446288_marshal_pinvoke_cleanup },
 	{ Keyframe_t2095052507_marshal_pinvoke, Keyframe_t2095052507_marshal_pinvoke_back, Keyframe_t2095052507_marshal_pinvoke_cleanup },
+	{ LayerMask_t1862190090_marshal_pinvoke, LayerMask_t1862190090_marshal_pinvoke_back, LayerMask_t1862190090_marshal_pinvoke_cleanup },
 	{ Mathf_t1597001355_marshal_pinvoke, Mathf_t1597001355_marshal_pinvoke_back, Mathf_t1597001355_marshal_pinvoke_cleanup },
 	{ Matrix4x4_t277289660_marshal_pinvoke, Matrix4x4_t277289660_marshal_pinvoke_back, Matrix4x4_t277289660_marshal_pinvoke_cleanup },
 	{ NetworkMessageInfo_t2574344884_marshal_pinvoke, NetworkMessageInfo_t2574344884_marshal_pinvoke_back, NetworkMessageInfo_t2574344884_marshal_pinvoke_cleanup },
@@ -523,9 +577,17 @@ extern const Il2CppMarshalingFunctions g_MarshalingFunctions[139] =
 	{ Rect_t1525428817_marshal_pinvoke, Rect_t1525428817_marshal_pinvoke_back, Rect_t1525428817_marshal_pinvoke_cleanup },
 	{ RenderBuffer_t1942909411_marshal_pinvoke, RenderBuffer_t1942909411_marshal_pinvoke_back, RenderBuffer_t1942909411_marshal_pinvoke_cleanup },
 	{ ScriptableObject_t184905905_marshal_pinvoke, ScriptableObject_t184905905_marshal_pinvoke_back, ScriptableObject_t184905905_marshal_pinvoke_cleanup },
+	{ SkeletonBone_t3129897246_marshal_pinvoke, SkeletonBone_t3129897246_marshal_pinvoke_back, SkeletonBone_t3129897246_marshal_pinvoke_cleanup },
 	{ GcAchievementData_t1317012096_marshal_pinvoke, GcAchievementData_t1317012096_marshal_pinvoke_back, GcAchievementData_t1317012096_marshal_pinvoke_cleanup },
 	{ GcScoreData_t2223678307_marshal_pinvoke, GcScoreData_t2223678307_marshal_pinvoke_back, GcScoreData_t2223678307_marshal_pinvoke_cleanup },
 	{ Range_t938821841_marshal_pinvoke, Range_t938821841_marshal_pinvoke_back, Range_t938821841_marshal_pinvoke_cleanup },
+	{ SortingLayer_t1789336218_marshal_pinvoke, SortingLayer_t1789336218_marshal_pinvoke_back, SortingLayer_t1789336218_marshal_pinvoke_cleanup },
+	{ Touch_t1603883884_marshal_pinvoke, Touch_t1603883884_marshal_pinvoke_back, Touch_t1603883884_marshal_pinvoke_cleanup },
+	{ TouchScreenKeyboard_InternalConstructorHelperArguments_t3502143717_marshal_pinvoke, TouchScreenKeyboard_InternalConstructorHelperArguments_t3502143717_marshal_pinvoke_back, TouchScreenKeyboard_InternalConstructorHelperArguments_t3502143717_marshal_pinvoke_cleanup },
+	{ TrackedReference_t3599015854_marshal_pinvoke, TrackedReference_t3599015854_marshal_pinvoke_back, TrackedReference_t3599015854_marshal_pinvoke_cleanup },
+	{ UICharInfo_t403820581_marshal_pinvoke, UICharInfo_t403820581_marshal_pinvoke_back, UICharInfo_t403820581_marshal_pinvoke_cleanup },
+	{ UILineInfo_t156921283_marshal_pinvoke, UILineInfo_t156921283_marshal_pinvoke_back, UILineInfo_t156921283_marshal_pinvoke_cleanup },
+	{ UIVertex_t2260061605_marshal_pinvoke, UIVertex_t2260061605_marshal_pinvoke_back, UIVertex_t2260061605_marshal_pinvoke_cleanup },
 	{ Vector2_t3525329788_marshal_pinvoke, Vector2_t3525329788_marshal_pinvoke_back, Vector2_t3525329788_marshal_pinvoke_cleanup },
 	{ Vector3_t3525329789_marshal_pinvoke, Vector3_t3525329789_marshal_pinvoke_back, Vector3_t3525329789_marshal_pinvoke_cleanup },
 	{ Vector4_t3525329790_marshal_pinvoke, Vector4_t3525329790_marshal_pinvoke_back, Vector4_t3525329790_marshal_pinvoke_cleanup },
@@ -533,6 +595,8 @@ extern const Il2CppMarshalingFunctions g_MarshalingFunctions[139] =
 	{ WebCamDevice_t1687076478_marshal_pinvoke, WebCamDevice_t1687076478_marshal_pinvoke_back, WebCamDevice_t1687076478_marshal_pinvoke_cleanup },
 	{ YieldInstruction_t3557331758_marshal_pinvoke, YieldInstruction_t3557331758_marshal_pinvoke_back, YieldInstruction_t3557331758_marshal_pinvoke_cleanup },
 	{ MathfInternal_t681132919_marshal_pinvoke, MathfInternal_t681132919_marshal_pinvoke_back, MathfInternal_t681132919_marshal_pinvoke_cleanup },
+	{ U24ArrayTypeU2412_t214874489_marshal_pinvoke, U24ArrayTypeU2412_t214874489_marshal_pinvoke_back, U24ArrayTypeU2412_t214874489_marshal_pinvoke_cleanup },
+	{ ColorBlock_t2245020947_marshal_pinvoke, ColorBlock_t2245020947_marshal_pinvoke_back, ColorBlock_t2245020947_marshal_pinvoke_cleanup },
 	{ __StaticArrayInitTypeSizeU3D24_t1873314761_marshal_pinvoke, __StaticArrayInitTypeSizeU3D24_t1873314761_marshal_pinvoke_back, __StaticArrayInitTypeSizeU3D24_t1873314761_marshal_pinvoke_cleanup },
 	{ VideoModeData_t4206825832_marshal_pinvoke, VideoModeData_t4206825832_marshal_pinvoke_back, VideoModeData_t4206825832_marshal_pinvoke_cleanup },
 	{ EyewearCalibrationReading_t3061222002_marshal_pinvoke, EyewearCalibrationReading_t3061222002_marshal_pinvoke_back, EyewearCalibrationReading_t3061222002_marshal_pinvoke_cleanup },

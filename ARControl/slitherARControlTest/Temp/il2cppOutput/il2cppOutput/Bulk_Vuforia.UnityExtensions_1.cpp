@@ -855,31 +855,31 @@ extern "C"  Il2CppObject * TrackerManager_InitTracker_TisIl2CppObject_m344798459
 extern "C"  Int32U5BU5D_t1809983122* Enumerable_ToArray_TisInt32_t2847414787_m4185692666_gshared (Il2CppObject * __this /* static, unused */, Il2CppObject* p0, const MethodInfo* method);
 #define Enumerable_ToArray_TisInt32_t2847414787_m4185692666(__this /* static, unused */, p0, method) ((  Int32U5BU5D_t1809983122* (*) (Il2CppObject * /* static, unused */, Il2CppObject*, const MethodInfo*))Enumerable_ToArray_TisInt32_t2847414787_m4185692666_gshared)(__this /* static, unused */, p0, method)
 // !!0 UnityEngine.GameObject::GetComponent<System.Object>()
-extern "C"  Il2CppObject * GameObject_GetComponent_TisIl2CppObject_m1994270962_gshared (GameObject_t4012695102 * __this, const MethodInfo* method);
-#define GameObject_GetComponent_TisIl2CppObject_m1994270962(__this, method) ((  Il2CppObject * (*) (GameObject_t4012695102 *, const MethodInfo*))GameObject_GetComponent_TisIl2CppObject_m1994270962_gshared)(__this, method)
+extern "C"  Il2CppObject * GameObject_GetComponent_TisIl2CppObject_m2447772384_gshared (GameObject_t4012695102 * __this, const MethodInfo* method);
+#define GameObject_GetComponent_TisIl2CppObject_m2447772384(__this, method) ((  Il2CppObject * (*) (GameObject_t4012695102 *, const MethodInfo*))GameObject_GetComponent_TisIl2CppObject_m2447772384_gshared)(__this, method)
 // !!0 UnityEngine.GameObject::GetComponent<Vuforia.DataSetTrackableBehaviour>()
-#define GameObject_GetComponent_TisDataSetTrackableBehaviour_t1793464454_m111816684(__this, method) ((  DataSetTrackableBehaviour_t1793464454 * (*) (GameObject_t4012695102 *, const MethodInfo*))GameObject_GetComponent_TisIl2CppObject_m1994270962_gshared)(__this, method)
+#define GameObject_GetComponent_TisDataSetTrackableBehaviour_t1793464454_m111816684(__this, method) ((  DataSetTrackableBehaviour_t1793464454 * (*) (GameObject_t4012695102 *, const MethodInfo*))GameObject_GetComponent_TisIl2CppObject_m2447772384_gshared)(__this, method)
 // !!0[] System.Linq.Enumerable::ToArray<System.Object>(System.Collections.Generic.IEnumerable`1<!!0>)
 extern "C"  ObjectU5BU5D_t11523773* Enumerable_ToArray_TisIl2CppObject_m3764797323_gshared (Il2CppObject * __this /* static, unused */, Il2CppObject* p0, const MethodInfo* method);
 #define Enumerable_ToArray_TisIl2CppObject_m3764797323(__this /* static, unused */, p0, method) ((  ObjectU5BU5D_t11523773* (*) (Il2CppObject * /* static, unused */, Il2CppObject*, const MethodInfo*))Enumerable_ToArray_TisIl2CppObject_m3764797323_gshared)(__this /* static, unused */, p0, method)
 // !!0[] System.Linq.Enumerable::ToArray<Vuforia.TrackableBehaviour>(System.Collections.Generic.IEnumerable`1<!!0>)
 #define Enumerable_ToArray_TisTrackableBehaviour_t2427445838_m3164130863(__this /* static, unused */, p0, method) ((  TrackableBehaviourU5BU5D_t2614621371* (*) (Il2CppObject * /* static, unused */, Il2CppObject*, const MethodInfo*))Enumerable_ToArray_TisIl2CppObject_m3764797323_gshared)(__this /* static, unused */, p0, method)
 // !!0 UnityEngine.GameObject::GetComponent<UnityEngine.Renderer>()
-#define GameObject_GetComponent_TisRenderer_t1092684080_m114447252(__this, method) ((  Renderer_t1092684080 * (*) (GameObject_t4012695102 *, const MethodInfo*))GameObject_GetComponent_TisIl2CppObject_m1994270962_gshared)(__this, method)
+#define GameObject_GetComponent_TisRenderer_t1092684080_m114447252(__this, method) ((  Renderer_t1092684080 * (*) (GameObject_t4012695102 *, const MethodInfo*))GameObject_GetComponent_TisIl2CppObject_m2447772384_gshared)(__this, method)
 // !!0 UnityEngine.GameObject::GetComponent<UnityEngine.Collider>()
-#define GameObject_GetComponent_TisCollider_t955670625_m2860507843(__this, method) ((  Collider_t955670625 * (*) (GameObject_t4012695102 *, const MethodInfo*))GameObject_GetComponent_TisIl2CppObject_m1994270962_gshared)(__this, method)
+#define GameObject_GetComponent_TisCollider_t955670625_m2860507843(__this, method) ((  Collider_t955670625 * (*) (GameObject_t4012695102 *, const MethodInfo*))GameObject_GetComponent_TisIl2CppObject_m2447772384_gshared)(__this, method)
 // !!0 UnityEngine.Object::FindObjectOfType<System.Object>()
 extern "C"  Il2CppObject * Object_FindObjectOfType_TisIl2CppObject_m150646178_gshared (Il2CppObject * __this /* static, unused */, const MethodInfo* method);
 #define Object_FindObjectOfType_TisIl2CppObject_m150646178(__this /* static, unused */, method) ((  Il2CppObject * (*) (Il2CppObject * /* static, unused */, const MethodInfo*))Object_FindObjectOfType_TisIl2CppObject_m150646178_gshared)(__this /* static, unused */, method)
 // !!0 UnityEngine.Object::FindObjectOfType<Vuforia.DigitalEyewearAbstractBehaviour>()
 #define Object_FindObjectOfType_TisDigitalEyewearAbstractBehaviour_t1656621721_m587775977(__this /* static, unused */, method) ((  DigitalEyewearAbstractBehaviour_t1656621721 * (*) (Il2CppObject * /* static, unused */, const MethodInfo*))Object_FindObjectOfType_TisIl2CppObject_m150646178_gshared)(__this /* static, unused */, method)
 // !!0 UnityEngine.GameObject::GetComponent<UnityEngine.Camera>()
-#define GameObject_GetComponent_TisCamera_t3533968274_m1679891442(__this, method) ((  Camera_t3533968274 * (*) (GameObject_t4012695102 *, const MethodInfo*))GameObject_GetComponent_TisIl2CppObject_m1994270962_gshared)(__this, method)
+#define GameObject_GetComponent_TisCamera_t3533968274_m1679891442(__this, method) ((  Camera_t3533968274 * (*) (GameObject_t4012695102 *, const MethodInfo*))GameObject_GetComponent_TisIl2CppObject_m2447772384_gshared)(__this, method)
 // !!0 UnityEngine.Component::GetComponentInChildren<System.Object>()
-extern "C"  Il2CppObject * Component_GetComponentInChildren_TisIl2CppObject_m807709032_gshared (Component_t2126946602 * __this, const MethodInfo* method);
-#define Component_GetComponentInChildren_TisIl2CppObject_m807709032(__this, method) ((  Il2CppObject * (*) (Component_t2126946602 *, const MethodInfo*))Component_GetComponentInChildren_TisIl2CppObject_m807709032_gshared)(__this, method)
+extern "C"  Il2CppObject * Component_GetComponentInChildren_TisIl2CppObject_m900797242_gshared (Component_t2126946602 * __this, const MethodInfo* method);
+#define Component_GetComponentInChildren_TisIl2CppObject_m900797242(__this, method) ((  Il2CppObject * (*) (Component_t2126946602 *, const MethodInfo*))Component_GetComponentInChildren_TisIl2CppObject_m900797242_gshared)(__this, method)
 // !!0 UnityEngine.Component::GetComponentInChildren<Vuforia.BackgroundPlaneAbstractBehaviour>()
-#define Component_GetComponentInChildren_TisBackgroundPlaneAbstractBehaviour_t1953260483_m4210090879(__this, method) ((  BackgroundPlaneAbstractBehaviour_t1953260483 * (*) (Component_t2126946602 *, const MethodInfo*))Component_GetComponentInChildren_TisIl2CppObject_m807709032_gshared)(__this, method)
+#define Component_GetComponentInChildren_TisBackgroundPlaneAbstractBehaviour_t1953260483_m4210090879(__this, method) ((  BackgroundPlaneAbstractBehaviour_t1953260483 * (*) (Component_t2126946602 *, const MethodInfo*))Component_GetComponentInChildren_TisIl2CppObject_m900797242_gshared)(__this, method)
 // !!0[] System.Linq.Enumerable::ToArray<Vuforia.ImageTarget>(System.Collections.Generic.IEnumerable`1<!!0>)
 #define Enumerable_ToArray_TisImageTarget_t2294340546_m2360748493(__this /* static, unused */, p0, method) ((  ImageTargetU5BU5D_t3682648823* (*) (Il2CppObject * /* static, unused */, Il2CppObject*, const MethodInfo*))Enumerable_ToArray_TisIl2CppObject_m3764797323_gshared)(__this /* static, unused */, p0, method)
 // T Vuforia.TrackerManager::GetTracker<Vuforia.TextTracker>()
@@ -887,14 +887,14 @@ extern "C"  Il2CppObject * Component_GetComponentInChildren_TisIl2CppObject_m807
 // T Vuforia.TrackerManager::InitTracker<Vuforia.TextTracker>()
 #define TrackerManager_InitTracker_TisTextTracker_t2495541825_m65958637(__this, method) ((  TextTracker_t2495541825 * (*) (TrackerManager_t3856558731 *, const MethodInfo*))TrackerManager_InitTracker_TisIl2CppObject_m3447984590_gshared)(__this, method)
 // !!0 UnityEngine.GameObject::AddComponent<System.Object>()
-extern "C"  Il2CppObject * GameObject_AddComponent_TisIl2CppObject_m4179409533_gshared (GameObject_t4012695102 * __this, const MethodInfo* method);
-#define GameObject_AddComponent_TisIl2CppObject_m4179409533(__this, method) ((  Il2CppObject * (*) (GameObject_t4012695102 *, const MethodInfo*))GameObject_AddComponent_TisIl2CppObject_m4179409533_gshared)(__this, method)
+extern "C"  Il2CppObject * GameObject_AddComponent_TisIl2CppObject_m337943659_gshared (GameObject_t4012695102 * __this, const MethodInfo* method);
+#define GameObject_AddComponent_TisIl2CppObject_m337943659(__this, method) ((  Il2CppObject * (*) (GameObject_t4012695102 *, const MethodInfo*))GameObject_AddComponent_TisIl2CppObject_m337943659_gshared)(__this, method)
 // !!0 UnityEngine.GameObject::AddComponent<UnityEngine.Camera>()
-#define GameObject_AddComponent_TisCamera_t3533968274_m4102474055(__this, method) ((  Camera_t3533968274 * (*) (GameObject_t4012695102 *, const MethodInfo*))GameObject_AddComponent_TisIl2CppObject_m4179409533_gshared)(__this, method)
+#define GameObject_AddComponent_TisCamera_t3533968274_m4102474055(__this, method) ((  Camera_t3533968274 * (*) (GameObject_t4012695102 *, const MethodInfo*))GameObject_AddComponent_TisIl2CppObject_m337943659_gshared)(__this, method)
 // !!0 UnityEngine.GameObject::GetComponent<UnityEngine.MeshRenderer>()
-#define GameObject_GetComponent_TisMeshRenderer_t1217738301_m2447532903(__this, method) ((  MeshRenderer_t1217738301 * (*) (GameObject_t4012695102 *, const MethodInfo*))GameObject_GetComponent_TisIl2CppObject_m1994270962_gshared)(__this, method)
+#define GameObject_GetComponent_TisMeshRenderer_t1217738301_m2447532903(__this, method) ((  MeshRenderer_t1217738301 * (*) (GameObject_t4012695102 *, const MethodInfo*))GameObject_GetComponent_TisIl2CppObject_m2447772384_gshared)(__this, method)
 // !!0 UnityEngine.GameObject::GetComponent<UnityEngine.MeshFilter>()
-#define GameObject_GetComponent_TisMeshFilter_t4177078322_m2304948050(__this, method) ((  MeshFilter_t4177078322 * (*) (GameObject_t4012695102 *, const MethodInfo*))GameObject_GetComponent_TisIl2CppObject_m1994270962_gshared)(__this, method)
+#define GameObject_GetComponent_TisMeshFilter_t4177078322_m2304948050(__this, method) ((  MeshFilter_t4177078322 * (*) (GameObject_t4012695102 *, const MethodInfo*))GameObject_GetComponent_TisIl2CppObject_m2447772384_gshared)(__this, method)
 // !!0 UnityEngine.Component::GetComponent<System.Object>()
 extern "C"  Il2CppObject * Component_GetComponent_TisIl2CppObject_m267839954_gshared (Component_t2126946602 * __this, const MethodInfo* method);
 #define Component_GetComponent_TisIl2CppObject_m267839954(__this, method) ((  Il2CppObject * (*) (Component_t2126946602 *, const MethodInfo*))Component_GetComponent_TisIl2CppObject_m267839954_gshared)(__this, method)
@@ -905,7 +905,7 @@ extern "C"  Il2CppObject * Component_GetComponent_TisIl2CppObject_m267839954_gsh
 // !!0 UnityEngine.Component::GetComponent<UnityEngine.MeshRenderer>()
 #define Component_GetComponent_TisMeshRenderer_t1217738301_m2476973581(__this, method) ((  MeshRenderer_t1217738301 * (*) (Component_t2126946602 *, const MethodInfo*))Component_GetComponent_TisIl2CppObject_m267839954_gshared)(__this, method)
 // !!0 UnityEngine.Component::GetComponent<UnityEngine.Camera>()
-#define Component_GetComponent_TisCamera_t3533968274_m863292184(__this, method) ((  Camera_t3533968274 * (*) (Component_t2126946602 *, const MethodInfo*))Component_GetComponent_TisIl2CppObject_m267839954_gshared)(__this, method)
+#define Component_GetComponent_TisCamera_t3533968274_m3804104198(__this, method) ((  Camera_t3533968274 * (*) (Component_t2126946602 *, const MethodInfo*))Component_GetComponent_TisIl2CppObject_m267839954_gshared)(__this, method)
 // !!0 UnityEngine.Object::FindObjectOfType<Vuforia.VuforiaAbstractBehaviour>()
 #define Object_FindObjectOfType_TisVuforiaAbstractBehaviour_t2427322319_m4100990585(__this /* static, unused */, method) ((  VuforiaAbstractBehaviour_t2427322319 * (*) (Il2CppObject * /* static, unused */, const MethodInfo*))Object_FindObjectOfType_TisIl2CppObject_m150646178_gshared)(__this /* static, unused */, method)
 // !!0[] UnityEngine.GameObject::GetComponentsInChildren<System.Object>(System.Boolean)
@@ -918,7 +918,7 @@ extern "C"  ObjectU5BU5D_t11523773* GameObject_GetComponentsInChildren_TisIl2Cpp
 // !!0[] UnityEngine.GameObject::GetComponentsInChildren<Vuforia.HideExcessAreaAbstractBehaviour>(System.Boolean)
 #define GameObject_GetComponentsInChildren_TisHideExcessAreaAbstractBehaviour_t3630507405_m1351872729(__this, p0, method) ((  HideExcessAreaAbstractBehaviourU5BU5D_t939284896* (*) (GameObject_t4012695102 *, bool, const MethodInfo*))GameObject_GetComponentsInChildren_TisIl2CppObject_m2311584134_gshared)(__this, p0, method)
 // !!0 UnityEngine.GameObject::GetComponent<Vuforia.ImageTargetAbstractBehaviour>()
-#define GameObject_GetComponent_TisImageTargetAbstractBehaviour_t2880150149_m520130867(__this, method) ((  ImageTargetAbstractBehaviour_t2880150149 * (*) (GameObject_t4012695102 *, const MethodInfo*))GameObject_GetComponent_TisIl2CppObject_m1994270962_gshared)(__this, method)
+#define GameObject_GetComponent_TisImageTargetAbstractBehaviour_t2880150149_m520130867(__this, method) ((  ImageTargetAbstractBehaviour_t2880150149 * (*) (GameObject_t4012695102 *, const MethodInfo*))GameObject_GetComponent_TisIl2CppObject_m2447772384_gshared)(__this, method)
 // !!0[] UnityEngine.Component::GetComponentsInChildren<System.Object>(System.Boolean)
 extern "C"  ObjectU5BU5D_t11523773* Component_GetComponentsInChildren_TisIl2CppObject_m1469303600_gshared (Component_t2126946602 * __this, bool p0, const MethodInfo* method);
 #define Component_GetComponentsInChildren_TisIl2CppObject_m1469303600(__this, p0, method) ((  ObjectU5BU5D_t11523773* (*) (Component_t2126946602 *, bool, const MethodInfo*))Component_GetComponentsInChildren_TisIl2CppObject_m1469303600_gshared)(__this, p0, method)
@@ -1742,7 +1742,7 @@ IL_0035:
 	{
 		List_1_t1527509638 * L_12 = __this->get_mReconstructionBehaviours_0();
 		NullCheck(L_12);
-		VirtActionInvoker0::Invoke(20 /* System.Void System.Collections.Generic.List`1<Vuforia.ReconstructionAbstractBehaviour>::Clear() */, L_12);
+		VirtActionInvoker0::Invoke(23 /* System.Void System.Collections.Generic.List`1<Vuforia.ReconstructionAbstractBehaviour>::Clear() */, L_12);
 		IL2CPP_RUNTIME_CLASS_INIT(VuforiaWrapper_t3703831335_il2cpp_TypeInfo_var);
 		Il2CppObject * L_13 = VuforiaWrapper_get_Instance_m1518294522(NULL /*static, unused*/, /*hidden argument*/NULL);
 		NullCheck(L_13);
@@ -1804,7 +1804,7 @@ extern "C"  bool SmartTerrainBuilderImpl_AddReconstruction_m1210136121 (SmartTer
 	{
 		List_1_t1527509638 * L_0 = __this->get_mReconstructionBehaviours_0();
 		NullCheck(L_0);
-		int32_t L_1 = VirtFuncInvoker0< int32_t >::Invoke(17 /* System.Int32 System.Collections.Generic.List`1<Vuforia.ReconstructionAbstractBehaviour>::get_Count() */, L_0);
+		int32_t L_1 = VirtFuncInvoker0< int32_t >::Invoke(20 /* System.Int32 System.Collections.Generic.List`1<Vuforia.ReconstructionAbstractBehaviour>::get_Count() */, L_0);
 		if (L_1)
 		{
 			goto IL_0090;
@@ -1856,7 +1856,7 @@ IL_0049:
 		List_1_t1527509638 * L_13 = __this->get_mReconstructionBehaviours_0();
 		ReconstructionAbstractBehaviour_t730550669 * L_14 = ___reconstructionBehaviour0;
 		NullCheck(L_13);
-		VirtActionInvoker1< ReconstructionAbstractBehaviour_t730550669 * >::Invoke(19 /* System.Void System.Collections.Generic.List`1<Vuforia.ReconstructionAbstractBehaviour>::Add(!0) */, L_13, L_14);
+		VirtActionInvoker1< ReconstructionAbstractBehaviour_t730550669 * >::Invoke(22 /* System.Void System.Collections.Generic.List`1<Vuforia.ReconstructionAbstractBehaviour>::Add(!0) */, L_13, L_14);
 		ReconstructionAbstractBehaviour_t730550669 * L_15 = ___reconstructionBehaviour0;
 		NullCheck(L_15);
 		SmartTerrainTrackableBehaviourU5BU5D_t1143282623* L_16 = Component_GetComponentsInChildren_TisSmartTerrainTrackableBehaviour_t3759975578_m3462850455(L_15, /*hidden argument*/Component_GetComponentsInChildren_TisSmartTerrainTrackableBehaviour_t3759975578_m3462850455_MethodInfo_var);
@@ -1938,7 +1938,7 @@ extern "C"  bool SmartTerrainBuilderImpl_RemoveReconstruction_m2112013766 (Smart
 		List_1_t1527509638 * L_0 = __this->get_mReconstructionBehaviours_0();
 		ReconstructionAbstractBehaviour_t730550669 * L_1 = ___reconstruction0;
 		NullCheck(L_0);
-		bool L_2 = VirtFuncInvoker1< bool, ReconstructionAbstractBehaviour_t730550669 * >::Invoke(21 /* System.Boolean System.Collections.Generic.List`1<Vuforia.ReconstructionAbstractBehaviour>::Contains(!0) */, L_0, L_1);
+		bool L_2 = VirtFuncInvoker1< bool, ReconstructionAbstractBehaviour_t730550669 * >::Invoke(24 /* System.Boolean System.Collections.Generic.List`1<Vuforia.ReconstructionAbstractBehaviour>::Contains(!0) */, L_0, L_1);
 		if (!L_2)
 		{
 			goto IL_0045;
@@ -1972,7 +1972,7 @@ IL_0030:
 		List_1_t1527509638 * L_10 = __this->get_mReconstructionBehaviours_0();
 		ReconstructionAbstractBehaviour_t730550669 * L_11 = ___reconstruction0;
 		NullCheck(L_10);
-		VirtFuncInvoker1< bool, ReconstructionAbstractBehaviour_t730550669 * >::Invoke(23 /* System.Boolean System.Collections.Generic.List`1<Vuforia.ReconstructionAbstractBehaviour>::Remove(!0) */, L_10, L_11);
+		VirtFuncInvoker1< bool, ReconstructionAbstractBehaviour_t730550669 * >::Invoke(26 /* System.Boolean System.Collections.Generic.List`1<Vuforia.ReconstructionAbstractBehaviour>::Remove(!0) */, L_10, L_11);
 		ReconstructionAbstractBehaviour_t730550669 * L_12 = ___reconstruction0;
 		NullCheck(L_12);
 		ReconstructionAbstractBehaviour_OnReconstructionRemoved_m1045715340(L_12, /*hidden argument*/NULL);
@@ -2601,7 +2601,7 @@ extern "C"  void SmartTerrainTrackableImpl_AddChild_m672752981 (SmartTerrainTrac
 		List_1_t1689368392 * L_0 = __this->get_mChildren_2();
 		Il2CppObject * L_1 = ___newChild0;
 		NullCheck(L_0);
-		bool L_2 = VirtFuncInvoker1< bool, Il2CppObject * >::Invoke(21 /* System.Boolean System.Collections.Generic.List`1<Vuforia.SmartTerrainTrackable>::Contains(!0) */, L_0, L_1);
+		bool L_2 = VirtFuncInvoker1< bool, Il2CppObject * >::Invoke(24 /* System.Boolean System.Collections.Generic.List`1<Vuforia.SmartTerrainTrackable>::Contains(!0) */, L_0, L_1);
 		if (L_2)
 		{
 			goto IL_001a;
@@ -2611,7 +2611,7 @@ extern "C"  void SmartTerrainTrackableImpl_AddChild_m672752981 (SmartTerrainTrac
 		List_1_t1689368392 * L_3 = __this->get_mChildren_2();
 		Il2CppObject * L_4 = ___newChild0;
 		NullCheck(L_3);
-		VirtActionInvoker1< Il2CppObject * >::Invoke(19 /* System.Void System.Collections.Generic.List`1<Vuforia.SmartTerrainTrackable>::Add(!0) */, L_3, L_4);
+		VirtActionInvoker1< Il2CppObject * >::Invoke(22 /* System.Void System.Collections.Generic.List`1<Vuforia.SmartTerrainTrackable>::Add(!0) */, L_3, L_4);
 	}
 
 IL_001a:
@@ -2626,7 +2626,7 @@ extern "C"  void SmartTerrainTrackableImpl_RemoveChild_m2011997152 (SmartTerrain
 		List_1_t1689368392 * L_0 = __this->get_mChildren_2();
 		Il2CppObject * L_1 = ___removedChild0;
 		NullCheck(L_0);
-		bool L_2 = VirtFuncInvoker1< bool, Il2CppObject * >::Invoke(21 /* System.Boolean System.Collections.Generic.List`1<Vuforia.SmartTerrainTrackable>::Contains(!0) */, L_0, L_1);
+		bool L_2 = VirtFuncInvoker1< bool, Il2CppObject * >::Invoke(24 /* System.Boolean System.Collections.Generic.List`1<Vuforia.SmartTerrainTrackable>::Contains(!0) */, L_0, L_1);
 		if (!L_2)
 		{
 			goto IL_001b;
@@ -2636,7 +2636,7 @@ extern "C"  void SmartTerrainTrackableImpl_RemoveChild_m2011997152 (SmartTerrain
 		List_1_t1689368392 * L_3 = __this->get_mChildren_2();
 		Il2CppObject * L_4 = ___removedChild0;
 		NullCheck(L_3);
-		VirtFuncInvoker1< bool, Il2CppObject * >::Invoke(23 /* System.Boolean System.Collections.Generic.List`1<Vuforia.SmartTerrainTrackable>::Remove(!0) */, L_3, L_4);
+		VirtFuncInvoker1< bool, Il2CppObject * >::Invoke(26 /* System.Boolean System.Collections.Generic.List`1<Vuforia.SmartTerrainTrackable>::Remove(!0) */, L_3, L_4);
 	}
 
 IL_001b:
@@ -3574,7 +3574,7 @@ extern "C"  void StateManagerImpl_DestroyTrackableBehavioursForTrackable_m503450
 		NullCheck(L_1);
 		int32_t L_2 = InterfaceFuncInvoker0< int32_t >::Invoke(1 /* System.Int32 Vuforia.Trackable::get_ID() */, Trackable_t1174201883_il2cpp_TypeInfo_var, L_1);
 		NullCheck(L_0);
-		bool L_3 = VirtFuncInvoker2< bool, int32_t, TrackableBehaviour_t2427445838 ** >::Invoke(30 /* System.Boolean System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::TryGetValue(!0,!1&) */, L_0, L_2, (&V_0));
+		bool L_3 = VirtFuncInvoker2< bool, int32_t, TrackableBehaviour_t2427445838 ** >::Invoke(31 /* System.Boolean System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::TryGetValue(!0,!1&) */, L_0, L_2, (&V_0));
 		if (!L_3)
 		{
 			goto IL_006d;
@@ -3594,9 +3594,9 @@ extern "C"  void StateManagerImpl_DestroyTrackableBehavioursForTrackable_m503450
 		NullCheck(L_7);
 		int32_t L_8 = InterfaceFuncInvoker0< int32_t >::Invoke(1 /* System.Int32 Vuforia.Trackable::get_ID() */, Trackable_t1174201883_il2cpp_TypeInfo_var, L_7);
 		NullCheck(L_6);
-		TrackableBehaviour_t2427445838 * L_9 = VirtFuncInvoker1< TrackableBehaviour_t2427445838 *, int32_t >::Invoke(23 /* !1 System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::get_Item(!0) */, L_6, L_8);
+		TrackableBehaviour_t2427445838 * L_9 = VirtFuncInvoker1< TrackableBehaviour_t2427445838 *, int32_t >::Invoke(24 /* !1 System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::get_Item(!0) */, L_6, L_8);
 		NullCheck(L_5);
-		VirtActionInvoker1< TrackableBehaviour_t2427445838 * >::Invoke(19 /* System.Void System.Collections.Generic.List`1<Vuforia.TrackableBehaviour>::Add(!0) */, L_5, L_9);
+		VirtActionInvoker1< TrackableBehaviour_t2427445838 * >::Invoke(22 /* System.Void System.Collections.Generic.List`1<Vuforia.TrackableBehaviour>::Add(!0) */, L_5, L_9);
 		TrackableBehaviour_t2427445838 * L_10 = V_0;
 		NullCheck(L_10);
 		GameObject_t4012695102 * L_11 = Component_get_gameObject_m1170635899(L_10, /*hidden argument*/NULL);
@@ -3620,13 +3620,13 @@ IL_0049:
 		NullCheck(L_15);
 		int32_t L_16 = InterfaceFuncInvoker0< int32_t >::Invoke(1 /* System.Int32 Vuforia.Trackable::get_ID() */, Trackable_t1174201883_il2cpp_TypeInfo_var, L_15);
 		NullCheck(L_14);
-		VirtFuncInvoker1< bool, int32_t >::Invoke(29 /* System.Boolean System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::Remove(!0) */, L_14, L_16);
+		VirtFuncInvoker1< bool, int32_t >::Invoke(30 /* System.Boolean System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::Remove(!0) */, L_14, L_16);
 		List_1_t3644373756 * L_17 = __this->get_mAutomaticallyCreatedBehaviours_1();
 		Il2CppObject * L_18 = ___trackable0;
 		NullCheck(L_18);
 		int32_t L_19 = InterfaceFuncInvoker0< int32_t >::Invoke(1 /* System.Int32 Vuforia.Trackable::get_ID() */, Trackable_t1174201883_il2cpp_TypeInfo_var, L_18);
 		NullCheck(L_17);
-		VirtFuncInvoker1< bool, int32_t >::Invoke(23 /* System.Boolean System.Collections.Generic.List`1<System.Int32>::Remove(!0) */, L_17, L_19);
+		VirtFuncInvoker1< bool, int32_t >::Invoke(26 /* System.Boolean System.Collections.Generic.List`1<System.Int32>::Remove(!0) */, L_17, L_19);
 	}
 
 IL_006d:
@@ -3697,7 +3697,7 @@ IL_0036:
 		List_1_t3224404807 * L_9 = __this->get_mBehavioursMarkedForDeletion_2();
 		MarkerAbstractBehaviour_t1462758039 * L_10 = V_2;
 		NullCheck(L_9);
-		bool L_11 = VirtFuncInvoker1< bool, TrackableBehaviour_t2427445838 * >::Invoke(21 /* System.Boolean System.Collections.Generic.List`1<Vuforia.TrackableBehaviour>::Contains(!0) */, L_9, L_10);
+		bool L_11 = VirtFuncInvoker1< bool, TrackableBehaviour_t2427445838 * >::Invoke(24 /* System.Boolean System.Collections.Generic.List`1<Vuforia.TrackableBehaviour>::Contains(!0) */, L_9, L_10);
 		if (!L_11)
 		{
 			goto IL_0070;
@@ -3711,11 +3711,11 @@ IL_0036:
 		NullCheck(L_14);
 		int32_t L_15 = InterfaceFuncInvoker0< int32_t >::Invoke(1 /* System.Int32 Vuforia.Trackable::get_ID() */, Trackable_t1174201883_il2cpp_TypeInfo_var, L_14);
 		NullCheck(L_12);
-		VirtFuncInvoker1< bool, int32_t >::Invoke(29 /* System.Boolean System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::Remove(!0) */, L_12, L_15);
+		VirtFuncInvoker1< bool, int32_t >::Invoke(30 /* System.Boolean System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::Remove(!0) */, L_12, L_15);
 		List_1_t3224404807 * L_16 = __this->get_mBehavioursMarkedForDeletion_2();
 		MarkerAbstractBehaviour_t1462758039 * L_17 = V_2;
 		NullCheck(L_16);
-		VirtFuncInvoker1< bool, TrackableBehaviour_t2427445838 * >::Invoke(23 /* System.Boolean System.Collections.Generic.List`1<Vuforia.TrackableBehaviour>::Remove(!0) */, L_16, L_17);
+		VirtFuncInvoker1< bool, TrackableBehaviour_t2427445838 * >::Invoke(26 /* System.Boolean System.Collections.Generic.List`1<Vuforia.TrackableBehaviour>::Remove(!0) */, L_16, L_17);
 		goto IL_00e5;
 	}
 
@@ -3904,7 +3904,7 @@ IL_0020:
 		List_1_t3224404807 * L_6 = __this->get_mBehavioursMarkedForDeletion_2();
 		DataSetTrackableBehaviour_t1793464454 * L_7 = V_1;
 		NullCheck(L_6);
-		bool L_8 = VirtFuncInvoker1< bool, TrackableBehaviour_t2427445838 * >::Invoke(21 /* System.Boolean System.Collections.Generic.List`1<Vuforia.TrackableBehaviour>::Contains(!0) */, L_6, L_7);
+		bool L_8 = VirtFuncInvoker1< bool, TrackableBehaviour_t2427445838 * >::Invoke(24 /* System.Boolean System.Collections.Generic.List`1<Vuforia.TrackableBehaviour>::Contains(!0) */, L_6, L_7);
 		if (L_8)
 		{
 			goto IL_03c6;
@@ -4027,7 +4027,7 @@ IL_00cd:
 			NullCheck(L_39);
 			int32_t L_40 = InterfaceFuncInvoker0< int32_t >::Invoke(1 /* System.Int32 Vuforia.Trackable::get_ID() */, Trackable_t1174201883_il2cpp_TypeInfo_var, L_39);
 			NullCheck(L_38);
-			bool L_41 = VirtFuncInvoker1< bool, int32_t >::Invoke(26 /* System.Boolean System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::ContainsKey(!0) */, L_38, L_40);
+			bool L_41 = VirtFuncInvoker1< bool, int32_t >::Invoke(27 /* System.Boolean System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::ContainsKey(!0) */, L_38, L_40);
 			if (!L_41)
 			{
 				goto IL_015e;
@@ -4041,7 +4041,7 @@ IL_00e1:
 			NullCheck(L_43);
 			int32_t L_44 = InterfaceFuncInvoker0< int32_t >::Invoke(1 /* System.Int32 Vuforia.Trackable::get_ID() */, Trackable_t1174201883_il2cpp_TypeInfo_var, L_43);
 			NullCheck(L_42);
-			bool L_45 = VirtFuncInvoker1< bool, int32_t >::Invoke(21 /* System.Boolean System.Collections.Generic.List`1<System.Int32>::Contains(!0) */, L_42, L_44);
+			bool L_45 = VirtFuncInvoker1< bool, int32_t >::Invoke(24 /* System.Boolean System.Collections.Generic.List`1<System.Int32>::Contains(!0) */, L_42, L_44);
 			if (L_45)
 			{
 				goto IL_011c;
@@ -4056,9 +4056,9 @@ IL_00f5:
 			NullCheck(L_48);
 			int32_t L_49 = InterfaceFuncInvoker0< int32_t >::Invoke(1 /* System.Int32 Vuforia.Trackable::get_ID() */, Trackable_t1174201883_il2cpp_TypeInfo_var, L_48);
 			NullCheck(L_47);
-			TrackableBehaviour_t2427445838 * L_50 = VirtFuncInvoker1< TrackableBehaviour_t2427445838 *, int32_t >::Invoke(23 /* !1 System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::get_Item(!0) */, L_47, L_49);
+			TrackableBehaviour_t2427445838 * L_50 = VirtFuncInvoker1< TrackableBehaviour_t2427445838 *, int32_t >::Invoke(24 /* !1 System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::get_Item(!0) */, L_47, L_49);
 			NullCheck(L_46);
-			bool L_51 = VirtFuncInvoker1< bool, TrackableBehaviour_t2427445838 * >::Invoke(21 /* System.Boolean System.Collections.Generic.List`1<Vuforia.TrackableBehaviour>::Contains(!0) */, L_46, L_50);
+			bool L_51 = VirtFuncInvoker1< bool, TrackableBehaviour_t2427445838 * >::Invoke(24 /* System.Boolean System.Collections.Generic.List`1<Vuforia.TrackableBehaviour>::Contains(!0) */, L_46, L_50);
 			if (L_51)
 			{
 				goto IL_011c;
@@ -4078,7 +4078,7 @@ IL_011c:
 			NullCheck(L_53);
 			int32_t L_54 = InterfaceFuncInvoker0< int32_t >::Invoke(1 /* System.Int32 Vuforia.Trackable::get_ID() */, Trackable_t1174201883_il2cpp_TypeInfo_var, L_53);
 			NullCheck(L_52);
-			TrackableBehaviour_t2427445838 * L_55 = VirtFuncInvoker1< TrackableBehaviour_t2427445838 *, int32_t >::Invoke(23 /* !1 System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::get_Item(!0) */, L_52, L_54);
+			TrackableBehaviour_t2427445838 * L_55 = VirtFuncInvoker1< TrackableBehaviour_t2427445838 *, int32_t >::Invoke(24 /* !1 System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::get_Item(!0) */, L_52, L_54);
 			NullCheck(L_55);
 			GameObject_t4012695102 * L_56 = Component_get_gameObject_m1170635899(L_55, /*hidden argument*/NULL);
 			Object_Destroy_m176400816(NULL /*static, unused*/, L_56, /*hidden argument*/NULL);
@@ -4087,13 +4087,13 @@ IL_011c:
 			NullCheck(L_58);
 			int32_t L_59 = InterfaceFuncInvoker0< int32_t >::Invoke(1 /* System.Int32 Vuforia.Trackable::get_ID() */, Trackable_t1174201883_il2cpp_TypeInfo_var, L_58);
 			NullCheck(L_57);
-			VirtFuncInvoker1< bool, int32_t >::Invoke(29 /* System.Boolean System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::Remove(!0) */, L_57, L_59);
+			VirtFuncInvoker1< bool, int32_t >::Invoke(30 /* System.Boolean System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::Remove(!0) */, L_57, L_59);
 			List_1_t3644373756 * L_60 = __this->get_mAutomaticallyCreatedBehaviours_1();
 			Il2CppObject * L_61 = V_6;
 			NullCheck(L_61);
 			int32_t L_62 = InterfaceFuncInvoker0< int32_t >::Invoke(1 /* System.Int32 Vuforia.Trackable::get_ID() */, Trackable_t1174201883_il2cpp_TypeInfo_var, L_61);
 			NullCheck(L_60);
-			VirtFuncInvoker1< bool, int32_t >::Invoke(23 /* System.Boolean System.Collections.Generic.List`1<System.Int32>::Remove(!0) */, L_60, L_62);
+			VirtFuncInvoker1< bool, int32_t >::Invoke(26 /* System.Boolean System.Collections.Generic.List`1<System.Int32>::Remove(!0) */, L_60, L_62);
 		}
 
 IL_015e:
@@ -4129,7 +4129,7 @@ IL_0172:
 			int32_t L_70 = InterfaceFuncInvoker0< int32_t >::Invoke(1 /* System.Int32 Vuforia.Trackable::get_ID() */, Trackable_t1174201883_il2cpp_TypeInfo_var, L_69);
 			DataSetTrackableBehaviour_t1793464454 * L_71 = V_1;
 			NullCheck(L_68);
-			VirtActionInvoker2< int32_t, TrackableBehaviour_t2427445838 * >::Invoke(24 /* System.Void System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::set_Item(!0,!1) */, L_68, L_70, L_71);
+			VirtActionInvoker2< int32_t, TrackableBehaviour_t2427445838 * >::Invoke(25 /* System.Void System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::set_Item(!0,!1) */, L_68, L_70, L_71);
 			V_15 = ((ObjectU5BU5D_t11523773*)SZArrayNew(ObjectU5BU5D_t11523773_il2cpp_TypeInfo_var, (uint32_t)4));
 			ObjectU5BU5D_t11523773* L_72 = V_15;
 			NullCheck(L_72);
@@ -4204,7 +4204,7 @@ IL_0200:
 			int32_t L_93 = InterfaceFuncInvoker0< int32_t >::Invoke(1 /* System.Int32 Vuforia.Trackable::get_ID() */, Trackable_t1174201883_il2cpp_TypeInfo_var, L_92);
 			DataSetTrackableBehaviour_t1793464454 * L_94 = V_1;
 			NullCheck(L_91);
-			VirtActionInvoker2< int32_t, TrackableBehaviour_t2427445838 * >::Invoke(24 /* System.Void System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::set_Item(!0,!1) */, L_91, L_93, L_94);
+			VirtActionInvoker2< int32_t, TrackableBehaviour_t2427445838 * >::Invoke(25 /* System.Void System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::set_Item(!0,!1) */, L_91, L_93, L_94);
 			V_16 = ((ObjectU5BU5D_t11523773*)SZArrayNew(ObjectU5BU5D_t11523773_il2cpp_TypeInfo_var, (uint32_t)4));
 			ObjectU5BU5D_t11523773* L_95 = V_16;
 			NullCheck(L_95);
@@ -4279,7 +4279,7 @@ IL_028e:
 			int32_t L_116 = InterfaceFuncInvoker0< int32_t >::Invoke(1 /* System.Int32 Vuforia.Trackable::get_ID() */, Trackable_t1174201883_il2cpp_TypeInfo_var, L_115);
 			DataSetTrackableBehaviour_t1793464454 * L_117 = V_1;
 			NullCheck(L_114);
-			VirtActionInvoker2< int32_t, TrackableBehaviour_t2427445838 * >::Invoke(24 /* System.Void System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::set_Item(!0,!1) */, L_114, L_116, L_117);
+			VirtActionInvoker2< int32_t, TrackableBehaviour_t2427445838 * >::Invoke(25 /* System.Void System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::set_Item(!0,!1) */, L_114, L_116, L_117);
 			V_17 = ((ObjectU5BU5D_t11523773*)SZArrayNew(ObjectU5BU5D_t11523773_il2cpp_TypeInfo_var, (uint32_t)4));
 			ObjectU5BU5D_t11523773* L_118 = V_17;
 			NullCheck(L_118);
@@ -4354,7 +4354,7 @@ IL_0319:
 			int32_t L_139 = InterfaceFuncInvoker0< int32_t >::Invoke(1 /* System.Int32 Vuforia.Trackable::get_ID() */, Trackable_t1174201883_il2cpp_TypeInfo_var, L_138);
 			DataSetTrackableBehaviour_t1793464454 * L_140 = V_1;
 			NullCheck(L_137);
-			VirtActionInvoker2< int32_t, TrackableBehaviour_t2427445838 * >::Invoke(24 /* System.Void System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::set_Item(!0,!1) */, L_137, L_139, L_140);
+			VirtActionInvoker2< int32_t, TrackableBehaviour_t2427445838 * >::Invoke(25 /* System.Void System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::set_Item(!0,!1) */, L_137, L_139, L_140);
 			V_18 = ((ObjectU5BU5D_t11523773*)SZArrayNew(ObjectU5BU5D_t11523773_il2cpp_TypeInfo_var, (uint32_t)4));
 			ObjectU5BU5D_t11523773* L_141 = V_18;
 			NullCheck(L_141);
@@ -4515,7 +4515,7 @@ extern "C"  void StateManagerImpl_RegisterExternallyManagedTrackableBehaviour_m4
 		NullCheck(L_2);
 		int32_t L_3 = InterfaceFuncInvoker0< int32_t >::Invoke(1 /* System.Int32 Vuforia.Trackable::get_ID() */, Trackable_t1174201883_il2cpp_TypeInfo_var, L_2);
 		NullCheck(L_0);
-		bool L_4 = VirtFuncInvoker1< bool, int32_t >::Invoke(26 /* System.Boolean System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::ContainsKey(!0) */, L_0, L_3);
+		bool L_4 = VirtFuncInvoker1< bool, int32_t >::Invoke(27 /* System.Boolean System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::ContainsKey(!0) */, L_0, L_3);
 		if (L_4)
 		{
 			goto IL_0030;
@@ -4530,7 +4530,7 @@ extern "C"  void StateManagerImpl_RegisterExternallyManagedTrackableBehaviour_m4
 		int32_t L_8 = InterfaceFuncInvoker0< int32_t >::Invoke(1 /* System.Int32 Vuforia.Trackable::get_ID() */, Trackable_t1174201883_il2cpp_TypeInfo_var, L_7);
 		TrackableBehaviour_t2427445838 * L_9 = ___trackableBehaviour0;
 		NullCheck(L_5);
-		VirtActionInvoker2< int32_t, TrackableBehaviour_t2427445838 * >::Invoke(24 /* System.Void System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::set_Item(!0,!1) */, L_5, L_8, L_9);
+		VirtActionInvoker2< int32_t, TrackableBehaviour_t2427445838 * >::Invoke(25 /* System.Void System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::set_Item(!0,!1) */, L_5, L_8, L_9);
 		return;
 	}
 
@@ -4557,7 +4557,7 @@ extern "C"  void StateManagerImpl_UnregisterExternallyManagedTrackableBehaviour_
 		Dictionary_2_t2918256621 * L_0 = __this->get_mTrackableBehaviours_0();
 		int32_t L_1 = ___id0;
 		NullCheck(L_0);
-		bool L_2 = VirtFuncInvoker1< bool, int32_t >::Invoke(26 /* System.Boolean System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::ContainsKey(!0) */, L_0, L_1);
+		bool L_2 = VirtFuncInvoker1< bool, int32_t >::Invoke(27 /* System.Boolean System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::ContainsKey(!0) */, L_0, L_1);
 		if (!L_2)
 		{
 			goto IL_001b;
@@ -4567,7 +4567,7 @@ extern "C"  void StateManagerImpl_UnregisterExternallyManagedTrackableBehaviour_
 		Dictionary_2_t2918256621 * L_3 = __this->get_mTrackableBehaviours_0();
 		int32_t L_4 = ___id0;
 		NullCheck(L_3);
-		VirtFuncInvoker1< bool, int32_t >::Invoke(29 /* System.Boolean System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::Remove(!0) */, L_3, L_4);
+		VirtFuncInvoker1< bool, int32_t >::Invoke(30 /* System.Boolean System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::Remove(!0) */, L_3, L_4);
 	}
 
 IL_001b:
@@ -4614,7 +4614,7 @@ IL_0017:
 		Dictionary_2_t2918256621 * L_7 = __this->get_mTrackableBehaviours_0();
 		int32_t L_8 = V_1;
 		NullCheck(L_7);
-		TrackableBehaviour_t2427445838 * L_9 = VirtFuncInvoker1< TrackableBehaviour_t2427445838 *, int32_t >::Invoke(23 /* !1 System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::get_Item(!0) */, L_7, L_8);
+		TrackableBehaviour_t2427445838 * L_9 = VirtFuncInvoker1< TrackableBehaviour_t2427445838 *, int32_t >::Invoke(24 /* !1 System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::get_Item(!0) */, L_7, L_8);
 		bool L_10 = Object_op_Equality_m3964590952(NULL /*static, unused*/, L_9, (Object_t3878351788 *)NULL, /*hidden argument*/NULL);
 		if (!L_10)
 		{
@@ -4625,11 +4625,11 @@ IL_0017:
 		Dictionary_2_t2918256621 * L_11 = __this->get_mTrackableBehaviours_0();
 		int32_t L_12 = V_1;
 		NullCheck(L_11);
-		VirtFuncInvoker1< bool, int32_t >::Invoke(29 /* System.Boolean System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::Remove(!0) */, L_11, L_12);
+		VirtFuncInvoker1< bool, int32_t >::Invoke(30 /* System.Boolean System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::Remove(!0) */, L_11, L_12);
 		List_1_t3644373756 * L_13 = __this->get_mAutomaticallyCreatedBehaviours_1();
 		int32_t L_14 = V_1;
 		NullCheck(L_13);
-		VirtFuncInvoker1< bool, int32_t >::Invoke(23 /* System.Boolean System.Collections.Generic.List`1<System.Int32>::Remove(!0) */, L_13, L_14);
+		VirtFuncInvoker1< bool, int32_t >::Invoke(26 /* System.Boolean System.Collections.Generic.List`1<System.Int32>::Remove(!0) */, L_13, L_14);
 	}
 
 IL_0049:
@@ -4658,16 +4658,16 @@ extern "C"  void StateManagerImpl_ClearTrackableBehaviours_m517145104 (StateMana
 	{
 		Dictionary_2_t2918256621 * L_0 = __this->get_mTrackableBehaviours_0();
 		NullCheck(L_0);
-		VirtActionInvoker0::Invoke(12 /* System.Void System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::Clear() */, L_0);
+		VirtActionInvoker0::Invoke(13 /* System.Void System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::Clear() */, L_0);
 		List_1_t3224404807 * L_1 = __this->get_mActiveTrackableBehaviours_3();
 		NullCheck(L_1);
-		VirtActionInvoker0::Invoke(20 /* System.Void System.Collections.Generic.List`1<Vuforia.TrackableBehaviour>::Clear() */, L_1);
+		VirtActionInvoker0::Invoke(23 /* System.Void System.Collections.Generic.List`1<Vuforia.TrackableBehaviour>::Clear() */, L_1);
 		List_1_t3644373756 * L_2 = __this->get_mAutomaticallyCreatedBehaviours_1();
 		NullCheck(L_2);
-		VirtActionInvoker0::Invoke(20 /* System.Void System.Collections.Generic.List`1<System.Int32>::Clear() */, L_2);
+		VirtActionInvoker0::Invoke(23 /* System.Void System.Collections.Generic.List`1<System.Int32>::Clear() */, L_2);
 		List_1_t3224404807 * L_3 = __this->get_mBehavioursMarkedForDeletion_2();
 		NullCheck(L_3);
-		VirtActionInvoker0::Invoke(20 /* System.Void System.Collections.Generic.List`1<Vuforia.TrackableBehaviour>::Clear() */, L_3);
+		VirtActionInvoker0::Invoke(23 /* System.Void System.Collections.Generic.List`1<Vuforia.TrackableBehaviour>::Clear() */, L_3);
 		return;
 	}
 }
@@ -4789,7 +4789,7 @@ IL_005a:
 		int32_t L_27 = InterfaceFuncInvoker0< int32_t >::Invoke(1 /* System.Int32 Vuforia.Trackable::get_ID() */, Trackable_t1174201883_il2cpp_TypeInfo_var, L_26);
 		DataSetTrackableBehaviour_t1793464454 * L_28 = V_0;
 		NullCheck(L_25);
-		VirtActionInvoker2< int32_t, TrackableBehaviour_t2427445838 * >::Invoke(24 /* System.Void System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::set_Item(!0,!1) */, L_25, L_27, L_28);
+		VirtActionInvoker2< int32_t, TrackableBehaviour_t2427445838 * >::Invoke(25 /* System.Void System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::set_Item(!0,!1) */, L_25, L_27, L_28);
 		DataSetTrackableBehaviour_t1793464454 * L_29 = V_0;
 		return ((ImageTargetAbstractBehaviour_t2880150149 *)IsInstClass(L_29, ImageTargetAbstractBehaviour_t2880150149_il2cpp_TypeInfo_var));
 	}
@@ -4966,7 +4966,7 @@ extern "C"  MarkerAbstractBehaviour_t1462758039 * StateManagerImpl_CreateNewMark
 		int32_t L_50 = InterfaceFuncInvoker0< int32_t >::Invoke(1 /* System.Int32 Vuforia.Trackable::get_ID() */, Trackable_t1174201883_il2cpp_TypeInfo_var, L_49);
 		MarkerAbstractBehaviour_t1462758039 * L_51 = V_0;
 		NullCheck(L_48);
-		VirtActionInvoker2< int32_t, TrackableBehaviour_t2427445838 * >::Invoke(24 /* System.Void System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::set_Item(!0,!1) */, L_48, L_50, L_51);
+		VirtActionInvoker2< int32_t, TrackableBehaviour_t2427445838 * >::Invoke(25 /* System.Void System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::set_Item(!0,!1) */, L_48, L_50, L_51);
 		MarkerAbstractBehaviour_t1462758039 * L_52 = V_0;
 		return L_52;
 	}
@@ -4989,7 +4989,7 @@ extern "C"  void StateManagerImpl_SetTrackableBehavioursForTrackableToNotFound_m
 		NullCheck(L_1);
 		int32_t L_2 = InterfaceFuncInvoker0< int32_t >::Invoke(1 /* System.Int32 Vuforia.Trackable::get_ID() */, Trackable_t1174201883_il2cpp_TypeInfo_var, L_1);
 		NullCheck(L_0);
-		bool L_3 = VirtFuncInvoker2< bool, int32_t, TrackableBehaviour_t2427445838 ** >::Invoke(30 /* System.Boolean System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::TryGetValue(!0,!1&) */, L_0, L_2, (&V_0));
+		bool L_3 = VirtFuncInvoker2< bool, int32_t, TrackableBehaviour_t2427445838 ** >::Invoke(31 /* System.Boolean System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::TryGetValue(!0,!1&) */, L_0, L_2, (&V_0));
 		if (!L_3)
 		{
 			goto IL_001c;
@@ -5024,7 +5024,7 @@ extern "C"  void StateManagerImpl_EnableTrackableBehavioursForTrackable_m2766252
 		NullCheck(L_1);
 		int32_t L_2 = InterfaceFuncInvoker0< int32_t >::Invoke(1 /* System.Int32 Vuforia.Trackable::get_ID() */, Trackable_t1174201883_il2cpp_TypeInfo_var, L_1);
 		NullCheck(L_0);
-		bool L_3 = VirtFuncInvoker2< bool, int32_t, TrackableBehaviour_t2427445838 ** >::Invoke(30 /* System.Boolean System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::TryGetValue(!0,!1&) */, L_0, L_2, (&V_0));
+		bool L_3 = VirtFuncInvoker2< bool, int32_t, TrackableBehaviour_t2427445838 ** >::Invoke(31 /* System.Boolean System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::TryGetValue(!0,!1&) */, L_0, L_2, (&V_0));
 		if (!L_3)
 		{
 			goto IL_0025;
@@ -5086,7 +5086,7 @@ IL_000a:
 		NullCheck(L_5);
 		int32_t L_6 = LinkedListNode_1_get_Value_m326957826(L_5, /*hidden argument*/LinkedListNode_1_get_Value_m326957826_MethodInfo_var);
 		NullCheck(L_4);
-		bool L_7 = VirtFuncInvoker2< bool, int32_t, TrackableBehaviour_t2427445838 ** >::Invoke(30 /* System.Boolean System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::TryGetValue(!0,!1&) */, L_4, L_6, (&V_2));
+		bool L_7 = VirtFuncInvoker2< bool, int32_t, TrackableBehaviour_t2427445838 ** >::Invoke(31 /* System.Boolean System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::TryGetValue(!0,!1&) */, L_4, L_6, (&V_2));
 		if (!L_7)
 		{
 			goto IL_0036;
@@ -5189,7 +5189,7 @@ IL_0041:
 		Dictionary_2_t2918256621 * L_9 = __this->get_mTrackableBehaviours_0();
 		int32_t L_10 = ___originTrackableID3;
 		NullCheck(L_9);
-		bool L_11 = VirtFuncInvoker2< bool, int32_t, TrackableBehaviour_t2427445838 ** >::Invoke(30 /* System.Boolean System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::TryGetValue(!0,!1&) */, L_9, L_10, (&V_1));
+		bool L_11 = VirtFuncInvoker2< bool, int32_t, TrackableBehaviour_t2427445838 ** >::Invoke(31 /* System.Boolean System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::TryGetValue(!0,!1&) */, L_9, L_10, (&V_1));
 		if (!L_11)
 		{
 			goto IL_0075;
@@ -5282,11 +5282,11 @@ IL_0011:
 		int32_t L_5 = (&V_1)->get_id_3();
 		TrackableResultData_t2490169420  L_6 = V_1;
 		NullCheck(L_4);
-		VirtActionInvoker2< int32_t, TrackableResultData_t2490169420  >::Invoke(25 /* System.Void System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.VuforiaManagerImpl/TrackableResultData>::Add(!0,!1) */, L_4, L_5, L_6);
+		VirtActionInvoker2< int32_t, TrackableResultData_t2490169420  >::Invoke(26 /* System.Void System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.VuforiaManagerImpl/TrackableResultData>::Add(!0,!1) */, L_4, L_5, L_6);
 		Dictionary_2_t2918256621 * L_7 = __this->get_mTrackableBehaviours_0();
 		int32_t L_8 = (&V_1)->get_id_3();
 		NullCheck(L_7);
-		bool L_9 = VirtFuncInvoker2< bool, int32_t, TrackableBehaviour_t2427445838 ** >::Invoke(30 /* System.Boolean System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::TryGetValue(!0,!1&) */, L_7, L_8, (&V_2));
+		bool L_9 = VirtFuncInvoker2< bool, int32_t, TrackableBehaviour_t2427445838 ** >::Invoke(31 /* System.Boolean System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::TryGetValue(!0,!1&) */, L_7, L_8, (&V_2));
 		if (!L_9)
 		{
 			goto IL_0090;
@@ -5362,7 +5362,7 @@ IL_0096:
 	{
 		List_1_t3224404807 * L_25 = __this->get_mActiveTrackableBehaviours_3();
 		NullCheck(L_25);
-		VirtActionInvoker0::Invoke(20 /* System.Void System.Collections.Generic.List`1<Vuforia.TrackableBehaviour>::Clear() */, L_25);
+		VirtActionInvoker0::Invoke(23 /* System.Void System.Collections.Generic.List`1<Vuforia.TrackableBehaviour>::Clear() */, L_25);
 		Dictionary_2_t2918256621 * L_26 = __this->get_mTrackableBehaviours_0();
 		NullCheck(L_26);
 		ValueCollection_t545426419 * L_27 = Dictionary_2_get_Values_m4016380396(L_26, /*hidden argument*/Dictionary_2_get_Values_m4016380396_MethodInfo_var);
@@ -5396,7 +5396,7 @@ IL_00c3:
 		NullCheck(L_36);
 		int32_t L_37 = InterfaceFuncInvoker0< int32_t >::Invoke(1 /* System.Int32 Vuforia.Trackable::get_ID() */, Trackable_t1174201883_il2cpp_TypeInfo_var, L_36);
 		NullCheck(L_34);
-		bool L_38 = VirtFuncInvoker2< bool, int32_t, TrackableResultData_t2490169420 * >::Invoke(30 /* System.Boolean System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.VuforiaManagerImpl/TrackableResultData>::TryGetValue(!0,!1&) */, L_34, L_37, (&V_4));
+		bool L_38 = VirtFuncInvoker2< bool, int32_t, TrackableResultData_t2490169420 * >::Invoke(31 /* System.Boolean System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.VuforiaManagerImpl/TrackableResultData>::TryGetValue(!0,!1&) */, L_34, L_37, (&V_4));
 		if (!L_38)
 		{
 			goto IL_00fd;
@@ -5455,7 +5455,7 @@ IL_011f:
 		List_1_t3224404807 * L_50 = __this->get_mActiveTrackableBehaviours_3();
 		TrackableBehaviour_t2427445838 * L_51 = V_3;
 		NullCheck(L_50);
-		VirtActionInvoker1< TrackableBehaviour_t2427445838 * >::Invoke(19 /* System.Void System.Collections.Generic.List`1<Vuforia.TrackableBehaviour>::Add(!0) */, L_50, L_51);
+		VirtActionInvoker1< TrackableBehaviour_t2427445838 * >::Invoke(22 /* System.Void System.Collections.Generic.List`1<Vuforia.TrackableBehaviour>::Add(!0) */, L_50, L_51);
 	}
 
 IL_012b:
@@ -5559,7 +5559,7 @@ IL_000a:
 		int32_t L_9 = (&V_3)->get_id_0();
 		VirtualButtonData_t1123011399  L_10 = V_3;
 		NullCheck(L_8);
-		VirtActionInvoker2< int32_t, VirtualButtonData_t1123011399  >::Invoke(25 /* System.Void System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.VuforiaManagerImpl/VirtualButtonData>::Add(!0,!1) */, L_8, L_9, L_10);
+		VirtActionInvoker2< int32_t, VirtualButtonData_t1123011399  >::Invoke(26 /* System.Void System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.VuforiaManagerImpl/VirtualButtonData>::Add(!0,!1) */, L_8, L_9, L_10);
 		int32_t L_11 = V_1;
 		V_1 = ((int32_t)((int32_t)L_11+(int32_t)1));
 	}
@@ -5654,7 +5654,7 @@ IL_00b9:
 				List_1_t2921592909 * L_31 = V_4;
 				VirtualButtonAbstractBehaviour_t2124633940 * L_32 = V_7;
 				NullCheck(L_31);
-				VirtActionInvoker1< VirtualButtonAbstractBehaviour_t2124633940 * >::Invoke(19 /* System.Void System.Collections.Generic.List`1<Vuforia.VirtualButtonAbstractBehaviour>::Add(!0) */, L_31, L_32);
+				VirtActionInvoker1< VirtualButtonAbstractBehaviour_t2124633940 * >::Invoke(22 /* System.Void System.Collections.Generic.List`1<Vuforia.VirtualButtonAbstractBehaviour>::Add(!0) */, L_31, L_32);
 			}
 
 IL_00c2:
@@ -5764,7 +5764,7 @@ IL_00fd:
 			NullCheck(L_43);
 			int32_t L_44 = VirtFuncInvoker0< int32_t >::Invoke(5 /* System.Int32 Vuforia.VirtualButton::get_ID() */, L_43);
 			NullCheck(L_41);
-			bool L_45 = VirtFuncInvoker2< bool, int32_t, VirtualButtonData_t1123011399 * >::Invoke(30 /* System.Boolean System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.VuforiaManagerImpl/VirtualButtonData>::TryGetValue(!0,!1&) */, L_41, L_44, (&V_9));
+			bool L_45 = VirtFuncInvoker2< bool, int32_t, VirtualButtonData_t1123011399 * >::Invoke(31 /* System.Boolean System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.VuforiaManagerImpl/VirtualButtonData>::TryGetValue(!0,!1&) */, L_41, L_44, (&V_9));
 			if (!L_45)
 			{
 				goto IL_012f;
@@ -6020,7 +6020,7 @@ IL_0012:
 			NullCheck(L_6);
 			int32_t L_7 = InterfaceFuncInvoker0< int32_t >::Invoke(1 /* System.Int32 Vuforia.Trackable::get_ID() */, Trackable_t1174201883_il2cpp_TypeInfo_var, L_6);
 			NullCheck(L_5);
-			bool L_8 = VirtFuncInvoker1< bool, int32_t >::Invoke(26 /* System.Boolean System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::ContainsKey(!0) */, L_5, L_7);
+			bool L_8 = VirtFuncInvoker1< bool, int32_t >::Invoke(27 /* System.Boolean System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::ContainsKey(!0) */, L_5, L_7);
 			if (L_8)
 			{
 				goto IL_0121;
@@ -6050,13 +6050,13 @@ IL_0038:
 			int32_t L_15 = InterfaceFuncInvoker0< int32_t >::Invoke(1 /* System.Int32 Vuforia.Trackable::get_ID() */, Trackable_t1174201883_il2cpp_TypeInfo_var, L_14);
 			ImageTargetAbstractBehaviour_t2880150149 * L_16 = V_1;
 			NullCheck(L_13);
-			VirtActionInvoker2< int32_t, TrackableBehaviour_t2427445838 * >::Invoke(24 /* System.Void System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::set_Item(!0,!1) */, L_13, L_15, L_16);
+			VirtActionInvoker2< int32_t, TrackableBehaviour_t2427445838 * >::Invoke(25 /* System.Void System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::set_Item(!0,!1) */, L_13, L_15, L_16);
 			List_1_t3644373756 * L_17 = __this->get_mAutomaticallyCreatedBehaviours_1();
 			Il2CppObject * L_18 = V_0;
 			NullCheck(L_18);
 			int32_t L_19 = InterfaceFuncInvoker0< int32_t >::Invoke(1 /* System.Int32 Vuforia.Trackable::get_ID() */, Trackable_t1174201883_il2cpp_TypeInfo_var, L_18);
 			NullCheck(L_17);
-			VirtActionInvoker1< int32_t >::Invoke(19 /* System.Void System.Collections.Generic.List`1<System.Int32>::Add(!0) */, L_17, L_19);
+			VirtActionInvoker1< int32_t >::Invoke(22 /* System.Void System.Collections.Generic.List`1<System.Int32>::Add(!0) */, L_17, L_19);
 			goto IL_0121;
 		}
 
@@ -6080,13 +6080,13 @@ IL_007b:
 			int32_t L_25 = InterfaceFuncInvoker0< int32_t >::Invoke(1 /* System.Int32 Vuforia.Trackable::get_ID() */, Trackable_t1174201883_il2cpp_TypeInfo_var, L_24);
 			MultiTargetAbstractBehaviour_t4098421991 * L_26 = V_2;
 			NullCheck(L_23);
-			VirtActionInvoker2< int32_t, TrackableBehaviour_t2427445838 * >::Invoke(24 /* System.Void System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::set_Item(!0,!1) */, L_23, L_25, L_26);
+			VirtActionInvoker2< int32_t, TrackableBehaviour_t2427445838 * >::Invoke(25 /* System.Void System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::set_Item(!0,!1) */, L_23, L_25, L_26);
 			List_1_t3644373756 * L_27 = __this->get_mAutomaticallyCreatedBehaviours_1();
 			Il2CppObject * L_28 = V_0;
 			NullCheck(L_28);
 			int32_t L_29 = InterfaceFuncInvoker0< int32_t >::Invoke(1 /* System.Int32 Vuforia.Trackable::get_ID() */, Trackable_t1174201883_il2cpp_TypeInfo_var, L_28);
 			NullCheck(L_27);
-			VirtActionInvoker1< int32_t >::Invoke(19 /* System.Void System.Collections.Generic.List`1<System.Int32>::Add(!0) */, L_27, L_29);
+			VirtActionInvoker1< int32_t >::Invoke(22 /* System.Void System.Collections.Generic.List`1<System.Int32>::Add(!0) */, L_27, L_29);
 			goto IL_0121;
 		}
 
@@ -6110,13 +6110,13 @@ IL_00b5:
 			int32_t L_35 = InterfaceFuncInvoker0< int32_t >::Invoke(1 /* System.Int32 Vuforia.Trackable::get_ID() */, Trackable_t1174201883_il2cpp_TypeInfo_var, L_34);
 			CylinderTargetAbstractBehaviour_t10167658 * L_36 = V_3;
 			NullCheck(L_33);
-			VirtActionInvoker2< int32_t, TrackableBehaviour_t2427445838 * >::Invoke(24 /* System.Void System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::set_Item(!0,!1) */, L_33, L_35, L_36);
+			VirtActionInvoker2< int32_t, TrackableBehaviour_t2427445838 * >::Invoke(25 /* System.Void System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::set_Item(!0,!1) */, L_33, L_35, L_36);
 			List_1_t3644373756 * L_37 = __this->get_mAutomaticallyCreatedBehaviours_1();
 			Il2CppObject * L_38 = V_0;
 			NullCheck(L_38);
 			int32_t L_39 = InterfaceFuncInvoker0< int32_t >::Invoke(1 /* System.Int32 Vuforia.Trackable::get_ID() */, Trackable_t1174201883_il2cpp_TypeInfo_var, L_38);
 			NullCheck(L_37);
-			VirtActionInvoker1< int32_t >::Invoke(19 /* System.Void System.Collections.Generic.List`1<System.Int32>::Add(!0) */, L_37, L_39);
+			VirtActionInvoker1< int32_t >::Invoke(22 /* System.Void System.Collections.Generic.List`1<System.Int32>::Add(!0) */, L_37, L_39);
 			goto IL_0121;
 		}
 
@@ -6140,13 +6140,13 @@ IL_00ef:
 			int32_t L_45 = InterfaceFuncInvoker0< int32_t >::Invoke(1 /* System.Int32 Vuforia.Trackable::get_ID() */, Trackable_t1174201883_il2cpp_TypeInfo_var, L_44);
 			DataSetTrackableBehaviour_t1793464454 * L_46 = V_4;
 			NullCheck(L_43);
-			VirtActionInvoker2< int32_t, TrackableBehaviour_t2427445838 * >::Invoke(24 /* System.Void System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::set_Item(!0,!1) */, L_43, L_45, L_46);
+			VirtActionInvoker2< int32_t, TrackableBehaviour_t2427445838 * >::Invoke(25 /* System.Void System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::set_Item(!0,!1) */, L_43, L_45, L_46);
 			List_1_t3644373756 * L_47 = __this->get_mAutomaticallyCreatedBehaviours_1();
 			Il2CppObject * L_48 = V_0;
 			NullCheck(L_48);
 			int32_t L_49 = InterfaceFuncInvoker0< int32_t >::Invoke(1 /* System.Int32 Vuforia.Trackable::get_ID() */, Trackable_t1174201883_il2cpp_TypeInfo_var, L_48);
 			NullCheck(L_47);
-			VirtActionInvoker1< int32_t >::Invoke(19 /* System.Void System.Collections.Generic.List`1<System.Int32>::Add(!0) */, L_47, L_49);
+			VirtActionInvoker1< int32_t >::Invoke(22 /* System.Void System.Collections.Generic.List`1<System.Int32>::Add(!0) */, L_47, L_49);
 		}
 
 IL_0121:
@@ -6907,7 +6907,7 @@ extern "C"  void StateManagerImpl_InitializeMarkerBehaviour_m743407158 (StateMan
 		NullCheck(L_4);
 		int32_t L_5 = InterfaceFuncInvoker0< int32_t >::Invoke(1 /* System.Int32 Vuforia.Trackable::get_ID() */, Trackable_t1174201883_il2cpp_TypeInfo_var, L_4);
 		NullCheck(L_3);
-		bool L_6 = VirtFuncInvoker1< bool, int32_t >::Invoke(26 /* System.Boolean System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::ContainsKey(!0) */, L_3, L_5);
+		bool L_6 = VirtFuncInvoker1< bool, int32_t >::Invoke(27 /* System.Boolean System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::ContainsKey(!0) */, L_3, L_5);
 		if (L_6)
 		{
 			goto IL_0067;
@@ -6920,7 +6920,7 @@ extern "C"  void StateManagerImpl_InitializeMarkerBehaviour_m743407158 (StateMan
 		int32_t L_9 = InterfaceFuncInvoker0< int32_t >::Invoke(1 /* System.Int32 Vuforia.Trackable::get_ID() */, Trackable_t1174201883_il2cpp_TypeInfo_var, L_8);
 		MarkerAbstractBehaviour_t1462758039 * L_10 = ___markerBehaviour0;
 		NullCheck(L_7);
-		VirtActionInvoker2< int32_t, TrackableBehaviour_t2427445838 * >::Invoke(24 /* System.Void System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::set_Item(!0,!1) */, L_7, L_9, L_10);
+		VirtActionInvoker2< int32_t, TrackableBehaviour_t2427445838 * >::Invoke(25 /* System.Void System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.TrackableBehaviour>::set_Item(!0,!1) */, L_7, L_9, L_10);
 		V_1 = ((ObjectU5BU5D_t11523773*)SZArrayNew(ObjectU5BU5D_t11523773_il2cpp_TypeInfo_var, (uint32_t)4));
 		ObjectU5BU5D_t11523773* L_11 = V_1;
 		NullCheck(L_11);
@@ -9080,7 +9080,7 @@ IL_009a:
 		(&V_4)->set_TargetSearchResultPtr_5(L_35);
 		TargetSearchResult_t3905350710  L_36 = V_4;
 		NullCheck(L_26);
-		VirtActionInvoker1< TargetSearchResult_t3905350710  >::Invoke(19 /* System.Void System.Collections.Generic.List`1<Vuforia.TargetFinder/TargetSearchResult>::Add(!0) */, L_26, L_36);
+		VirtActionInvoker1< TargetSearchResult_t3905350710  >::Invoke(22 /* System.Void System.Collections.Generic.List`1<Vuforia.TargetFinder/TargetSearchResult>::Add(!0) */, L_26, L_36);
 		int32_t L_37 = V_1;
 		V_1 = ((int32_t)((int32_t)L_37+(int32_t)1));
 	}
@@ -9239,7 +9239,7 @@ IL_007e:
 		int32_t L_21 = (&V_2)->get_id_0();
 		Il2CppObject * L_22 = V_5;
 		NullCheck(L_20);
-		VirtActionInvoker2< int32_t, Il2CppObject * >::Invoke(24 /* System.Void System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.ImageTarget>::set_Item(!0,!1) */, L_20, L_21, L_22);
+		VirtActionInvoker2< int32_t, Il2CppObject * >::Invoke(25 /* System.Void System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.ImageTarget>::set_Item(!0,!1) */, L_20, L_21, L_22);
 		StateManagerImpl_t2482403154 * L_23 = V_3;
 		Il2CppObject * L_24 = V_5;
 		GameObject_t4012695102 * L_25 = ___gameObject1;
@@ -9285,7 +9285,7 @@ IL_00ea:
 		List_1_t3644373756 * L_41 = V_7;
 		int32_t L_42 = V_10;
 		NullCheck(L_41);
-		VirtActionInvoker1< int32_t >::Invoke(19 /* System.Void System.Collections.Generic.List`1<System.Int32>::Add(!0) */, L_41, L_42);
+		VirtActionInvoker1< int32_t >::Invoke(22 /* System.Void System.Collections.Generic.List`1<System.Int32>::Add(!0) */, L_41, L_42);
 		int32_t L_43 = V_8;
 		V_8 = ((int32_t)((int32_t)L_43+(int32_t)1));
 	}
@@ -9325,7 +9325,7 @@ IL_0147:
 		NullCheck(L_54);
 		int32_t L_55 = InterfaceFuncInvoker0< int32_t >::Invoke(1 /* System.Int32 Vuforia.Trackable::get_ID() */, Trackable_t1174201883_il2cpp_TypeInfo_var, L_54);
 		NullCheck(L_53);
-		bool L_56 = VirtFuncInvoker1< bool, int32_t >::Invoke(21 /* System.Boolean System.Collections.Generic.List`1<System.Int32>::Contains(!0) */, L_53, L_55);
+		bool L_56 = VirtFuncInvoker1< bool, int32_t >::Invoke(24 /* System.Boolean System.Collections.Generic.List`1<System.Int32>::Contains(!0) */, L_53, L_55);
 		if (L_56)
 		{
 			goto IL_017a;
@@ -9341,7 +9341,7 @@ IL_0147:
 		NullCheck(L_60);
 		int32_t L_61 = InterfaceFuncInvoker0< int32_t >::Invoke(1 /* System.Int32 Vuforia.Trackable::get_ID() */, Trackable_t1174201883_il2cpp_TypeInfo_var, L_60);
 		NullCheck(L_59);
-		VirtFuncInvoker1< bool, int32_t >::Invoke(29 /* System.Boolean System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.ImageTarget>::Remove(!0) */, L_59, L_61);
+		VirtFuncInvoker1< bool, int32_t >::Invoke(30 /* System.Boolean System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.ImageTarget>::Remove(!0) */, L_59, L_61);
 	}
 
 IL_017a:
@@ -9464,7 +9464,7 @@ IL_0051:
 	{
 		Dictionary_2_t2785151329 * L_11 = __this->get_mImageTargets_3();
 		NullCheck(L_11);
-		VirtActionInvoker0::Invoke(12 /* System.Void System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.ImageTarget>::Clear() */, L_11);
+		VirtActionInvoker0::Invoke(13 /* System.Void System.Collections.Generic.Dictionary`2<System.Int32,Vuforia.ImageTarget>::Clear() */, L_11);
 		return;
 	}
 }
@@ -9955,7 +9955,7 @@ extern "C"  void TextRecoAbstractBehaviour_RegisterTextRecoEventHandler_m4083244
 		List_1_t568940052 * L_0 = __this->get_mTextRecoEventHandlers_13();
 		Il2CppObject * L_1 = ___trackableEventHandler0;
 		NullCheck(L_0);
-		VirtActionInvoker1< Il2CppObject * >::Invoke(19 /* System.Void System.Collections.Generic.List`1<Vuforia.ITextRecoEventHandler>::Add(!0) */, L_0, L_1);
+		VirtActionInvoker1< Il2CppObject * >::Invoke(22 /* System.Void System.Collections.Generic.List`1<Vuforia.ITextRecoEventHandler>::Add(!0) */, L_0, L_1);
 		bool L_2 = __this->get_mHasInitialized_2();
 		if (!L_2)
 		{
@@ -9980,7 +9980,7 @@ extern "C"  bool TextRecoAbstractBehaviour_UnregisterTextRecoEventHandler_m10238
 		List_1_t568940052 * L_0 = __this->get_mTextRecoEventHandlers_13();
 		Il2CppObject * L_1 = ___trackableEventHandler0;
 		NullCheck(L_0);
-		bool L_2 = VirtFuncInvoker1< bool, Il2CppObject * >::Invoke(23 /* System.Boolean System.Collections.Generic.List`1<Vuforia.ITextRecoEventHandler>::Remove(!0) */, L_0, L_1);
+		bool L_2 = VirtFuncInvoker1< bool, Il2CppObject * >::Invoke(26 /* System.Boolean System.Collections.Generic.List`1<Vuforia.ITextRecoEventHandler>::Remove(!0) */, L_0, L_1);
 		return L_2;
 	}
 }
@@ -11971,7 +11971,7 @@ extern "C"  void TrackableBehaviour_RegisterTrackableEventHandler_m1526298110 (T
 		List_1_t3399675483 * L_0 = __this->get_mTrackableEventHandlers_8();
 		Il2CppObject * L_1 = ___trackableEventHandler0;
 		NullCheck(L_0);
-		VirtActionInvoker1< Il2CppObject * >::Invoke(19 /* System.Void System.Collections.Generic.List`1<Vuforia.ITrackableEventHandler>::Add(!0) */, L_0, L_1);
+		VirtActionInvoker1< Il2CppObject * >::Invoke(22 /* System.Void System.Collections.Generic.List`1<Vuforia.ITrackableEventHandler>::Add(!0) */, L_0, L_1);
 		Il2CppObject * L_2 = ___trackableEventHandler0;
 		int32_t L_3 = __this->get_mStatus_6();
 		NullCheck(L_2);
@@ -11986,7 +11986,7 @@ extern "C"  bool TrackableBehaviour_UnregisterTrackableEventHandler_m4062845907 
 		List_1_t3399675483 * L_0 = __this->get_mTrackableEventHandlers_8();
 		Il2CppObject * L_1 = ___trackableEventHandler0;
 		NullCheck(L_0);
-		bool L_2 = VirtFuncInvoker1< bool, Il2CppObject * >::Invoke(23 /* System.Boolean System.Collections.Generic.List`1<Vuforia.ITrackableEventHandler>::Remove(!0) */, L_0, L_1);
+		bool L_2 = VirtFuncInvoker1< bool, Il2CppObject * >::Invoke(26 /* System.Boolean System.Collections.Generic.List`1<Vuforia.ITrackableEventHandler>::Remove(!0) */, L_0, L_1);
 		return L_2;
 	}
 }
@@ -12685,7 +12685,7 @@ extern "C"  uint16_t TypeMapping_GetTypeID_m66495655 (Il2CppObject * __this /* s
 		Dictionary_2_t3098472983 * L_0 = ((TypeMapping_t1672605994_StaticFields*)TypeMapping_t1672605994_il2cpp_TypeInfo_var->static_fields)->get_sTypes_0();
 		Type_t * L_1 = ___type0;
 		NullCheck(L_0);
-		uint16_t L_2 = VirtFuncInvoker1< uint16_t, Type_t * >::Invoke(23 /* !1 System.Collections.Generic.Dictionary`2<System.Type,System.UInt16>::get_Item(!0) */, L_0, L_1);
+		uint16_t L_2 = VirtFuncInvoker1< uint16_t, Type_t * >::Invoke(24 /* !1 System.Collections.Generic.Dictionary`2<System.Type,System.UInt16>::get_Item(!0) */, L_0, L_1);
 		return L_2;
 	}
 }
@@ -12724,51 +12724,51 @@ extern "C"  void TypeMapping__cctor_m3157954073 (Il2CppObject * __this /* static
 		IL2CPP_RUNTIME_CLASS_INIT(Type_t_il2cpp_TypeInfo_var);
 		Type_t * L_2 = Type_GetTypeFromHandle_m3806905434(NULL /*static, unused*/, LoadTypeToken(ImageTarget_t2294340546_0_0_0_var), /*hidden argument*/NULL);
 		NullCheck(L_1);
-		VirtActionInvoker2< Type_t *, uint16_t >::Invoke(25 /* System.Void System.Collections.Generic.Dictionary`2<System.Type,System.UInt16>::Add(!0,!1) */, L_1, L_2, 1);
+		VirtActionInvoker2< Type_t *, uint16_t >::Invoke(26 /* System.Void System.Collections.Generic.Dictionary`2<System.Type,System.UInt16>::Add(!0,!1) */, L_1, L_2, 1);
 		Dictionary_2_t3098472983 * L_3 = V_0;
 		Type_t * L_4 = Type_GetTypeFromHandle_m3806905434(NULL /*static, unused*/, LoadTypeToken(MultiTarget_t4153944352_0_0_0_var), /*hidden argument*/NULL);
 		NullCheck(L_3);
-		VirtActionInvoker2< Type_t *, uint16_t >::Invoke(25 /* System.Void System.Collections.Generic.Dictionary`2<System.Type,System.UInt16>::Add(!0,!1) */, L_3, L_4, 2);
+		VirtActionInvoker2< Type_t *, uint16_t >::Invoke(26 /* System.Void System.Collections.Generic.Dictionary`2<System.Type,System.UInt16>::Add(!0,!1) */, L_3, L_4, 2);
 		Dictionary_2_t3098472983 * L_5 = V_0;
 		Type_t * L_6 = Type_GetTypeFromHandle_m3806905434(NULL /*static, unused*/, LoadTypeToken(CylinderTarget_t3460838973_0_0_0_var), /*hidden argument*/NULL);
 		NullCheck(L_5);
-		VirtActionInvoker2< Type_t *, uint16_t >::Invoke(25 /* System.Void System.Collections.Generic.Dictionary`2<System.Type,System.UInt16>::Add(!0,!1) */, L_5, L_6, 3);
+		VirtActionInvoker2< Type_t *, uint16_t >::Invoke(26 /* System.Void System.Collections.Generic.Dictionary`2<System.Type,System.UInt16>::Add(!0,!1) */, L_5, L_6, 3);
 		Dictionary_2_t3098472983 * L_7 = V_0;
 		Type_t * L_8 = Type_GetTypeFromHandle_m3806905434(NULL /*static, unused*/, LoadTypeToken(Marker_t737566064_0_0_0_var), /*hidden argument*/NULL);
 		NullCheck(L_7);
-		VirtActionInvoker2< Type_t *, uint16_t >::Invoke(25 /* System.Void System.Collections.Generic.Dictionary`2<System.Type,System.UInt16>::Add(!0,!1) */, L_7, L_8, 4);
+		VirtActionInvoker2< Type_t *, uint16_t >::Invoke(26 /* System.Void System.Collections.Generic.Dictionary`2<System.Type,System.UInt16>::Add(!0,!1) */, L_7, L_8, 4);
 		Dictionary_2_t3098472983 * L_9 = V_0;
 		Type_t * L_10 = Type_GetTypeFromHandle_m3806905434(NULL /*static, unused*/, LoadTypeToken(Word_t2737707072_0_0_0_var), /*hidden argument*/NULL);
 		NullCheck(L_9);
-		VirtActionInvoker2< Type_t *, uint16_t >::Invoke(25 /* System.Void System.Collections.Generic.Dictionary`2<System.Type,System.UInt16>::Add(!0,!1) */, L_9, L_10, 5);
+		VirtActionInvoker2< Type_t *, uint16_t >::Invoke(26 /* System.Void System.Collections.Generic.Dictionary`2<System.Type,System.UInt16>::Add(!0,!1) */, L_9, L_10, 5);
 		Dictionary_2_t3098472983 * L_11 = V_0;
 		Type_t * L_12 = Type_GetTypeFromHandle_m3806905434(NULL /*static, unused*/, LoadTypeToken(ObjectTarget_t1628866278_0_0_0_var), /*hidden argument*/NULL);
 		NullCheck(L_11);
-		VirtActionInvoker2< Type_t *, uint16_t >::Invoke(25 /* System.Void System.Collections.Generic.Dictionary`2<System.Type,System.UInt16>::Add(!0,!1) */, L_11, L_12, 6);
+		VirtActionInvoker2< Type_t *, uint16_t >::Invoke(26 /* System.Void System.Collections.Generic.Dictionary`2<System.Type,System.UInt16>::Add(!0,!1) */, L_11, L_12, 6);
 		Dictionary_2_t3098472983 * L_13 = V_0;
 		Type_t * L_14 = Type_GetTypeFromHandle_m3806905434(NULL /*static, unused*/, LoadTypeToken(ObjectTracker_t3275326447_0_0_0_var), /*hidden argument*/NULL);
 		NullCheck(L_13);
-		VirtActionInvoker2< Type_t *, uint16_t >::Invoke(25 /* System.Void System.Collections.Generic.Dictionary`2<System.Type,System.UInt16>::Add(!0,!1) */, L_13, L_14, 7);
+		VirtActionInvoker2< Type_t *, uint16_t >::Invoke(26 /* System.Void System.Collections.Generic.Dictionary`2<System.Type,System.UInt16>::Add(!0,!1) */, L_13, L_14, 7);
 		Dictionary_2_t3098472983 * L_15 = V_0;
 		Type_t * L_16 = Type_GetTypeFromHandle_m3806905434(NULL /*static, unused*/, LoadTypeToken(MarkerTracker_t2552664724_0_0_0_var), /*hidden argument*/NULL);
 		NullCheck(L_15);
-		VirtActionInvoker2< Type_t *, uint16_t >::Invoke(25 /* System.Void System.Collections.Generic.Dictionary`2<System.Type,System.UInt16>::Add(!0,!1) */, L_15, L_16, 8);
+		VirtActionInvoker2< Type_t *, uint16_t >::Invoke(26 /* System.Void System.Collections.Generic.Dictionary`2<System.Type,System.UInt16>::Add(!0,!1) */, L_15, L_16, 8);
 		Dictionary_2_t3098472983 * L_17 = V_0;
 		Type_t * L_18 = Type_GetTypeFromHandle_m3806905434(NULL /*static, unused*/, LoadTypeToken(TextTracker_t2495541825_0_0_0_var), /*hidden argument*/NULL);
 		NullCheck(L_17);
-		VirtActionInvoker2< Type_t *, uint16_t >::Invoke(25 /* System.Void System.Collections.Generic.Dictionary`2<System.Type,System.UInt16>::Add(!0,!1) */, L_17, L_18, ((int32_t)9));
+		VirtActionInvoker2< Type_t *, uint16_t >::Invoke(26 /* System.Void System.Collections.Generic.Dictionary`2<System.Type,System.UInt16>::Add(!0,!1) */, L_17, L_18, ((int32_t)9));
 		Dictionary_2_t3098472983 * L_19 = V_0;
 		Type_t * L_20 = Type_GetTypeFromHandle_m3806905434(NULL /*static, unused*/, LoadTypeToken(SmartTerrainTracker_t3586718050_0_0_0_var), /*hidden argument*/NULL);
 		NullCheck(L_19);
-		VirtActionInvoker2< Type_t *, uint16_t >::Invoke(25 /* System.Void System.Collections.Generic.Dictionary`2<System.Type,System.UInt16>::Add(!0,!1) */, L_19, L_20, ((int32_t)10));
+		VirtActionInvoker2< Type_t *, uint16_t >::Invoke(26 /* System.Void System.Collections.Generic.Dictionary`2<System.Type,System.UInt16>::Add(!0,!1) */, L_19, L_20, ((int32_t)10));
 		Dictionary_2_t3098472983 * L_21 = V_0;
 		Type_t * L_22 = Type_GetTypeFromHandle_m3806905434(NULL /*static, unused*/, LoadTypeToken(DeviceTracker_t1348055288_0_0_0_var), /*hidden argument*/NULL);
 		NullCheck(L_21);
-		VirtActionInvoker2< Type_t *, uint16_t >::Invoke(25 /* System.Void System.Collections.Generic.Dictionary`2<System.Type,System.UInt16>::Add(!0,!1) */, L_21, L_22, ((int32_t)11));
+		VirtActionInvoker2< Type_t *, uint16_t >::Invoke(26 /* System.Void System.Collections.Generic.Dictionary`2<System.Type,System.UInt16>::Add(!0,!1) */, L_21, L_22, ((int32_t)11));
 		Dictionary_2_t3098472983 * L_23 = V_0;
 		Type_t * L_24 = Type_GetTypeFromHandle_m3806905434(NULL /*static, unused*/, LoadTypeToken(RotationalDeviceTracker_t4008517455_0_0_0_var), /*hidden argument*/NULL);
 		NullCheck(L_23);
-		VirtActionInvoker2< Type_t *, uint16_t >::Invoke(25 /* System.Void System.Collections.Generic.Dictionary`2<System.Type,System.UInt16>::Add(!0,!1) */, L_23, L_24, ((int32_t)11));
+		VirtActionInvoker2< Type_t *, uint16_t >::Invoke(26 /* System.Void System.Collections.Generic.Dictionary`2<System.Type,System.UInt16>::Add(!0,!1) */, L_23, L_24, ((int32_t)11));
 		Dictionary_2_t3098472983 * L_25 = V_0;
 		((TypeMapping_t1672605994_StaticFields*)TypeMapping_t1672605994_il2cpp_TypeInfo_var->static_fields)->set_sTypes_0(L_25);
 		return;
@@ -12896,7 +12896,7 @@ extern "C"  void UserDefinedTargetBuildingAbstractBehaviour_RegisterEventHandler
 		List_1_t95606309 * L_0 = __this->get_mHandlers_9();
 		Il2CppObject * L_1 = ___eventHandler0;
 		NullCheck(L_0);
-		VirtActionInvoker1< Il2CppObject * >::Invoke(19 /* System.Void System.Collections.Generic.List`1<Vuforia.IUserDefinedTargetEventHandler>::Add(!0) */, L_0, L_1);
+		VirtActionInvoker1< Il2CppObject * >::Invoke(22 /* System.Void System.Collections.Generic.List`1<Vuforia.IUserDefinedTargetEventHandler>::Add(!0) */, L_0, L_1);
 		bool L_2 = __this->get_mOnInitializedCalled_8();
 		if (!L_2)
 		{
@@ -12921,7 +12921,7 @@ extern "C"  bool UserDefinedTargetBuildingAbstractBehaviour_UnregisterEventHandl
 		List_1_t95606309 * L_0 = __this->get_mHandlers_9();
 		Il2CppObject * L_1 = ___eventHandler0;
 		NullCheck(L_0);
-		bool L_2 = VirtFuncInvoker1< bool, Il2CppObject * >::Invoke(23 /* System.Boolean System.Collections.Generic.List`1<Vuforia.IUserDefinedTargetEventHandler>::Remove(!0) */, L_0, L_1);
+		bool L_2 = VirtFuncInvoker1< bool, Il2CppObject * >::Invoke(26 /* System.Boolean System.Collections.Generic.List`1<Vuforia.IUserDefinedTargetEventHandler>::Remove(!0) */, L_0, L_1);
 		return L_2;
 	}
 }
@@ -13955,7 +13955,7 @@ IL_005a:
 }
 // System.Void Vuforia.VideoBackgroundAbstractBehaviour::Awake()
 extern Il2CppClass* Action_t437523947_il2cpp_TypeInfo_var;
-extern const MethodInfo* Component_GetComponent_TisCamera_t3533968274_m863292184_MethodInfo_var;
+extern const MethodInfo* Component_GetComponent_TisCamera_t3533968274_m3804104198_MethodInfo_var;
 extern const MethodInfo* Object_FindObjectOfType_TisVuforiaAbstractBehaviour_t2427322319_m4100990585_MethodInfo_var;
 extern const MethodInfo* VideoBackgroundAbstractBehaviour_RenderOnUpdate_m3201117142_MethodInfo_var;
 extern const MethodInfo* Component_GetComponentInChildren_TisBackgroundPlaneAbstractBehaviour_t1953260483_m4210090879_MethodInfo_var;
@@ -13969,7 +13969,7 @@ extern "C"  void VideoBackgroundAbstractBehaviour_Awake_m1576815695 (VideoBackgr
 		s_Il2CppMethodIntialized = true;
 	}
 	{
-		Camera_t3533968274 * L_0 = Component_GetComponent_TisCamera_t3533968274_m863292184(__this, /*hidden argument*/Component_GetComponent_TisCamera_t3533968274_m863292184_MethodInfo_var);
+		Camera_t3533968274 * L_0 = Component_GetComponent_TisCamera_t3533968274_m3804104198(__this, /*hidden argument*/Component_GetComponent_TisCamera_t3533968274_m3804104198_MethodInfo_var);
 		__this->set_mCamera_5(L_0);
 		VuforiaAbstractBehaviour_t2427322319 * L_1 = Object_FindObjectOfType_TisVuforiaAbstractBehaviour_t2427322319_m4100990585(NULL /*static, unused*/, /*hidden argument*/Object_FindObjectOfType_TisVuforiaAbstractBehaviour_t2427322319_m4100990585_MethodInfo_var);
 		__this->set_mVuforiaAbstractBehaviour_4(L_1);
@@ -14013,7 +14013,7 @@ extern Il2CppClass* VuforiaRenderer_t4287869979_il2cpp_TypeInfo_var;
 extern Il2CppClass* Display_t564335855_il2cpp_TypeInfo_var;
 extern Il2CppClass* VuforiaWrapper_t3703831335_il2cpp_TypeInfo_var;
 extern Il2CppClass* IVuforiaWrapper_t2085963696_il2cpp_TypeInfo_var;
-extern const MethodInfo* Component_GetComponent_TisCamera_t3533968274_m863292184_MethodInfo_var;
+extern const MethodInfo* Component_GetComponent_TisCamera_t3533968274_m3804104198_MethodInfo_var;
 extern const uint32_t VideoBackgroundAbstractBehaviour_OnPreRender_m1621784004_MetadataUsageId;
 extern "C"  void VideoBackgroundAbstractBehaviour_OnPreRender_m1621784004 (VideoBackgroundAbstractBehaviour_t1820506856 * __this, const MethodInfo* method)
 {
@@ -14059,7 +14059,7 @@ extern "C"  void VideoBackgroundAbstractBehaviour_OnPreRender_m1621784004 (Video
 		}
 	}
 	{
-		Camera_t3533968274 * L_7 = Component_GetComponent_TisCamera_t3533968274_m863292184(__this, /*hidden argument*/Component_GetComponent_TisCamera_t3533968274_m863292184_MethodInfo_var);
+		Camera_t3533968274 * L_7 = Component_GetComponent_TisCamera_t3533968274_m3804104198(__this, /*hidden argument*/Component_GetComponent_TisCamera_t3533968274_m3804104198_MethodInfo_var);
 		NullCheck(L_7);
 		RenderTexture_t12905170 * L_8 = Camera_get_targetTexture_m1468336738(L_7, /*hidden argument*/NULL);
 		V_0 = L_8;
@@ -14110,7 +14110,7 @@ extern Il2CppClass* IVuforiaWrapper_t2085963696_il2cpp_TypeInfo_var;
 extern Il2CppClass* VideoBackgroundAbstractBehaviour_t1820506856_il2cpp_TypeInfo_var;
 extern Il2CppClass* VuforiaManager_t2943583809_il2cpp_TypeInfo_var;
 extern Il2CppClass* VuforiaManagerImpl_t410504961_il2cpp_TypeInfo_var;
-extern const MethodInfo* Component_GetComponent_TisCamera_t3533968274_m863292184_MethodInfo_var;
+extern const MethodInfo* Component_GetComponent_TisCamera_t3533968274_m3804104198_MethodInfo_var;
 extern const uint32_t VideoBackgroundAbstractBehaviour_OnPostRender_m2185247277_MetadataUsageId;
 extern "C"  void VideoBackgroundAbstractBehaviour_OnPostRender_m2185247277 (VideoBackgroundAbstractBehaviour_t1820506856 * __this, const MethodInfo* method)
 {
@@ -14156,7 +14156,7 @@ extern "C"  void VideoBackgroundAbstractBehaviour_OnPostRender_m2185247277 (Vide
 		}
 	}
 	{
-		Camera_t3533968274 * L_5 = Component_GetComponent_TisCamera_t3533968274_m863292184(__this, /*hidden argument*/Component_GetComponent_TisCamera_t3533968274_m863292184_MethodInfo_var);
+		Camera_t3533968274 * L_5 = Component_GetComponent_TisCamera_t3533968274_m3804104198(__this, /*hidden argument*/Component_GetComponent_TisCamera_t3533968274_m3804104198_MethodInfo_var);
 		NullCheck(L_5);
 		RenderTexture_t12905170 * L_6 = Camera_get_targetTexture_m1468336738(L_5, /*hidden argument*/NULL);
 		V_0 = L_6;
@@ -14788,7 +14788,7 @@ extern Il2CppClass* HashSet_1_t356981858_il2cpp_TypeInfo_var;
 extern Il2CppClass* HashSet_1_t2034228780_il2cpp_TypeInfo_var;
 extern Il2CppClass* ICameraConfiguration_t2440735710_il2cpp_TypeInfo_var;
 extern const MethodInfo* Object_FindObjectOfType_TisDigitalEyewearAbstractBehaviour_t1656621721_m587775977_MethodInfo_var;
-extern const MethodInfo* List_1__ctor_m372386980_MethodInfo_var;
+extern const MethodInfo* List_1__ctor_m2397334390_MethodInfo_var;
 extern const MethodInfo* HashSet_1__ctor_m27788688_MethodInfo_var;
 extern const MethodInfo* List_1_GetEnumerator_m1302590511_MethodInfo_var;
 extern const MethodInfo* Enumerator_get_Current_m98610077_MethodInfo_var;
@@ -14881,14 +14881,14 @@ extern "C"  void VideoBackgroundManagerAbstractBehaviour_UpdateVideoBackgroundEn
 		Camera_t3533968274 * L_4 = DigitalEyewearAbstractBehaviour_get_SecondaryCamera_m322736658(L_3, /*hidden argument*/NULL);
 		V_2 = L_4;
 		List_1_t514686775 * L_5 = (List_1_t514686775 *)il2cpp_codegen_object_new(List_1_t514686775_il2cpp_TypeInfo_var);
-		List_1__ctor_m372386980(L_5, /*hidden argument*/List_1__ctor_m372386980_MethodInfo_var);
+		List_1__ctor_m2397334390(L_5, /*hidden argument*/List_1__ctor_m2397334390_MethodInfo_var);
 		V_16 = L_5;
 		List_1_t514686775 * L_6 = V_16;
 		DigitalEyewearAbstractBehaviour_t1656621721 * L_7 = V_0;
 		NullCheck(L_7);
 		GameObject_t4012695102 * L_8 = Component_get_gameObject_m1170635899(L_7, /*hidden argument*/NULL);
 		NullCheck(L_6);
-		VirtActionInvoker1< GameObject_t4012695102 * >::Invoke(19 /* System.Void System.Collections.Generic.List`1<UnityEngine.GameObject>::Add(!0) */, L_6, L_8);
+		VirtActionInvoker1< GameObject_t4012695102 * >::Invoke(22 /* System.Void System.Collections.Generic.List`1<UnityEngine.GameObject>::Add(!0) */, L_6, L_8);
 		List_1_t514686775 * L_9 = V_16;
 		V_3 = L_9;
 		Camera_t3533968274 * L_10 = V_1;
@@ -14904,7 +14904,7 @@ extern "C"  void VideoBackgroundManagerAbstractBehaviour_UpdateVideoBackgroundEn
 		NullCheck(L_13);
 		GameObject_t4012695102 * L_14 = Component_get_gameObject_m1170635899(L_13, /*hidden argument*/NULL);
 		NullCheck(L_12);
-		VirtActionInvoker1< GameObject_t4012695102 * >::Invoke(19 /* System.Void System.Collections.Generic.List`1<UnityEngine.GameObject>::Add(!0) */, L_12, L_14);
+		VirtActionInvoker1< GameObject_t4012695102 * >::Invoke(22 /* System.Void System.Collections.Generic.List`1<UnityEngine.GameObject>::Add(!0) */, L_12, L_14);
 	}
 
 IL_0040:
@@ -14922,7 +14922,7 @@ IL_0040:
 		NullCheck(L_18);
 		GameObject_t4012695102 * L_19 = Component_get_gameObject_m1170635899(L_18, /*hidden argument*/NULL);
 		NullCheck(L_17);
-		VirtActionInvoker1< GameObject_t4012695102 * >::Invoke(19 /* System.Void System.Collections.Generic.List`1<UnityEngine.GameObject>::Add(!0) */, L_17, L_19);
+		VirtActionInvoker1< GameObject_t4012695102 * >::Invoke(22 /* System.Void System.Collections.Generic.List`1<UnityEngine.GameObject>::Add(!0) */, L_17, L_19);
 	}
 
 IL_0055:
@@ -16194,7 +16194,7 @@ IL_001f:
 		ViewerParameters_t696517330 * L_9 = (ViewerParameters_t696517330 *)il2cpp_codegen_object_new(ViewerParameters_t696517330_il2cpp_TypeInfo_var);
 		ViewerParameters__ctor_m3792113490(L_9, L_8, /*hidden argument*/NULL);
 		NullCheck(L_5);
-		VirtActionInvoker1< Il2CppObject * >::Invoke(19 /* System.Void System.Collections.Generic.List`1<Vuforia.IViewerParameters>::Add(!0) */, L_5, L_9);
+		VirtActionInvoker1< Il2CppObject * >::Invoke(22 /* System.Void System.Collections.Generic.List`1<Vuforia.IViewerParameters>::Add(!0) */, L_5, L_9);
 		Il2CppObject * L_10 = VuforiaWrapper_get_CamIndependentInstance_m3006300549(NULL /*static, unused*/, /*hidden argument*/NULL);
 		IntPtr_t L_11 = __this->get_mNativeVPL_0();
 		IntPtr_t L_12 = V_1;
@@ -16310,7 +16310,7 @@ extern "C"  void VirtualButtonAbstractBehaviour_RegisterEventHandler_m2754464967
 		List_1_t3030014931 * L_0 = __this->get_mHandlers_11();
 		Il2CppObject * L_1 = ___eventHandler0;
 		NullCheck(L_0);
-		VirtActionInvoker1< Il2CppObject * >::Invoke(19 /* System.Void System.Collections.Generic.List`1<Vuforia.IVirtualButtonEventHandler>::Add(!0) */, L_0, L_1);
+		VirtActionInvoker1< Il2CppObject * >::Invoke(22 /* System.Void System.Collections.Generic.List`1<Vuforia.IVirtualButtonEventHandler>::Add(!0) */, L_0, L_1);
 		return;
 	}
 }
@@ -16321,7 +16321,7 @@ extern "C"  bool VirtualButtonAbstractBehaviour_UnregisterEventHandler_m13579185
 		List_1_t3030014931 * L_0 = __this->get_mHandlers_11();
 		Il2CppObject * L_1 = ___eventHandler0;
 		NullCheck(L_0);
-		bool L_2 = VirtFuncInvoker1< bool, Il2CppObject * >::Invoke(23 /* System.Boolean System.Collections.Generic.List`1<Vuforia.IVirtualButtonEventHandler>::Remove(!0) */, L_0, L_1);
+		bool L_2 = VirtFuncInvoker1< bool, Il2CppObject * >::Invoke(26 /* System.Boolean System.Collections.Generic.List`1<Vuforia.IVirtualButtonEventHandler>::Remove(!0) */, L_0, L_1);
 		return L_2;
 	}
 }
@@ -18253,7 +18253,7 @@ extern "C"  void VuforiaAbstractBehaviour_RegisterTrackerEventHandler_m349433170
 		List_1_t4212701614 * L_0 = __this->get_mTrackerEventHandlers_11();
 		Il2CppObject * L_1 = ___trackerEventHandler0;
 		NullCheck(L_0);
-		VirtActionInvoker1< Il2CppObject * >::Invoke(19 /* System.Void System.Collections.Generic.List`1<Vuforia.ITrackerEventHandler>::Add(!0) */, L_0, L_1);
+		VirtActionInvoker1< Il2CppObject * >::Invoke(22 /* System.Void System.Collections.Generic.List`1<Vuforia.ITrackerEventHandler>::Add(!0) */, L_0, L_1);
 		bool L_2 = __this->get_mHasStarted_21();
 		if (!L_2)
 		{
@@ -18278,7 +18278,7 @@ extern "C"  bool VuforiaAbstractBehaviour_UnregisterTrackerEventHandler_m1603868
 		List_1_t4212701614 * L_0 = __this->get_mTrackerEventHandlers_11();
 		Il2CppObject * L_1 = ___trackerEventHandler0;
 		NullCheck(L_0);
-		bool L_2 = VirtFuncInvoker1< bool, Il2CppObject * >::Invoke(23 /* System.Boolean System.Collections.Generic.List`1<Vuforia.ITrackerEventHandler>::Remove(!0) */, L_0, L_1);
+		bool L_2 = VirtFuncInvoker1< bool, Il2CppObject * >::Invoke(26 /* System.Boolean System.Collections.Generic.List`1<Vuforia.ITrackerEventHandler>::Remove(!0) */, L_0, L_1);
 		return L_2;
 	}
 }
@@ -18289,7 +18289,7 @@ extern "C"  void VuforiaAbstractBehaviour_RegisterVideoBgEventHandler_m867081460
 		List_1_t1045066239 * L_0 = __this->get_mVideoBgEventHandlers_12();
 		Il2CppObject * L_1 = ___videoBgEventHandler0;
 		NullCheck(L_0);
-		VirtActionInvoker1< Il2CppObject * >::Invoke(19 /* System.Void System.Collections.Generic.List`1<Vuforia.IVideoBackgroundEventHandler>::Add(!0) */, L_0, L_1);
+		VirtActionInvoker1< Il2CppObject * >::Invoke(22 /* System.Void System.Collections.Generic.List`1<Vuforia.IVideoBackgroundEventHandler>::Add(!0) */, L_0, L_1);
 		return;
 	}
 }
@@ -18300,7 +18300,7 @@ extern "C"  bool VuforiaAbstractBehaviour_UnregisterVideoBgEventHandler_m2062139
 		List_1_t1045066239 * L_0 = __this->get_mVideoBgEventHandlers_12();
 		Il2CppObject * L_1 = ___videoBgEventHandler0;
 		NullCheck(L_0);
-		bool L_2 = VirtFuncInvoker1< bool, Il2CppObject * >::Invoke(23 /* System.Boolean System.Collections.Generic.List`1<Vuforia.IVideoBackgroundEventHandler>::Remove(!0) */, L_0, L_1);
+		bool L_2 = VirtFuncInvoker1< bool, Il2CppObject * >::Invoke(26 /* System.Boolean System.Collections.Generic.List`1<Vuforia.IVideoBackgroundEventHandler>::Remove(!0) */, L_0, L_1);
 		return L_2;
 	}
 }
@@ -20446,7 +20446,7 @@ extern "C"  void VuforiaAbstractBehaviour_DeinitRequestedTrackers_m3517163579 (V
 	{
 		List_1_t3576188904 * L_0 = __this->get_mTrackersRequestedToDeinit_38();
 		NullCheck(L_0);
-		int32_t L_1 = VirtFuncInvoker0< int32_t >::Invoke(17 /* System.Int32 System.Collections.Generic.List`1<System.Type>::get_Count() */, L_0);
+		int32_t L_1 = VirtFuncInvoker0< int32_t >::Invoke(20 /* System.Int32 System.Collections.Generic.List`1<System.Type>::get_Count() */, L_0);
 		if ((((int32_t)L_1) <= ((int32_t)0)))
 		{
 			goto IL_0108;
@@ -20630,7 +20630,7 @@ IL_00f6:
 		Behaviour_set_enabled_m2046806933(__this, (bool)1, /*hidden argument*/NULL);
 		List_1_t3576188904 * L_26 = __this->get_mTrackersRequestedToDeinit_38();
 		NullCheck(L_26);
-		VirtActionInvoker0::Invoke(20 /* System.Void System.Collections.Generic.List`1<System.Type>::Clear() */, L_26);
+		VirtActionInvoker0::Invoke(23 /* System.Void System.Collections.Generic.List`1<System.Type>::Clear() */, L_26);
 	}
 
 IL_0108:
@@ -22079,7 +22079,7 @@ IL_0109:
 		LinkedList_1_t292577037 * L_35 = __this->get_mTrackableFoundQueue_9();
 		int32_t L_36 = (&V_6)->get_id_3();
 		NullCheck(L_35);
-		bool L_37 = VirtFuncInvoker1< bool, int32_t >::Invoke(14 /* System.Boolean System.Collections.Generic.LinkedList`1<System.Int32>::Contains(!0) */, L_35, L_36);
+		bool L_37 = VirtFuncInvoker1< bool, int32_t >::Invoke(15 /* System.Boolean System.Collections.Generic.LinkedList`1<System.Int32>::Contains(!0) */, L_35, L_36);
 		if (L_37)
 		{
 			goto IL_0159;
@@ -22098,7 +22098,7 @@ IL_0132:
 		LinkedList_1_t292577037 * L_40 = __this->get_mTrackableFoundQueue_9();
 		int32_t L_41 = (&V_6)->get_id_3();
 		NullCheck(L_40);
-		bool L_42 = VirtFuncInvoker1< bool, int32_t >::Invoke(14 /* System.Boolean System.Collections.Generic.LinkedList`1<System.Int32>::Contains(!0) */, L_40, L_41);
+		bool L_42 = VirtFuncInvoker1< bool, int32_t >::Invoke(15 /* System.Boolean System.Collections.Generic.LinkedList`1<System.Int32>::Contains(!0) */, L_40, L_41);
 		if (!L_42)
 		{
 			goto IL_0159;
@@ -22108,7 +22108,7 @@ IL_0132:
 		LinkedList_1_t292577037 * L_43 = __this->get_mTrackableFoundQueue_9();
 		int32_t L_44 = (&V_6)->get_id_3();
 		NullCheck(L_43);
-		VirtFuncInvoker1< bool, int32_t >::Invoke(16 /* System.Boolean System.Collections.Generic.LinkedList`1<System.Int32>::Remove(!0) */, L_43, L_44);
+		VirtFuncInvoker1< bool, int32_t >::Invoke(17 /* System.Boolean System.Collections.Generic.LinkedList`1<System.Int32>::Remove(!0) */, L_43, L_44);
 	}
 
 IL_0159:
@@ -22193,7 +22193,7 @@ IL_01bc:
 			NullCheck(L_63);
 			int32_t L_64 = L_63->get_id_0();
 			NullCheck(L_62);
-			VirtFuncInvoker1< bool, int32_t >::Invoke(16 /* System.Boolean System.Collections.Generic.LinkedList`1<System.Int32>::Remove(!0) */, L_62, L_64);
+			VirtFuncInvoker1< bool, int32_t >::Invoke(17 /* System.Boolean System.Collections.Generic.LinkedList`1<System.Int32>::Remove(!0) */, L_62, L_64);
 		}
 
 IL_01cf:
@@ -22286,7 +22286,7 @@ IL_0239:
 		StateManagerImpl_RemoveDisabledTrackablesFromQueue_m2149411645(L_78, L_79, /*hidden argument*/NULL);
 		LinkedList_1_t292577037 * L_80 = __this->get_mTrackableFoundQueue_9();
 		NullCheck(L_80);
-		int32_t L_81 = VirtFuncInvoker0< int32_t >::Invoke(10 /* System.Int32 System.Collections.Generic.LinkedList`1<System.Int32>::get_Count() */, L_80);
+		int32_t L_81 = VirtFuncInvoker0< int32_t >::Invoke(11 /* System.Int32 System.Collections.Generic.LinkedList`1<System.Int32>::get_Count() */, L_80);
 		if ((((int32_t)L_81) <= ((int32_t)0)))
 		{
 			goto IL_0283;
@@ -22960,7 +22960,7 @@ extern "C"  void VuforiaManagerImpl_UpdateImageContainer_m4163987328 (VuforiaMan
 		NullCheck(L_2);
 		Dictionary_2_t1438973871 * L_3 = CameraDeviceImpl_GetAllImages_m3712038097(L_2, /*hidden argument*/NULL);
 		NullCheck(L_3);
-		int32_t L_4 = VirtFuncInvoker0< int32_t >::Invoke(9 /* System.Int32 System.Collections.Generic.Dictionary`2<Vuforia.Image/PIXEL_FORMAT,Vuforia.Image>::get_Count() */, L_3);
+		int32_t L_4 = VirtFuncInvoker0< int32_t >::Invoke(10 /* System.Int32 System.Collections.Generic.Dictionary`2<Vuforia.Image/PIXEL_FORMAT,Vuforia.Image>::get_Count() */, L_3);
 		if ((!(((uint32_t)L_1) == ((uint32_t)L_4))))
 		{
 			goto IL_003e;
@@ -22971,7 +22971,7 @@ extern "C"  void VuforiaManagerImpl_UpdateImageContainer_m4163987328 (VuforiaMan
 		NullCheck(L_5);
 		Dictionary_2_t1438973871 * L_6 = CameraDeviceImpl_GetAllImages_m3712038097(L_5, /*hidden argument*/NULL);
 		NullCheck(L_6);
-		int32_t L_7 = VirtFuncInvoker0< int32_t >::Invoke(9 /* System.Int32 System.Collections.Generic.Dictionary`2<Vuforia.Image/PIXEL_FORMAT,Vuforia.Image>::get_Count() */, L_6);
+		int32_t L_7 = VirtFuncInvoker0< int32_t >::Invoke(10 /* System.Int32 System.Collections.Generic.Dictionary`2<Vuforia.Image/PIXEL_FORMAT,Vuforia.Image>::get_Count() */, L_6);
 		if ((((int32_t)L_7) <= ((int32_t)0)))
 		{
 			goto IL_007b;
@@ -22993,7 +22993,7 @@ IL_003e:
 		NullCheck(L_11);
 		Dictionary_2_t1438973871 * L_12 = CameraDeviceImpl_GetAllImages_m3712038097(L_11, /*hidden argument*/NULL);
 		NullCheck(L_12);
-		int32_t L_13 = VirtFuncInvoker0< int32_t >::Invoke(9 /* System.Int32 System.Collections.Generic.Dictionary`2<Vuforia.Image/PIXEL_FORMAT,Vuforia.Image>::get_Count() */, L_12);
+		int32_t L_13 = VirtFuncInvoker0< int32_t >::Invoke(10 /* System.Int32 System.Collections.Generic.Dictionary`2<Vuforia.Image/PIXEL_FORMAT,Vuforia.Image>::get_Count() */, L_12);
 		__this->set_mNumImageHeaders_11(L_13);
 		IntPtr_t L_14 = __this->get_mImageHeaderData_10();
 		IL2CPP_RUNTIME_CLASS_INIT(Marshal_t3977632096_il2cpp_TypeInfo_var);
@@ -44176,7 +44176,7 @@ extern "C"  ProfileData_t1845074131  WebCamProfile_GetProfile_m3052101586 (WebCa
 		NullCheck(L_2);
 		String_t* L_3 = String_ToLower_m2421900555(L_2, /*hidden argument*/NULL);
 		NullCheck(L_1);
-		bool L_4 = VirtFuncInvoker2< bool, String_t*, ProfileData_t1845074131 * >::Invoke(30 /* System.Boolean System.Collections.Generic.Dictionary`2<System.String,Vuforia.WebCamProfile/ProfileData>::TryGetValue(!0,!1&) */, L_1, L_3, (&V_0));
+		bool L_4 = VirtFuncInvoker2< bool, String_t*, ProfileData_t1845074131 * >::Invoke(31 /* System.Boolean System.Collections.Generic.Dictionary`2<System.String,Vuforia.WebCamProfile/ProfileData>::TryGetValue(!0,!1&) */, L_1, L_3, (&V_0));
 		if (!L_4)
 		{
 			goto IL_001c;
@@ -44204,7 +44204,7 @@ extern "C"  bool WebCamProfile_ProfileAvailable_m113445706 (WebCamProfile_t16607
 		NullCheck(L_2);
 		String_t* L_3 = String_ToLower_m2421900555(L_2, /*hidden argument*/NULL);
 		NullCheck(L_1);
-		bool L_4 = VirtFuncInvoker1< bool, String_t* >::Invoke(26 /* System.Boolean System.Collections.Generic.Dictionary`2<System.String,Vuforia.WebCamProfile/ProfileData>::ContainsKey(!0) */, L_1, L_3);
+		bool L_4 = VirtFuncInvoker1< bool, String_t* >::Invoke(27 /* System.Boolean System.Collections.Generic.Dictionary`2<System.String,Vuforia.WebCamProfile/ProfileData>::ContainsKey(!0) */, L_1, L_3);
 		return L_4;
 	}
 }

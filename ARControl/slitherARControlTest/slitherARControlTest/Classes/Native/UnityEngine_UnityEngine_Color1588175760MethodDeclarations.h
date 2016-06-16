@@ -32,6 +32,8 @@ extern "C"  String_t* Color_ToString_m2277845527 (Color_t1588175760 * __this, co
 extern "C"  int32_t Color_GetHashCode_m170503301 (Color_t1588175760 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean UnityEngine.Color::Equals(System.Object)
 extern "C"  bool Color_Equals_m3016668205 (Color_t1588175760 * __this, Il2CppObject * ___other0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.Color UnityEngine.Color::Lerp(UnityEngine.Color,UnityEngine.Color,System.Single)
+extern "C"  Color_t1588175760  Color_Lerp_m3494628845 (Il2CppObject * __this /* static, unused */, Color_t1588175760  ___a0, Color_t1588175760  ___b1, float ___t2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Color UnityEngine.Color::get_red()
 extern "C"  Color_t1588175760  Color_get_red_m4288945411 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Color UnityEngine.Color::get_green()
@@ -44,10 +46,16 @@ extern "C"  Color_t1588175760  Color_get_white_m3038282331 (Il2CppObject * __thi
 extern "C"  Color_t1588175760  Color_get_black_m1687201969 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Color UnityEngine.Color::get_gray()
 extern "C"  Color_t1588175760  Color_get_gray_m3805362451 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.Color UnityEngine.Color::get_clear()
+extern "C"  Color_t1588175760  Color_get_clear_m2578346879 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Single UnityEngine.Color::get_Item(System.Int32)
 extern "C"  float Color_get_Item_m934758479 (Color_t1588175760 * __this, int32_t ___index0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Color::set_Item(System.Int32,System.Single)
 extern "C"  void Color_set_Item_m2234100212 (Color_t1588175760 * __this, int32_t ___index0, float ___value1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.Color UnityEngine.Color::op_Multiply(UnityEngine.Color,System.Single)
+extern "C"  Color_t1588175760  Color_op_Multiply_m204757678 (Il2CppObject * __this /* static, unused */, Color_t1588175760  ___a0, float ___b1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Boolean UnityEngine.Color::op_Equality(UnityEngine.Color,UnityEngine.Color)
+extern "C"  bool Color_op_Equality_m4163276884 (Il2CppObject * __this /* static, unused */, Color_t1588175760  ___lhs0, Color_t1588175760  ___rhs1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Vector4 UnityEngine.Color::op_Implicit(UnityEngine.Color)
 extern "C"  Vector4_t3525329790  Color_op_Implicit_m2638307542 (Il2CppObject * __this /* static, unused */, Color_t1588175760  ___c0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 

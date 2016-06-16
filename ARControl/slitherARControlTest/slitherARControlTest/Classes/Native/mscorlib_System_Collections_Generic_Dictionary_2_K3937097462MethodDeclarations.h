@@ -58,6 +58,9 @@ extern "C"  Il2CppObject * KeyCollection_System_Collections_IEnumerable_GetEnume
 // System.Boolean System.Collections.Generic.Dictionary`2/KeyCollection<System.Int32,Vuforia.VuforiaManagerImpl/VirtualButtonData>::System.Collections.Generic.ICollection<TKey>.get_IsReadOnly()
 extern "C"  bool KeyCollection_System_Collections_Generic_ICollectionU3CTKeyU3E_get_IsReadOnly_m1392494009_gshared (KeyCollection_t3937097462 * __this, const MethodInfo* method);
 #define KeyCollection_System_Collections_Generic_ICollectionU3CTKeyU3E_get_IsReadOnly_m1392494009(__this, method) ((  bool (*) (KeyCollection_t3937097462 *, const MethodInfo*))KeyCollection_System_Collections_Generic_ICollectionU3CTKeyU3E_get_IsReadOnly_m1392494009_gshared)(__this, method)
+// System.Boolean System.Collections.Generic.Dictionary`2/KeyCollection<System.Int32,Vuforia.VuforiaManagerImpl/VirtualButtonData>::System.Collections.ICollection.get_IsSynchronized()
+extern "C"  bool KeyCollection_System_Collections_ICollection_get_IsSynchronized_m3834769835_gshared (KeyCollection_t3937097462 * __this, const MethodInfo* method);
+#define KeyCollection_System_Collections_ICollection_get_IsSynchronized_m3834769835(__this, method) ((  bool (*) (KeyCollection_t3937097462 *, const MethodInfo*))KeyCollection_System_Collections_ICollection_get_IsSynchronized_m3834769835_gshared)(__this, method)
 // System.Object System.Collections.Generic.Dictionary`2/KeyCollection<System.Int32,Vuforia.VuforiaManagerImpl/VirtualButtonData>::System.Collections.ICollection.get_SyncRoot()
 extern "C"  Il2CppObject * KeyCollection_System_Collections_ICollection_get_SyncRoot_m383959_gshared (KeyCollection_t3937097462 * __this, const MethodInfo* method);
 #define KeyCollection_System_Collections_ICollection_get_SyncRoot_m383959(__this, method) ((  Il2CppObject * (*) (KeyCollection_t3937097462 *, const MethodInfo*))KeyCollection_System_Collections_ICollection_get_SyncRoot_m383959_gshared)(__this, method)

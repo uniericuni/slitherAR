@@ -13,6 +13,8 @@
 // UnityEngine.Event
 struct Event_t1590224583;
 struct Event_t1590224583_marshaled_pinvoke;
+// System.Collections.Generic.Dictionary`2<System.String,System.Int32>
+struct Dictionary_2_t190145395;
 
 #include "mscorlib_System_Object837106420.h"
 #include "mscorlib_System_IntPtr676692020.h"
@@ -47,6 +49,8 @@ public:
 	Event_t1590224583 * ___s_Current_1;
 	// UnityEngine.Event UnityEngine.Event::s_MasterEvent
 	Event_t1590224583 * ___s_MasterEvent_2;
+	// System.Collections.Generic.Dictionary`2<System.String,System.Int32> UnityEngine.Event::<>f__switch$map0
+	Dictionary_2_t190145395 * ___U3CU3Ef__switchU24map0_3;
 
 public:
 	inline static int32_t get_offset_of_s_Current_1() { return static_cast<int32_t>(offsetof(Event_t1590224583_StaticFields, ___s_Current_1)); }
@@ -65,6 +69,15 @@ public:
 	{
 		___s_MasterEvent_2 = value;
 		Il2CppCodeGenWriteBarrier(&___s_MasterEvent_2, value);
+	}
+
+	inline static int32_t get_offset_of_U3CU3Ef__switchU24map0_3() { return static_cast<int32_t>(offsetof(Event_t1590224583_StaticFields, ___U3CU3Ef__switchU24map0_3)); }
+	inline Dictionary_2_t190145395 * get_U3CU3Ef__switchU24map0_3() const { return ___U3CU3Ef__switchU24map0_3; }
+	inline Dictionary_2_t190145395 ** get_address_of_U3CU3Ef__switchU24map0_3() { return &___U3CU3Ef__switchU24map0_3; }
+	inline void set_U3CU3Ef__switchU24map0_3(Dictionary_2_t190145395 * value)
+	{
+		___U3CU3Ef__switchU24map0_3 = value;
+		Il2CppCodeGenWriteBarrier(&___U3CU3Ef__switchU24map0_3, value);
 	}
 };
 

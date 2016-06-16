@@ -21,5 +21,5 @@ struct onPlane_t2955063229;
 extern "C"  void onPlane__ctor_m2530468942 (onPlane_t2955063229 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void onPlane::Start()
 extern "C"  void onPlane_Start_m1477606734 (onPlane_t2955063229 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void onPlane::Update()
-extern "C"  void onPlane_Update_m2861987967 (onPlane_t2955063229 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void onPlane::FixedUpdate()
+extern "C"  void onPlane_FixedUpdate_m3985166153 (onPlane_t2955063229 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;

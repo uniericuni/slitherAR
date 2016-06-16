@@ -34,6 +34,8 @@
 #define ValueCollection_System_Collections_IEnumerable_GetEnumerator_m4132894117(__this, method) ((  Il2CppObject * (*) (ValueCollection_t3361110965 *, const MethodInfo*))ValueCollection_System_Collections_IEnumerable_GetEnumerator_m11068950_gshared)(__this, method)
 // System.Boolean System.Collections.Generic.Dictionary`2/ValueCollection<Vuforia.Image/PIXEL_FORMAT,Vuforia.Image>::System.Collections.Generic.ICollection<TValue>.get_IsReadOnly()
 #define ValueCollection_System_Collections_Generic_ICollectionU3CTValueU3E_get_IsReadOnly_m3975576052(__this, method) ((  bool (*) (ValueCollection_t3361110965 *, const MethodInfo*))ValueCollection_System_Collections_Generic_ICollectionU3CTValueU3E_get_IsReadOnly_m925325731_gshared)(__this, method)
+// System.Boolean System.Collections.Generic.Dictionary`2/ValueCollection<Vuforia.Image/PIXEL_FORMAT,Vuforia.Image>::System.Collections.ICollection.get_IsSynchronized()
+#define ValueCollection_System_Collections_ICollection_get_IsSynchronized_m2676821460(__this, method) ((  bool (*) (ValueCollection_t3361110965 *, const MethodInfo*))ValueCollection_System_Collections_ICollection_get_IsSynchronized_m2881797123_gshared)(__this, method)
 // System.Object System.Collections.Generic.Dictionary`2/ValueCollection<Vuforia.Image/PIXEL_FORMAT,Vuforia.Image>::System.Collections.ICollection.get_SyncRoot()
 #define ValueCollection_System_Collections_ICollection_get_SyncRoot_m3257700870(__this, method) ((  Il2CppObject * (*) (ValueCollection_t3361110965 *, const MethodInfo*))ValueCollection_System_Collections_ICollection_get_SyncRoot_m76697461_gshared)(__this, method)
 // System.Void System.Collections.Generic.Dictionary`2/ValueCollection<Vuforia.Image/PIXEL_FORMAT,Vuforia.Image>::CopyTo(TValue[],System.Int32)

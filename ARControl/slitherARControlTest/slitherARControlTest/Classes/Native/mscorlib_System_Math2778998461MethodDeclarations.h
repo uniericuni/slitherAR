@@ -38,6 +38,10 @@ extern "C"  int32_t Math_Min_m811624909 (Il2CppObject * __this /* static, unused
 extern "C"  Decimal_t1688557254  Math_Round_m2659396224 (Il2CppObject * __this /* static, unused */, Decimal_t1688557254  ___d0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Double System.Math::Round(System.Double)
 extern "C"  double Math_Round_m2587388934 (Il2CppObject * __this /* static, unused */, double ___a0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Double System.Math::Sin(System.Double)
+extern "C"  double Math_Sin_m1832281148 (Il2CppObject * __this /* static, unused */, double ___a0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Double System.Math::Cos(System.Double)
+extern "C"  double Math_Cos_m1877789613 (Il2CppObject * __this /* static, unused */, double ___d0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Double System.Math::Tan(System.Double)
 extern "C"  double Math_Tan_m2893633107 (Il2CppObject * __this /* static, unused */, double ___a0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Double System.Math::Acos(System.Double)

@@ -21,14 +21,14 @@
 #endif
 
 // Vuforia.Device/Mode
-struct  Mode_t2403779 
+struct  Mode_t2403780 
 {
 public:
 	// System.Int32 Vuforia.Device/Mode::value__
 	int32_t ___value___1;
 
 public:
-	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(Mode_t2403779, ___value___1)); }
+	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(Mode_t2403780, ___value___1)); }
 	inline int32_t get_value___1() const { return ___value___1; }
 	inline int32_t* get_address_of_value___1() { return &___value___1; }
 	inline void set_value___1(int32_t value)

@@ -34,6 +34,8 @@
 #define KeyCollection_System_Collections_IEnumerable_GetEnumerator_m1397015448(__this, method) ((  Il2CppObject * (*) (KeyCollection_t1511080019 *, const MethodInfo*))KeyCollection_System_Collections_IEnumerable_GetEnumerator_m4207908266_gshared)(__this, method)
 // System.Boolean System.Collections.Generic.Dictionary`2/KeyCollection<System.String,Vuforia.WebCamProfile/ProfileData>::System.Collections.Generic.ICollection<TKey>.get_IsReadOnly()
 #define KeyCollection_System_Collections_Generic_ICollectionU3CTKeyU3E_get_IsReadOnly_m2849748727(__this, method) ((  bool (*) (KeyCollection_t1511080019 *, const MethodInfo*))KeyCollection_System_Collections_Generic_ICollectionU3CTKeyU3E_get_IsReadOnly_m1096040101_gshared)(__this, method)
+// System.Boolean System.Collections.Generic.Dictionary`2/KeyCollection<System.String,Vuforia.WebCamProfile/ProfileData>::System.Collections.ICollection.get_IsSynchronized()
+#define KeyCollection_System_Collections_ICollection_get_IsSynchronized_m888191081(__this, method) ((  bool (*) (KeyCollection_t1511080019 *, const MethodInfo*))KeyCollection_System_Collections_ICollection_get_IsSynchronized_m739271063_gshared)(__this, method)
 // System.Object System.Collections.Generic.Dictionary`2/KeyCollection<System.String,Vuforia.WebCamProfile/ProfileData>::System.Collections.ICollection.get_SyncRoot()
 #define KeyCollection_System_Collections_ICollection_get_SyncRoot_m1508863317(__this, method) ((  Il2CppObject * (*) (KeyCollection_t1511080019 *, const MethodInfo*))KeyCollection_System_Collections_ICollection_get_SyncRoot_m1738084611_gshared)(__this, method)
 // System.Void System.Collections.Generic.Dictionary`2/KeyCollection<System.String,Vuforia.WebCamProfile/ProfileData>::CopyTo(TKey[],System.Int32)

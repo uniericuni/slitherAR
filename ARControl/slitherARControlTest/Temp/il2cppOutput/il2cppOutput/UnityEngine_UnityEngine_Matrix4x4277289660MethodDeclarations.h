@@ -44,6 +44,8 @@ extern "C"  void Matrix4x4_INTERNAL_CALL_Inverse_m362567117 (Il2CppObject * __th
 extern "C"  Matrix4x4_t277289660  Matrix4x4_get_inverse_m2596073482 (Matrix4x4_t277289660 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Vector4 UnityEngine.Matrix4x4::GetColumn(System.Int32)
 extern "C"  Vector4_t3525329790  Matrix4x4_GetColumn_m786071102 (Matrix4x4_t277289660 * __this, int32_t ___i0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.Vector3 UnityEngine.Matrix4x4::MultiplyPoint3x4(UnityEngine.Vector3)
+extern "C"  Vector3_t3525329789  Matrix4x4_MultiplyPoint3x4_m2198174902 (Matrix4x4_t277289660 * __this, Vector3_t3525329789  ___v0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Matrix4x4 UnityEngine.Matrix4x4::get_zero()
 extern "C"  Matrix4x4_t277289660  Matrix4x4_get_zero_m1808471152 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Matrix4x4 UnityEngine.Matrix4x4::get_identity()
