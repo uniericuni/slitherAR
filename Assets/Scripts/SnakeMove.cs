@@ -111,6 +111,8 @@ public class SnakeMove : Photon.MonoBehaviour {
 	public float bodyPartFollowTimeRunning = 0.1f;
 	public float bodyPartFollowTimeWalking = 0.19f;
 	void Running() {
+		SnakeGlow (running);
+
 		if (bodyParts.Count > 2) {
 			if (Input.GetMouseButtonDown (0)) {
 				speed = speedWhileRunning;
@@ -196,6 +198,13 @@ public class SnakeMove : Photon.MonoBehaviour {
 
 		bodyPartFollowTimeWalking = currentBodySize / 100.0f + followTimeSensitivity;
 		bodyPartFollowTimeRunning = bodyPartFollowTimeWalking / 2;
+	}
+
+	// Glow when running
+	void SnakeGlow(bool isRunning) {
+		foreach (Transform bodyPart_x in bodyParts) {
+			bodyPart_x.FindChild("onfire").gameObject.SetActive(isRunning);
+		}
 	}
 
 	void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
