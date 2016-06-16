@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour {
 		/*
 		 ... = instantiate a body on t
 		playerBodies[n].Add(...)
-		 * /
+		 */
 	}
 
 	private void MoveBodies()
