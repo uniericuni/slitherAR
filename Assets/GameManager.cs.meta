@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 5fb8d9f9fc393ed48b5d14b71e04bf15
 timeCreated: 1466073486
+=======
+guid: c7dbcc19f34d54ff193a21225d28d6df
+timeCreated: 1466073528
+>>>>>>> [Game] Added snake color and speed-up mechanism.
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
