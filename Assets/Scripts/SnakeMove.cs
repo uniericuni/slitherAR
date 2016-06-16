@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class SnakeMove : Photon.MonoBehaviour {
+
 	private float currentRotation;
 	public float rotationSensitivity = 50.0f;
 	public float speed = 3.5f;
@@ -10,9 +11,7 @@ public class SnakeMove : Photon.MonoBehaviour {
 	public List<Transform> bodyParts = new List<Transform>();
 
 
-	// Use this for initialization
 	void Start () {
-	
 	}
 	
 	// Update is called once per frame
@@ -20,6 +19,14 @@ public class SnakeMove : Photon.MonoBehaviour {
 		ColorSnake ();
 		Running ();
 	}
+
+	void FixedUpdate()
+	{	
+		if (photonView.isMine) {
+		    Move();
+		    UpdateBodyAttributes ();
+        }
+    }
 
 	// Add skin colors for snake
 	public Material skinColor_1, skinColor_2;
@@ -31,16 +38,6 @@ public class SnakeMove : Photon.MonoBehaviour {
 				bodyParts [i].GetComponent<Renderer> ().material = skinColor_2;
 			}
 		}
-	}
-
-	void FixedUpdate()
-	{	
-		Move();
-		UpdateBodyAttributes ();
-		/*if (photonView.isMine)
-		{
-			Move();
-		}*/
 	}
 
 	// Movement by keys A & D
@@ -56,17 +53,6 @@ public class SnakeMove : Photon.MonoBehaviour {
 
 		transform.position += transform.forward * speed * Time.deltaTime;
 		transform.rotation = Quaternion.Euler(new Vector3(myRot.x, currentRotation, myRot.z));
-	}
-
-	void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
-	{
-		if (stream.isWriting) {
-			stream.SendNext (transform.position);
-			stream.SendNext (transform.rotation);
-		} else {
-			transform.position = (Vector3)stream.ReceiveNext ();
-			transform.rotation = (Quaternion)stream.ReceiveNext ();
-		}
 	}
 
 	// Count number of orbs and decide whether to size up or to add a new body part
@@ -95,20 +81,20 @@ public class SnakeMove : Photon.MonoBehaviour {
 	public Transform bodyObject;
 	void OnCollisionEnter (Collision other) {
 		if (other.transform.tag == "NormalFood") {
-			Destroy (other.gameObject);
+			PhotonNetwork.Destroy (other.gameObject);
 			//orbCounter++;
 
 			if (SizeUp (orbCounter) == false) {
 				if (bodyParts.Count == 0) {
 					orbCounter++;
 					Vector3 currentPos = transform.position;
-					Transform newBodyPart = Instantiate (bodyObject, currentPos, Quaternion.identity) as Transform;
+				    Transform newBodyPart = PhotonNetwork.Instantiate( "SnakeBody" , currentPos, Quaternion.identity, 0).transform;
 					//newBodyPart.localScale = currentSize;
 					//newBodyPart.GetComponent<SnakeBody> ().overTime = bodyPartOverTimeFollow;
 					bodyParts.Add (newBodyPart);
 				} else {
 					Vector3 currentPos = bodyParts [bodyParts.Count - 1].position;
-					Transform newBodyPart = Instantiate (bodyObject, currentPos, Quaternion.identity) as Transform;
+				    Transform newBodyPart = PhotonNetwork.Instantiate( "SnakeBody" , currentPos, Quaternion.identity, 0).transform;
 					//newBodyPart.localScale = currentSize;
 					//newBodyPart.GetComponent<SnakeBody> ().overTime = bodyPartOverTimeFollow;
 					bodyParts.Add (newBodyPart);
@@ -159,6 +145,19 @@ public class SnakeMove : Photon.MonoBehaviour {
 		foreach (Transform bodyPart_x in bodyParts) {
 			bodyPart_x.localScale = currentSize;
 			bodyPart_x.GetComponent<SnakeBody> ().overTime = bodyPartOverTimeFollow;
+		}
+	}
+	void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+	{
+		if (stream.isWriting)
+		{
+			stream.SendNext(transform.position);
+			stream.SendNext(transform.rotation);
+		}
+		else
+		{
+			transform.position = (Vector3)stream.ReceiveNext();
+			transform.rotation = (Quaternion)stream.ReceiveNext();
 		}
 	}
 }

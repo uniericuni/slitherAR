@@ -7,16 +7,25 @@ public class GameManager : MonoBehaviour {
 	private List<string> playerNames;
 	private Hashtable playerBodies;
 	private Hashtable playerScore;
+	private Hashtable playerTail;
 
 	// Use this for initialization
 	void Start () {
-	
+		playerNames = new List<string>();
+		playerBodies = new Hashtable();
+		playerScore = new Hashtable();
+		playerTail = new Hashtable();
 	}
 
 
 	void FixedUpdate()
 	{
-		MoveBodies();
+		foreach (string name in playerNames) // remember tail
+		{
+			List<Transform> bodies = playerBodies[name] as List<Transform>;
+			playerTail[name] = bodies[bodies.Count - 1];
+		}
+		MoveBodies();   // then move forwad
 	}
 
 	void Update () {
@@ -31,13 +40,14 @@ public class GameManager : MonoBehaviour {
 			{
 				playerNames.Add(n);
 				playerBodies.Add(n, new List<Transform>());
-				playerScore.Add(n, 0f);
+				playerScore.Add(n, 0f); 
 			}
 		}
 	}
 	public void updateScore(string name, float score)
 	{
-		playerScore[name] = score; 
+		playerScore[name] = score;
+
 	}
 	public void addBody(string n, Transform t)
 	{
