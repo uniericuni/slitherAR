@@ -1,10 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class SnakeMove : Photon.MonoBehaviour {
 	private float currentRotation;
 	public float rotationSensitivity = 50.0f;
 	public float speed = 3.5f;
+
+	public List<Transform> bodyParts = new List<Transform>();
 
 
 	// Use this for initialization
@@ -18,11 +21,12 @@ public class SnakeMove : Photon.MonoBehaviour {
 	}
 
 	void FixedUpdate()
-	{
-		if (photonView.isMine)
+	{	
+		Move();
+		/*if (photonView.isMine)
 		{
 			Move();
-		}
+		}*/
 	}
 
 	private void Move()
@@ -47,6 +51,21 @@ public class SnakeMove : Photon.MonoBehaviour {
 		} else {
 			transform.position = (Vector3)stream.ReceiveNext ();
 			transform.rotation = (Quaternion)stream.ReceiveNext ();
+		}
+	}
+	public Transform bodyObject;
+	void OnCollisionEnter (Collision other) {
+		if (other.transform.tag == "NormalFood") {
+			Destroy (other.gameObject);
+			if (bodyParts.Count == 0) {
+				Vector3 currentPos = transform.position;
+				Transform newBodyPart = Instantiate (bodyObject, currentPos, Quaternion.identity) as Transform;
+				bodyParts.Add (newBodyPart);
+			} else {
+				Vector3 currentPos = bodyParts[bodyParts.Count-1].position;
+				Transform newBodyPart = Instantiate (bodyObject, currentPos, Quaternion.identity) as Transform;
+				bodyParts.Add (newBodyPart);
+			}
 		}
 	}
 }
