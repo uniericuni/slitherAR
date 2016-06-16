@@ -18,6 +18,7 @@ public class SnakeMove : Photon.MonoBehaviour {
 	void Update () {
 		ColorSnake ();
 		Running ();
+		Scaling ();
 	}
 
 	void FixedUpdate()
@@ -66,7 +67,7 @@ public class SnakeMove : Photon.MonoBehaviour {
 		try {
 			if (x == growOnThisOrb [currentOrb]) {
 				currentOrb++;
-				return true;
+				return false;
 			} else {
 				return false;
 			}
@@ -79,7 +80,7 @@ public class SnakeMove : Photon.MonoBehaviour {
 
 	// Add SnakeBody when head collides with food
 	public Transform bodyObject;
-	void OnCollisionEnter (Collision other) {
+	void OnTriggerEnter (Collider other) {
 		if (other.transform.tag == "NormalFood") {
 			PhotonNetwork.Destroy (other.gameObject);
 			//orbCounter++;
@@ -99,16 +100,7 @@ public class SnakeMove : Photon.MonoBehaviour {
 					//newBodyPart.GetComponent<SnakeBody> ().overTime = bodyPartOverTimeFollow;
 					bodyParts.Add (newBodyPart);
 				}
-			} else {
-				currentSize += Vector3.one * growthRate;
-				bodyPartOverTimeFollow += 0.04f;
-				transform.localScale = currentSize;
-
-				foreach (Transform bodyPart_x in bodyParts) {
-					bodyPart_x.localScale = currentSize;
-					bodyPart_x.GetComponent<SnakeBody> ().overTime = bodyPartOverTimeFollow;
-				}
-			}
+			} 
 		}
 	}
 
@@ -143,6 +135,7 @@ public class SnakeMove : Photon.MonoBehaviour {
 		}
 	}
 
+	// Couroutine: Lose body parts when speeding up.
 	IEnumerator LoseBodyParts(){
 		yield return new WaitForSeconds (0.5f);
 
@@ -163,6 +156,8 @@ public class SnakeMove : Photon.MonoBehaviour {
 		orbCounter--;
 		StartCoroutine("LoseBodyParts");
 	}
+
+	// Leave new food from the position of the body parts that are dropped
 	[PunRPC]
 	void foodFromBodyParts(Vector3 pos, Quaternion rot)
 	{
@@ -170,12 +165,39 @@ public class SnakeMove : Photon.MonoBehaviour {
 			PhotonNetwork.InstantiateSceneObject("food", pos, rot, 0, new Object[0]);
 	}
 
+	// Updates the body size and follow speed.
 	void UpdateBodyAttributes () {
+		transform.localScale = currentSize;
 		foreach (Transform bodyPart_x in bodyParts) {
 			bodyPart_x.localScale = currentSize;
 			bodyPart_x.GetComponent<SnakeBody> ().overTime = bodyPartOverTimeFollow;
 		}
 	}
+
+	// Scale body when body parts are lost
+	public List<bool> scalingTrack;
+	private int currentBodySize;
+	public float followTimeSensitivity;
+	public float scaleSensitivity = 0.22f;
+	void Scaling() {
+		scalingTrack = new List<bool> (new bool[growOnThisOrb.Length]);
+		currentBodySize = 0;
+		for (int i = 0; i < growOnThisOrb.Length; i++) {
+			if (orbCounter >= growOnThisOrb [i]) {
+				scalingTrack [i] = !scalingTrack [i];
+			}
+		}
+
+		currentSize = new Vector3(
+			1 + (currentBodySize * scaleSensitivity),
+			1 + (currentBodySize * scaleSensitivity),
+			1 + (currentBodySize * scaleSensitivity)
+		);
+
+		bodyPartFollowTimeWalking = currentBodySize / 100.0f + followTimeSensitivity;
+		bodyPartFollowTimeRunning = bodyPartFollowTimeWalking / 2;
+	}
+
 	void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
 	{
 		if (stream.isWriting)
