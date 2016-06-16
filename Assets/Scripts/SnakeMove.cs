@@ -135,10 +135,25 @@ public class SnakeMove : Photon.MonoBehaviour {
 			running = false;
 			bodyPartOverTimeFollow = bodyPartFollowTimeWalking;
 		}
-		/*
+
 		if (running) {
-			StartCoroutine("LoseBodyParts")
-		}*/
+			StartCoroutine ("LoseBodyParts");
+		} else {
+			bodyPartOverTimeFollow = bodyPartFollowTimeWalking;
+		}
+	}
+
+	IEnumerator LoseBodyParts(){
+		yield return new WaitForSeconds (0.5f);
+
+		int lastIndex = bodyParts.Count - 1;
+		Transform lastBodyPart = bodyParts [lastIndex].transform;
+
+		PhotonNetwork.InstantiateSceneObject ("food", lastBodyPart.position, Quaternion.identity, 0);
+
+		bodyParts.RemoveAt (lastIndex);
+		PhotonNetwork.Destroy (lastBodyPart.gameObject);
+		orbCounter--;
 	}
 
 	void UpdateBodyAttributes () {
