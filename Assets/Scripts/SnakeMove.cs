@@ -168,10 +168,11 @@ public class SnakeMove : Photon.MonoBehaviour {
 	}
 
 	// Updates the body size and follow speed.
+	private Vector3 headV;
 	void UpdateBodyAttributes () {
-		transform.localScale = currentSize;
+		transform.localScale = Vector3.SmoothDamp (transform.localScale, currentSize, ref headV, 0.5f);
 		foreach (Transform bodyPart_x in bodyParts) {
-			bodyPart_x.localScale = currentSize;
+			bodyPart_x.localScale = transform.localScale;
 			bodyPart_x.GetComponent<SnakeBody> ().overTime = bodyPartOverTimeFollow;
 		}
 	}
