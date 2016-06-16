@@ -36,6 +36,6 @@ public class NetworkManager : MonoBehaviour {
 
     void OnJoinedRoom()
     {
-        PhotonNetwork.Instantiate( "balla", transform.position, transform.rotation, 0); 
+        //PhotonNetwork.Instantiate( "balla", transform.position, transform.rotation, 0); 
     }
 }
