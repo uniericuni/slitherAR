@@ -83,6 +83,7 @@ namespace Vuforia
                 component.enabled = true;
             }
 
+            mTrackableBehaviour.transform;
             Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " found");
         }
 

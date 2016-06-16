@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{280FDA98-D39B-7C4D-D606-AC69686FE210}") = "slitherAr", "Assembly-CSharp.csproj", "{287B5DBB-6B49-3F95-D86C-91E04DFD37F8}"
+EndProject
+Project("{280FDA98-D39B-7C4D-D606-AC69686FE210}") = "slitherAr", "Assembly-CSharp-Editor.csproj", "{F501740A-37C1-5AD8-300E-080E6A722593}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{287B5DBB-6B49-3F95-D86C-91E04DFD37F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{287B5DBB-6B49-3F95-D86C-91E04DFD37F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{287B5DBB-6B49-3F95-D86C-91E04DFD37F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{287B5DBB-6B49-3F95-D86C-91E04DFD37F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F501740A-37C1-5AD8-300E-080E6A722593}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F501740A-37C1-5AD8-300E-080E6A722593}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F501740A-37C1-5AD8-300E-080E6A722593}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F501740A-37C1-5AD8-300E-080E6A722593}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
