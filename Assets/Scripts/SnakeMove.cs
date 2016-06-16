@@ -149,11 +149,25 @@ public class SnakeMove : Photon.MonoBehaviour {
 		int lastIndex = bodyParts.Count - 1;
 		Transform lastBodyPart = bodyParts [lastIndex].transform;
 
-		PhotonNetwork.InstantiateSceneObject ("food", lastBodyPart.position, Quaternion.identity, 0);
+		if (PhotonNetwork.isMasterClient)
+		{
+			PhotonNetwork.InstantiateSceneObject("food", lastBodyPart.position, Quaternion.identity, 0, new Object[0]);
+		}
+		else
+		{
+			photonView.RPC("foodFromBodyParts", PhotonTargets.All, lastBodyPart.position, Quaternion.identity);
+		}
 
 		bodyParts.RemoveAt (lastIndex);
 		PhotonNetwork.Destroy (lastBodyPart.gameObject);
 		orbCounter--;
+		StartCoroutine("LoseBodyParts");
+	}
+	[PunRPC]
+	void foodFromBodyParts(Vector3 pos, Quaternion rot)
+	{
+		if(PhotonNetwork.isMasterClient)
+			PhotonNetwork.InstantiateSceneObject("food", pos, rot, 0, new Object[0]);
 	}
 
 	void UpdateBodyAttributes () {
