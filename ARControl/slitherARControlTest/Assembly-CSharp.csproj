@@ -84,6 +84,7 @@
      <Compile Include="Assets\Vuforia\Scripts\WireframeBehaviour.cs" />
      <Compile Include="Assets\Vuforia\Scripts\WireframeTrackableEventHandler.cs" />
      <Compile Include="Assets\Vuforia\Scripts\WordBehaviour.cs" />
+     <Compile Include="Assets\followAR.cs" />
      <Compile Include="Assets\info.cs" />
      <Compile Include="Assets\onPlane.cs" />
      <None Include="Assets\Vuforia\Shaders\ColoredLines.shader" />

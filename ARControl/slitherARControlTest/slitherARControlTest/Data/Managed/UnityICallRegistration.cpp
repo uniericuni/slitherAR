@@ -1,4 +1,4 @@
-//Generated on : 2016/6/17 上午 02:58:11
+//Generated on : 2016/6/17 下午 01:43:48
 void RegisterAllStrippedInternalCalls()
 {
 	//Start Registrations for type : UnityEngine.AnimationCurve
@@ -612,6 +612,14 @@ void RegisterAllStrippedInternalCalls()
 		Register_UnityEngine_CullingGroup_FinalizerFailure();
 
 	//End Registrations for type : UnityEngine.CullingGroup
+
+	//Start Registrations for type : UnityEngine.Debug
+
+		//System.Void UnityEngine.Debug::INTERNAL_CALL_DrawLine(UnityEngine.Vector3&,UnityEngine.Vector3&,UnityEngine.Color&,System.Single,System.Boolean)
+		void Register_UnityEngine_Debug_INTERNAL_CALL_DrawLine();
+		Register_UnityEngine_Debug_INTERNAL_CALL_DrawLine();
+
+	//End Registrations for type : UnityEngine.Debug
 
 	//Start Registrations for type : UnityEngine.DebugLogHandler
 
