@@ -8,40 +8,68 @@ public class SnakeMove : Photon.MonoBehaviour {
 	public float rotationSensitivity = 50.0f;
 	public float speed = 3.5f;
 
-	public List<Transform> bodyParts = new List<Transform>();
-
-
-	void Start () {
-	}
+	public List<SnakeBody> bodyParts = new List<SnakeBody>();
 	
-	// Update is called once per frame
-	void Update () {
-		ColorSnake ();
-		Running ();
-		Scaling ();
-	}
+	void Start() { }
+
+	private Vector3 headV;
 
 	void FixedUpdate()
-	{	
-		if (photonView.isMine) {
-		    Move();
-		    UpdateBodyAttributes ();
-        }
-    }
-
-	// Add skin colors for snake
-	public Material skinColor_1, skinColor_2;
-	void ColorSnake() {
-		for (int i = 0; i < bodyParts.Count; i++) {
-			if (i % 2 == 0) {
-				bodyParts [i].GetComponent<Renderer> ().material = skinColor_1;
-			} else {
-				bodyParts [i].GetComponent<Renderer> ().material = skinColor_2;
+	{
+		if (photonView.isMine)
+		{
+			Move();
+			//transform.localScale = Vector3.SmoothDamp(transform.localScale, currentSize, ref headV, 0.5f);
+			int partsCount = bodyParts.Count;
+			if( partsCount > 1)
+			{
+				for (int i = 1; i < bodyParts.Count; i++)
+				{
+					if (i > 1)
+						bodyParts[i].AddPath(bodyParts[i - 1].transform.position);
+					else
+						bodyParts[0].AddPath(transform.position);
+					bodyParts[i].colorCode = i;
+					bodyParts[i].overTime = bodyPartOverTimeFollow;
+					//bodyParts[i].localScale = transform.localScale;
+				}
 			}
 		}
 	}
 
-	// Movement by keys A & D
+	// Add SnakeBody when head collides with food
+	void OnTriggerEnter(Collider other)
+	{
+		if (other.transform.tag == "NormalFood")
+		{
+			PhotonNetwork.Destroy(other.gameObject);
+			if (SizeUp(orbCounter) == false)
+			{
+				orbCounter++;
+				Vector3 currentPos;
+				if (bodyParts.Count == 0)
+					currentPos = transform.position;
+				else
+					currentPos = bodyParts[bodyParts.Count - 1].transform.position;
+
+				SnakeBody newBodyPart = PhotonNetwork.Instantiate("SnakeBody", currentPos, Quaternion.identity, 0).GetComponent<SnakeBody>();
+				newBodyPart.head = transform;
+				newBodyPart.myOrder = bodyParts.Count;
+				bodyParts.Add(newBodyPart);
+			}
+		}
+	}
+
+	void Update () {
+		/*if (photonView.isMine)
+		{
+			ColorSnake();
+			Running();
+			Scaling();
+		}*/
+	}
+
+   // Movement by keys A & D
 	private void Move()
 	{
 		Vector3 myPos = transform.position;
@@ -59,51 +87,32 @@ public class SnakeMove : Photon.MonoBehaviour {
 	// Count number of orbs and decide whether to size up or to add a new body part
 	private int orbCounter;
 	private int currentOrb;
-	public int [] growOnThisOrb;
+	public int[] growOnThisOrb;
 	private Vector3 currentSize = Vector3.one;
 	public float growthRate = 0.1f;
 	public float bodyPartOverTimeFollow = 0.19f;
-	bool SizeUp (int x) {
-		try {
-			if (x == growOnThisOrb [currentOrb]) {
+	bool SizeUp(int x)
+	{
+		try
+		{
+			if (x == growOnThisOrb[currentOrb])
+			{
 				currentOrb++;
 				return false;
-			} else {
+			}
+			else
+			{
 				return false;
 			}
-		} catch (System.Exception e) {
-			print ("No more growing from this point" + e.StackTrace.ToString ());
+		}
+		catch (System.Exception e)
+		{
+			print("No more growing from this point" + e.StackTrace.ToString());
 		}
 		return false;
 	}
-
-
-	// Add SnakeBody when head collides with food
-	public Transform bodyObject;
-	void OnTriggerEnter (Collider other) {
-		if (other.transform.tag == "NormalFood") {
-			PhotonNetwork.Destroy (other.gameObject);
-			//orbCounter++;
-
-			if (SizeUp (orbCounter) == false) {
-				if (bodyParts.Count == 0) {
-					orbCounter++;
-					Vector3 currentPos = transform.position;
-				    Transform newBodyPart = PhotonNetwork.Instantiate( "SnakeBody" , currentPos, Quaternion.identity, 0).transform;
-					//newBodyPart.localScale = currentSize;
-					//newBodyPart.GetComponent<SnakeBody> ().overTime = bodyPartOverTimeFollow;
-					bodyParts.Add (newBodyPart);
-				} else {
-					Vector3 currentPos = bodyParts [bodyParts.Count - 1].position;
-				    Transform newBodyPart = PhotonNetwork.Instantiate( "SnakeBody" , currentPos, Quaternion.identity, 0).transform;
-					//newBodyPart.localScale = currentSize;
-					//newBodyPart.GetComponent<SnakeBody> ().overTime = bodyPartOverTimeFollow;
-					bodyParts.Add (newBodyPart);
-				}
-			} 
-		}
-	}
-
+	
+	/*
 	// Speed up
 	private bool running;
 	public float speedWhileRunning = 6.5f;
@@ -158,7 +167,6 @@ public class SnakeMove : Photon.MonoBehaviour {
 		orbCounter--;
 		StartCoroutine("LoseBodyParts");
 	}
-
 	// Leave new food from the position of the body parts that are dropped
 	[PunRPC]
 	void foodFromBodyParts(Vector3 pos, Quaternion rot)
@@ -168,14 +176,7 @@ public class SnakeMove : Photon.MonoBehaviour {
 	}
 
 	// Updates the body size and follow speed.
-	private Vector3 headV;
-	void UpdateBodyAttributes () {
-		transform.localScale = Vector3.SmoothDamp (transform.localScale, currentSize, ref headV, 0.5f);
-		foreach (Transform bodyPart_x in bodyParts) {
-			bodyPart_x.localScale = transform.localScale;
-			bodyPart_x.GetComponent<SnakeBody> ().overTime = bodyPartOverTimeFollow;
-		}
-	}
+
 
 	// Scale body when body parts are lost
 	public List<bool> scalingTrack;
@@ -207,6 +208,7 @@ public class SnakeMove : Photon.MonoBehaviour {
 			bodyPart_x.FindChild("onfire").gameObject.SetActive(isRunning);
 		}
 	}
+	*/
 
 	void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
 	{
