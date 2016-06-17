@@ -9,7 +9,7 @@
 /[Bb]uild/
 /[Bb]uilds/
 /Assets/AssetStoreTools*
-/ARControl/slitherARControlTest/slitherARControlTest/
+./ARControl/slitherARControlTest/slitherARControlTest/
 /ARControl/slitherARControlTest/slitherARControlTest*
 /ARControl/slitherARControlTest/[Ll]ibrary*
 /ARControl/slitherARControlTest/[Tt]emp*
