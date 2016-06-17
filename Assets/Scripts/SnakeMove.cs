@@ -19,7 +19,7 @@ public class SnakeMove : Photon.MonoBehaviour {
 		if (photonView.isMine)
 		{
 			Move();
-			//transform.localScale = Vector3.SmoothDamp(transform.localScale, currentSize, ref headV, 0.5f);
+			transform.localScale = Vector3.SmoothDamp(transform.localScale, currentSize, ref headV, 0.5f);
 			if( bodyParts.Count > 0)
 			{
 				for (int i = bodyParts.Count-1; i >= 0; i--)
@@ -119,8 +119,7 @@ public class SnakeMove : Photon.MonoBehaviour {
 	public float bodyPartFollowTimeWalking = 0.19f;
 	void Running() {
 		//SnakeGlow (running);
-
-		if (bodyParts.Count > 2 
+        if (bodyParts.Count > 2 
             && Input.GetMouseButtonDown(0)
             && !running) {
 			speed = speedWhileRunning;
@@ -142,13 +141,9 @@ public class SnakeMove : Photon.MonoBehaviour {
 		Transform lastBodyPart = bodyParts [lastIndex].transform;
 
 		if (PhotonNetwork.isMasterClient)
-		{
 			PhotonNetwork.InstantiateSceneObject("food", lastBodyPart.position, Quaternion.identity, 0, null);
-		}
 		else
-		{
 			photonView.RPC("foodFromBodyParts", PhotonTargets.All, lastBodyPart.position, Quaternion.identity);
-		}
 
 		bodyParts.RemoveAt (lastIndex);
 		PhotonNetwork.Destroy (lastBodyPart.gameObject);
@@ -161,7 +156,7 @@ public class SnakeMove : Photon.MonoBehaviour {
         if (PhotonNetwork.isMasterClient)
             PhotonNetwork.InstantiateSceneObject("food", pos, rot, 0, null);
 	}
-    /*
+    
 	// Scale body when body parts are lost
 	public List<bool> scalingTrack;
 	private int currentBodySize;
@@ -185,14 +180,15 @@ public class SnakeMove : Photon.MonoBehaviour {
 		bodyPartFollowTimeWalking = currentBodySize / 100.0f + followTimeSensitivity;
 		bodyPartFollowTimeRunning = bodyPartFollowTimeWalking / 2;
 	}
+    
     /*
 	// Glow when running
 	void SnakeGlow(bool isRunning) {
-		foreach (Transform bodyPart_x in bodyParts) {
-			bodyPart_x.FindChild("onfire").gameObject.SetActive(isRunning);
-		}
-	}
-	*/
+		foreach ( SnakeBody body in bodyParts) {
+            body.transform.FindChild("onFire").gameObject.SetActive(isRunning);
+        }
+    }*/
+	
 
 	void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
 	{
