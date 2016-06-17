@@ -20,12 +20,11 @@ public class SnakeMove : Photon.MonoBehaviour {
 		{
 			Move();
 			//transform.localScale = Vector3.SmoothDamp(transform.localScale, currentSize, ref headV, 0.5f);
-			int partsCount = bodyParts.Count;
-			if( partsCount > 1)
+			if( bodyParts.Count > 0)
 			{
-				for (int i = 1; i < bodyParts.Count; i++)
+				for (int i = bodyParts.Count-1; i >= 0; i--)
 				{
-					if (i > 1)
+					if (i > 0)
 						bodyParts[i].AddPath(bodyParts[i - 1].transform.position);
 					else
 						bodyParts[0].AddPath(transform.position);
@@ -54,19 +53,18 @@ public class SnakeMove : Photon.MonoBehaviour {
 
 				SnakeBody newBodyPart = PhotonNetwork.Instantiate("SnakeBody", currentPos, Quaternion.identity, 0).GetComponent<SnakeBody>();
 				newBodyPart.head = transform;
-				newBodyPart.myOrder = bodyParts.Count;
 				bodyParts.Add(newBodyPart);
 			}
 		}
 	}
 
 	void Update () {
-		/*if (photonView.isMine)
+		if (photonView.isMine)
 		{
-			ColorSnake();
+			//ColorSnake();
 			Running();
-			Scaling();
-		}*/
+			//Scaling();
+		}
 	}
 
    // Movement by keys A & D
@@ -112,7 +110,7 @@ public class SnakeMove : Photon.MonoBehaviour {
 		return false;
 	}
 	
-	/*
+	
 	// Speed up
 	private bool running;
 	public float speedWhileRunning = 6.5f;
@@ -120,42 +118,32 @@ public class SnakeMove : Photon.MonoBehaviour {
 	public float bodyPartFollowTimeRunning = 0.1f;
 	public float bodyPartFollowTimeWalking = 0.19f;
 	void Running() {
-		SnakeGlow (running);
+		//SnakeGlow (running);
 
-		if (bodyParts.Count > 2) {
-			if (Input.GetMouseButtonDown (0)) {
-				speed = speedWhileRunning;
-				running = true;
-				bodyPartOverTimeFollow = bodyPartFollowTimeRunning;
-			}
-			if (Input.GetMouseButtonUp (0)) {
-				speed = speedWhileWalking;
-				running = false;
-				bodyPartOverTimeFollow = bodyPartFollowTimeWalking;
-			}
-		} else {
+		if (bodyParts.Count > 2 
+            && Input.GetMouseButtonDown(0)
+            && !running) {
+			speed = speedWhileRunning;
+			running = true;
+			bodyPartOverTimeFollow = bodyPartFollowTimeRunning;
+            InvokeRepeating("LoseBodyParts", 0f, 0.5f);
+        } else if (Input.GetMouseButtonUp(0)) {
 			speed = speedWhileWalking;
 			running = false;
 			bodyPartOverTimeFollow = bodyPartFollowTimeWalking;
-		}
-
-		if (running) {
-			StartCoroutine ("LoseBodyParts");
-		} else {
-			bodyPartOverTimeFollow = bodyPartFollowTimeWalking;
-		}
+            CancelInvoke("LoseBodyParts");
+        }
 	}
-
+    
 	// Couroutine: Lose body parts when speeding up.
-	IEnumerator LoseBodyParts(){
-		yield return new WaitForSeconds (0.5f);
+	private void LoseBodyParts(){
 
 		int lastIndex = bodyParts.Count - 1;
 		Transform lastBodyPart = bodyParts [lastIndex].transform;
 
 		if (PhotonNetwork.isMasterClient)
 		{
-			PhotonNetwork.InstantiateSceneObject("food", lastBodyPart.position, Quaternion.identity, 0, new Object[0]);
+			PhotonNetwork.InstantiateSceneObject("food", lastBodyPart.position, Quaternion.identity, 0, null);
 		}
 		else
 		{
@@ -165,19 +153,15 @@ public class SnakeMove : Photon.MonoBehaviour {
 		bodyParts.RemoveAt (lastIndex);
 		PhotonNetwork.Destroy (lastBodyPart.gameObject);
 		orbCounter--;
-		StartCoroutine("LoseBodyParts");
 	}
 	// Leave new food from the position of the body parts that are dropped
 	[PunRPC]
 	void foodFromBodyParts(Vector3 pos, Quaternion rot)
 	{
-		if(PhotonNetwork.isMasterClient)
-			PhotonNetwork.InstantiateSceneObject("food", pos, rot, 0, new Object[0]);
+        if (PhotonNetwork.isMasterClient)
+            PhotonNetwork.InstantiateSceneObject("food", pos, rot, 0, null);
 	}
-
-	// Updates the body size and follow speed.
-
-
+    /*
 	// Scale body when body parts are lost
 	public List<bool> scalingTrack;
 	private int currentBodySize;
@@ -201,7 +185,7 @@ public class SnakeMove : Photon.MonoBehaviour {
 		bodyPartFollowTimeWalking = currentBodySize / 100.0f + followTimeSensitivity;
 		bodyPartFollowTimeRunning = bodyPartFollowTimeWalking / 2;
 	}
-
+    /*
 	// Glow when running
 	void SnakeGlow(bool isRunning) {
 		foreach (Transform bodyPart_x in bodyParts) {

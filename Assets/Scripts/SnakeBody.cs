@@ -5,18 +5,21 @@ using System.Collections.Generic;
 public class SnakeBody : Photon.MonoBehaviour {
 
 	public int colorCode;
+    public Material Cyan;
+    public Material White;
+    public Material Purple;
 	//public Transform localScale;
 	public float overTime;
 	public Transform head;
-	public int myOrder;
+
 	private Queue<Vector3> Path;
-	private Material color;
+	private Renderer colorRenderer;
 
 	void Start() {
 		Path = new Queue<Vector3>();
-		overTime = 0.2f;
+		overTime = 0.19f;
 		colorCode = 0;
-		color = GetComponent<Renderer>().material;
+		colorRenderer = GetComponent<Renderer>();
 		head = GameObject.FindGameObjectWithTag("SnakeHead").gameObject.transform;
 		transform.position = Vector3.SmoothDamp(transform.position, head.position, ref movementVelocity, overTime);
 		transform.LookAt(head.position);
@@ -47,15 +50,15 @@ public class SnakeBody : Photon.MonoBehaviour {
 		transform.LookAt(pos);
 	}
 
-	public Material skinColor_1, skinColor_2;
-
-	private void Coloring ()
+    private void Coloring ()
 	{
-		if (colorCode % 2 == 0)
-			color = skinColor_1;
-		else
-			color = skinColor_2;
-	}
+		if (colorCode % 3 == 0)
+			colorRenderer.material = Cyan;
+		else if( colorCode % 3 == 1 )
+            colorRenderer.material = Purple;
+        else
+            colorRenderer.material = White;
+    }
 	
 	void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
 	{
