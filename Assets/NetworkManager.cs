@@ -4,17 +4,13 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class NetworkManager : MonoBehaviour {
-    public InputField nameInput;
-    public Button enterRoom;
-	public GameManager GM;
 
-    private Text[] rankTexts;
+	private Text[] rankTexts;
     private string errorMessage;
     private string playerName;
 
     void Start()
     {
-		GM = gameObject.GetComponent<GameManager>();
         PhotonNetwork.ConnectUsingSettings("1.7");
     }
     void Update()
@@ -33,9 +29,27 @@ public class NetworkManager : MonoBehaviour {
 
     void OnJoinedRoom()
     {
-        //PhotonNetwork.Instantiate( "balla", transform.position, transform.rotation, 0); 
+        PhotonNetwork.Instantiate( "SnakeHead", transform.position, transform.rotation, 0); 
     }
 
+	public void destroyFood(GameObject food)
+	{
+		PhotonNetwork.Destroy(food);
+	}
+	public Transform instantiateBody(Vector3 pos, Quaternion rot)
+	{
+		return PhotonNetwork.Instantiate("SnakeBody", pos, rot, 0).transform;
+	}
+
+
+
+
+	private void addScore(float s)
+	{
+
+	}
+	private void addBody(string n) { }
+	/*
 	[PunRPC]
 	void updateGMScore(float score)
 	{
@@ -46,4 +60,5 @@ public class NetworkManager : MonoBehaviour {
 	{
 		GM.updatePlayers(names);
 	}
+	*/
 }
