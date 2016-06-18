@@ -224,8 +224,8 @@ public class SnakeMove : Photon.MonoBehaviour {
 			}
 			PhotonNetwork.Destroy (bodyPart.gameObject);
 		}
-		if (PhotonNetwork.isMasterClient)
-			PhotonNetwork.Destroy(this.gameObject);
+		//if (PhotonNetwork.isMasterClient)
+		PhotonNetwork.Destroy(this.gameObject);
 		bodyParts.Clear();
 	}
 	// Leave new food from the position of the dead snakes
