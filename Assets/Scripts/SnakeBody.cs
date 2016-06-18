@@ -37,13 +37,13 @@ public class SnakeBody : Photon.MonoBehaviour {
 			if (Path.Count > 0)
 				MoveTo(Path.Dequeue());
 		}
-		transform.localScale = Vector3.SmoothDamp(transform.localScale, head.gameObject.GetComponent<SnakeMove>().currentSize, ref headV, 0.5f);
+		///transform.localScale = Vector3.SmoothDamp(transform.localScale, head.gameObject.GetComponent<SnakeMove>().currentSize, ref headV, 0.5f);
 	}
 	void Update()
 	{
 		Coloring();
 
-		transform.FindChild("onfire").gameObject.SetActive(head.gameObject.GetComponent<SnakeMove>().running);
+		//transform.FindChild("onfire").gameObject.SetActive(head.gameObject.GetComponent<SnakeMove>().running);
 	}
 
 	private Vector3 movementVelocity;

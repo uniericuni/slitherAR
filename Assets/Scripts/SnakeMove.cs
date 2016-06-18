@@ -33,7 +33,7 @@ public class SnakeMove : Photon.MonoBehaviour {
 						bodyParts[0].AddPath(transform.position);
 					bodyParts[i].colorCode = i;
 					bodyParts[i].overTime = bodyPartOverTimeFollow;
-					//bodyParts[i].transform.localScale = transform.localScale;
+					bodyParts[i].transform.localScale = transform.localScale;
 				}
 			}
 		}
@@ -82,7 +82,11 @@ public class SnakeMove : Photon.MonoBehaviour {
 			Running();
 			Scaling();
 		}
-		//SnakeGlow (running);
+		for (int i = bodyParts.Count - 1; i >= 0; i--)
+		{
+			bodyParts[i].transform.localScale = transform.localScale;
+		}
+		SnakeGlow (running);
 	}
 
 
@@ -226,6 +230,7 @@ public class SnakeMove : Photon.MonoBehaviour {
 			stream.SendNext(transform.rotation);
 			stream.SendNext(transform.localScale);
 			stream.SendNext(running);
+			stream.SendNext(bodyParts);
 		}
 		else
 		{
@@ -233,6 +238,7 @@ public class SnakeMove : Photon.MonoBehaviour {
 			transform.rotation = (Quaternion)stream.ReceiveNext();
 			transform.localScale = (Vector3)stream.ReceiveNext();
 			running = (bool)stream.ReceiveNext();
+			bodyParts = (List<SnakeBody>)stream.ReceiveNext();
 		}
 	}
 }
