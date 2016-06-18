@@ -108,13 +108,13 @@ public class SnakeMove : Photon.MonoBehaviour {
 	public float growthRate = 0.1f;
 	public float bodyPartOverTimeFollow = 0.19f;
 	bool SizeUp(int x)
-	{/*
+	{
 		try
 		{
 			if (x == growOnThisOrb[currentOrb])
 			{
 				currentOrb++;
-				return true;
+				return false;
 			}
 			else
 			{
@@ -124,7 +124,7 @@ public class SnakeMove : Photon.MonoBehaviour {
 		catch (System.Exception e)
 		{
 			print("No more growing from this point" + e.StackTrace.ToString());
-		}*/
+		}
 		return false;
 	}
 	
@@ -160,9 +160,11 @@ public class SnakeMove : Photon.MonoBehaviour {
 		if (PhotonNetwork.isMasterClient)
 		{
 			PhotonNetwork.InstantiateSceneObject("food", lastBodyPart.position, Quaternion.identity, 0, null);
-		}			
+		}
 		else
-			photonView.RPC("foodFromBodyParts", PhotonTargets.Others);
+		{
+			photonView.RPC("foodFromBodyParts", PhotonTargets.Others, bodyParts[bodyParts.Count - 1].photonView.viewID);
+		}
 
 		bodyParts.RemoveAt (lastIndex);
 		PhotonNetwork.Destroy(lastBodyPart.gameObject);
@@ -171,12 +173,13 @@ public class SnakeMove : Photon.MonoBehaviour {
 
 	// Leave new food from the position of the body parts that are dropped
 	[PunRPC]
-	void foodFromBodyParts()
+	void foodFromBodyParts(int lastbodyID)
 	{
 		Debug.Log("rpc bp");
 		if (PhotonNetwork.isMasterClient)
 		{
-			PhotonNetwork.InstantiateSceneObject("food", bodyParts[bodyParts.Count - 1].transform.position, Quaternion.identity, 0, null);
+			GameObject toDestroy= PhotonView.Find(lastbodyID).gameObject;
+			PhotonNetwork.InstantiateSceneObject("food", toDestroy.transform.position, Quaternion.identity, 0, null);
 		}
 	}
     
