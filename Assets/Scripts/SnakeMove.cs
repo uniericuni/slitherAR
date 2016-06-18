@@ -35,25 +35,28 @@ public class SnakeMove : Photon.MonoBehaviour {
 			}
 		}
 	}
-
+	     
 	// Add SnakeBody when head collides with food
 	void OnTriggerEnter(Collider other)
 	{
-		if (other.transform.tag == "NormalFood")
+		if (photonView.isMine)
 		{
-			PhotonNetwork.Destroy(other.gameObject);
-			if (SizeUp(orbCounter) == false)
+			if (other.transform.tag == "NormalFood")
 			{
-				orbCounter++;
-				Vector3 currentPos;
-				if (bodyParts.Count == 0)
-					currentPos = transform.position;
-				else
-					currentPos = bodyParts[bodyParts.Count - 1].transform.position;
+				PhotonNetwork.Destroy(other.gameObject);
+				if (SizeUp(orbCounter) == false)
+				{
+					orbCounter++;
+					Vector3 currentPos;
+					if (bodyParts.Count == 0)
+						currentPos = transform.position;
+					else
+						currentPos = bodyParts[bodyParts.Count - 1].transform.position;
 
-				SnakeBody newBodyPart = PhotonNetwork.Instantiate("SnakeBody", currentPos, Quaternion.identity, 0).GetComponent<SnakeBody>();
-				newBodyPart.head = transform;
-				bodyParts.Add(newBodyPart);
+					SnakeBody newBodyPart = PhotonNetwork.Instantiate("SnakeBody", currentPos, Quaternion.identity, 0).GetComponent<SnakeBody>();
+					newBodyPart.head = transform;
+					bodyParts.Add(newBodyPart);
+				}
 			}
 		}
 	}
@@ -146,7 +149,7 @@ public class SnakeMove : Photon.MonoBehaviour {
 			PhotonNetwork.Destroy(lastBodyPart.gameObject);
 		}			
 		else
-			photonView.RPC("foodFromBodyParts", PhotonTargets.All, lastBodyPart.position, Quaternion.identity, lastBodyPart.gameObject);
+			photonView.RPC("foodFromBodyParts", PhotonTargets.Others, lastBodyPart.position, Quaternion.identity, lastBodyPart.gameObject);
 
 		bodyParts.RemoveAt (lastIndex);
 		
@@ -157,7 +160,7 @@ public class SnakeMove : Photon.MonoBehaviour {
 	[PunRPC]
 	void foodFromBodyParts(Vector3 pos, Quaternion rot, GameObject lastBodyPart)
 	{
-        if (PhotonNetwork.isMasterClient)
+		if (PhotonNetwork.isMasterClient)
 		{
 			PhotonNetwork.InstantiateSceneObject("food", pos, rot, 0, null);
 			PhotonNetwork.Destroy(lastBodyPart.gameObject);
