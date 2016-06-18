@@ -95,11 +95,26 @@ public class SnakeMove : Photon.MonoBehaviour {
 		Vector3 myPos = transform.position;
 		Quaternion myRot = transform.rotation;
 
-		if (Input.GetKey(KeyCode.A) || lrValue > 0.01)
-			currentRotation -= rotationSensitivity * Time.deltaTime;			
-		if (Input.GetKey(KeyCode.D) || lrValue < -0.01)
+		if (Input.GetKey(KeyCode.A)){
+			currentRotation -= rotationSensitivity * Time.deltaTime;
+			Debug.Log("turning left ...");
+		
+		}
+		if (Input.GetKey(KeyCode.D)) {
 			currentRotation += rotationSensitivity * Time.deltaTime;
+			Debug.Log("turning right ...");
+		}
 
+		if ((Input.GetKey(KeyCode.A)) || (lrValue < 0.0f)){
+			currentRotation -= rotationSensitivity * Time.deltaTime;
+			Debug.Log("turning left ...");
+		
+		}
+		else if ((Input.GetKey(KeyCode.D)) || (lrValue > 0.0f)) {
+			currentRotation += rotationSensitivity * Time.deltaTime;
+			Debug.Log("turning right ...");
+		}
+		
 		transform.position += transform.forward * speed * Time.deltaTime;
 		transform.rotation = Quaternion.Euler(new Vector3(myRot.x, currentRotation, myRot.z));
 	}
@@ -259,7 +274,7 @@ public class SnakeMove : Photon.MonoBehaviour {
 		}
 		objFront = transform.forward;
 		center = boundingBoxCenter.transform;
-		planeNorm = ARPlane.transform.forward;
+		planeNorm = ARPlane.transform.up;
 
 		// debugging raycast draw
 		Debug.DrawRay(center.position, center.forward*10000f);
@@ -273,16 +288,12 @@ public class SnakeMove : Photon.MonoBehaviour {
 		else{
 			float x = hitCenter.point.x-transform.position.x;
 			float z = hitCenter.point.z-transform.position.z;
-			if( x*x + z*z > 10f) {
-				Debug.Log("snake turning ...");
+			if( x*x + z*z > 100f) {
 				dist = (transform.position - hitCenter.point);
-				back = -1*dist - objFront;
-				backPerpendic = back - Vector3.Project(back, objFront);
+				// back = objFront;
+				backPerpendic = Vector3.Project(dist, objFront) - dist;
 				lrValue = Vector3.Dot(Vector3.Cross(objFront, backPerpendic), planeNorm);
-				if(lrValue < -0.01)
-					Debug.Log("turning right ...");
-				else if(lrValue > 0.01)
-					Debug.Log("turning left ...");
+				Debug.Log("snake turning ... "+lrValue.ToString() + " |dist: "+dist.x.ToString() + ","+dist.y.ToString()+","+dist.z.ToString()+" |backPerpend: "+backPerpendic.x.ToString() + ","+backPerpendic.y.ToString()+","+backPerpendic.z.ToString() );
 			}
 			else{
 				Debug.Log("snake in center zone...");
