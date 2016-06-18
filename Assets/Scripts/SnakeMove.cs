@@ -7,6 +7,7 @@ public class SnakeMove : Photon.MonoBehaviour {
 	private float currentRotation;
 	public float rotationSensitivity = 50.0f;
 	public float speed = 3.5f;
+	public float score;
 
 	public List<SnakeBody> bodyParts = new List<SnakeBody>();
 
@@ -45,25 +46,32 @@ public class SnakeMove : Photon.MonoBehaviour {
 	{
 		if (photonView.isMine)
 		{
-			if (other.transform.tag == "NormalFood")
+			if (other.transform.tag == "Food")
 			{
 				if (PhotonNetwork.isMasterClient)
 					PhotonNetwork.Destroy(other.gameObject);
 				else
 					photonView.RPC("destroyFood", PhotonTargets.Others, other.gameObject.GetPhotonView().viewID);
+				
 				if (SizeUp(orbCounter) == false)
 				{
-					orbCounter++;
+					float oldScore = score;
+					score += other.GetComponent<FoodGrow> ().score;
+					orbCounter = Mathf.RoundToInt (score);
 					Vector3 currentPos;
 					if (bodyParts.Count == 0)
 						currentPos = transform.position;
 					else
 						currentPos = bodyParts[bodyParts.Count - 1].transform.position;
 
-					SnakeBody newBodyPart = PhotonNetwork.Instantiate("SnakeBody", currentPos, Quaternion.identity, 0).GetComponent<SnakeBody>();
-					newBodyPart.head = transform;
-					bodyParts.Add(newBodyPart);
+					for (int i = 0; i < (Mathf.RoundToInt(score) - Mathf.RoundToInt(oldScore)); i++) {
+						SnakeBody newBodyPart = PhotonNetwork.Instantiate ("SnakeBody", currentPos, Quaternion.identity, 0).GetComponent<SnakeBody> ();
+						newBodyPart.head = transform;
+						bodyParts.Add (newBodyPart);
+					}
 				}
+			} else if (other.transform.tag == "SnakeBody" && !other.GetComponent<SnakeBody> ().photonView.isMine) {
+				CollideWithOtherBody ();
 			}
 		}
 	}
@@ -101,7 +109,7 @@ public class SnakeMove : Photon.MonoBehaviour {
 	}
 
 	// Count number of orbs and decide whether to size up or to add a new body part
-	private int orbCounter;
+	public int orbCounter;
 	private int currentOrb;
 	public int[] growOnThisOrb;
 	private Vector3 currentSize = Vector3.one;
@@ -159,7 +167,7 @@ public class SnakeMove : Photon.MonoBehaviour {
 
 		if (PhotonNetwork.isMasterClient)
 		{
-			PhotonNetwork.InstantiateSceneObject("food", lastBodyPart.position, Quaternion.identity, 0, null);
+			PhotonNetwork.InstantiateSceneObject("smallfood", lastBodyPart.position, Quaternion.identity, 0, null);
 		}
 		else
 		{
@@ -168,7 +176,8 @@ public class SnakeMove : Photon.MonoBehaviour {
 
 		bodyParts.RemoveAt (lastIndex);
 		PhotonNetwork.Destroy(lastBodyPart.gameObject);
-		orbCounter--;
+		score -= 0.7f;
+		orbCounter = Mathf.RoundToInt (score);
 	}
 
 	// Leave new food from the position of the body parts that are dropped
@@ -179,13 +188,13 @@ public class SnakeMove : Photon.MonoBehaviour {
 		if (PhotonNetwork.isMasterClient)
 		{
 			GameObject toDestroy= PhotonView.Find(lastbodyID).gameObject;
-			PhotonNetwork.InstantiateSceneObject("food", toDestroy.transform.position, Quaternion.identity, 0, null);
+			PhotonNetwork.InstantiateSceneObject("smallfood", toDestroy.transform.position, Quaternion.identity, 0, null);
 		}
 	}
     
 	// Scale body when body parts are lost
 	public List<bool> scalingTrack;
-	private int currentBodySize;
+	public int currentBodySize;
 	public float followTimeSensitivity;
 	public float scaleSensitivity = 0.22f;
 	void Scaling() {
@@ -206,6 +215,31 @@ public class SnakeMove : Photon.MonoBehaviour {
 
 		bodyPartFollowTimeWalking = currentBodySize / 100.0f + followTimeSensitivity;
 		bodyPartFollowTimeRunning = bodyPartFollowTimeWalking / 2;
+	}
+
+	void CollideWithOtherBody() {
+		for (int i = 0; i < bodyParts.Count; i++) {
+			Transform bodyPart = bodyParts [i].transform;
+
+			if (PhotonNetwork.isMasterClient) {
+				PhotonNetwork.InstantiateSceneObject ("LargeFood", bodyPart.position, Quaternion.identity, 0, null);
+			} else {
+				photonView.RPC ("foodFromDeadSnake", PhotonTargets.Others, bodyParts [i].photonView.viewID);
+			}
+			PhotonNetwork.Destroy (bodyPart.gameObject);
+		}
+		bodyParts.Clear();
+	}
+	// Leave new food from the position of the dead snakes
+	[PunRPC]
+	void foodFromDeadSnake(int bodyID)
+	{
+		//Debug.Log("rpc bp");
+		if (PhotonNetwork.isMasterClient)
+		{
+			GameObject toDestroy= PhotonView.Find(bodyID).gameObject;
+			PhotonNetwork.InstantiateSceneObject("LargeFood", toDestroy.transform.position, Quaternion.identity, 0, null);
+		}
 	}
 
 	void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
