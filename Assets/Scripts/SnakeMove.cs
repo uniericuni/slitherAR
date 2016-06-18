@@ -47,9 +47,9 @@ public class SnakeMove : Photon.MonoBehaviour {
 			if (other.transform.tag == "NormalFood")
 			{
 				if (PhotonNetwork.isMasterClient)
-					PhotonNetwork.Destroy(other.gameObject.GetPhotonView().id);
+					PhotonNetwork.Destroy(other.gameObject);
 				else
-					photonView.RPC("destroyFood", PhotonTargets.Others, other.gameObject);
+					photonView.RPC("destroyFood", PhotonTargets.Others, other.gameObject.GetPhotonView().viewID);
 				if (SizeUp(orbCounter) == false)
 				{
 					orbCounter++;
