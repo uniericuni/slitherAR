@@ -141,20 +141,27 @@ public class SnakeMove : Photon.MonoBehaviour {
 		Transform lastBodyPart = bodyParts [lastIndex].transform;
 
 		if (PhotonNetwork.isMasterClient)
+		{
 			PhotonNetwork.InstantiateSceneObject("food", lastBodyPart.position, Quaternion.identity, 0, null);
+			PhotonNetwork.Destroy(lastBodyPart.gameObject);
+		}			
 		else
-			photonView.RPC("foodFromBodyParts", PhotonTargets.All, lastBodyPart.position, Quaternion.identity);
+			photonView.RPC("foodFromBodyParts", PhotonTargets.All, lastBodyPart.position, Quaternion.identity, lastBodyPart.gameObject);
 
 		bodyParts.RemoveAt (lastIndex);
-		PhotonNetwork.Destroy (lastBodyPart.gameObject);
+		
 		orbCounter--;
 	}
+
 	// Leave new food from the position of the body parts that are dropped
 	[PunRPC]
-	void foodFromBodyParts(Vector3 pos, Quaternion rot)
+	void foodFromBodyParts(Vector3 pos, Quaternion rot, GameObject lastBodyPart)
 	{
         if (PhotonNetwork.isMasterClient)
-            PhotonNetwork.InstantiateSceneObject("food", pos, rot, 0, null);
+		{
+			PhotonNetwork.InstantiateSceneObject("food", pos, rot, 0, null);
+			PhotonNetwork.Destroy(lastBodyPart.gameObject);
+		}
 	}
     
 	// Scale body when body parts are lost
@@ -196,11 +203,13 @@ public class SnakeMove : Photon.MonoBehaviour {
 		{
 			stream.SendNext(transform.position);
 			stream.SendNext(transform.rotation);
+			stream.SendNext(running);
 		}
 		else
 		{
 			transform.position = (Vector3)stream.ReceiveNext();
 			transform.rotation = (Quaternion)stream.ReceiveNext();
+			running = (bool)stream.ReceiveNext();
 		}
 	}
 }
