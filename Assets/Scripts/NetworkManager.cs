@@ -31,7 +31,7 @@ public class NetworkManager : MonoBehaviour {
 
     void OnJoinedRoom()
     {
-        GameObject snkHead = PhotonNetwork.Instantiate( "SnakeHead", transform.position, transform.rotation, 0); 
+        GameObject snkHead = PhotonNetwork.Instantiate( "SnakeHead", imageTarget.transform.position, imageTarget.transform.rotation, 0); 
         snkHead.transform.SetParent(imageTarget.transform, false);
         snkHead.transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
         SnakeMove move = snkHead.GetComponent<SnakeMove>();

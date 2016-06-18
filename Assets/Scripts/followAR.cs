@@ -13,6 +13,7 @@ public class followAR : MonoBehaviour {
 	void Update () {
 
 		transform.position = ARTag.transform.position;
+		transform.rotation = ARTag.transform.rotation;
 	
 	}
 }

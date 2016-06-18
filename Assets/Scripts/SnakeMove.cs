@@ -22,6 +22,8 @@ public class SnakeMove : Photon.MonoBehaviour {
 
 	void FixedUpdate()
 	{
+		planeNorm = ARPlane.transform.up;
+		transform.forward = Vector3.Normalize( transform.forward - Vector3.Project( transform.forward, planeNorm.normalized ) );
 		if (photonView.isMine)
 		{
 			boundingTest();
@@ -274,8 +276,7 @@ public class SnakeMove : Photon.MonoBehaviour {
 		}
 		objFront = transform.forward;
 		center = boundingBoxCenter.transform;
-		planeNorm = ARPlane.transform.up;
-
+		
 		// debugging raycast draw
 		Debug.DrawRay(center.position, center.forward*10000f);
 		
