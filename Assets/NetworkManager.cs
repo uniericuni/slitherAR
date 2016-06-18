@@ -8,6 +8,7 @@ public class NetworkManager : MonoBehaviour {
 	private Text[] rankTexts;
     private string errorMessage;
     private string playerName;
+    private float spawnTimer;
 
     void Start()
     {
@@ -15,6 +16,15 @@ public class NetworkManager : MonoBehaviour {
     }
     void Update()
     {
+        if (PhotonNetwork.isMasterClient)
+        {
+            spawnTimer += Time.deltaTime;
+            if (spawnTimer > 0.5f)
+            {
+                spawnFood();
+                spawnTimer = 0f;
+            }
+        }
     }
 
     void OnJoinedLobby()
@@ -42,23 +52,14 @@ public class NetworkManager : MonoBehaviour {
 	}
 
 
-
-
-	private void addScore(float s)
-	{
-
-	}
-	private void addBody(string n) { }
-	/*
-	[PunRPC]
-	void updateGMScore(float score)
-	{
-		GM.updateScore(PhotonNetwork.playerName, score);
-	}
-	[PunRPC]
-	void updateGMPlayers(List<string> names)
-	{
-		GM.updatePlayers(names);
-	}
-	*/
+    private void spawnFood()
+    {
+        float spawnSeed = Random.Range(0,6);
+        string toSpawn;
+        if (spawnSeed < 3) toSpawn = "smallFood";
+        else if (spawnSeed < 5) toSpawn = "food";
+        else toSpawn = "LargeFood";
+        Vector3 randPos = new Vector3(Random.Range(-30f, 30f), 0.6f, Random.Range(-30f, 30f));
+        PhotonNetwork.InstantiateSceneObject( toSpawn, randPos, Quaternion.identity, 0, null);
+    }
 }
