@@ -5,23 +5,27 @@ using System.Collections.Generic;
 public class SnakeMove : Photon.MonoBehaviour {
 
 	private float currentRotation;
-	public float rotationSensitivity = 50.0f;
-	public float speed = 3.5f;
+	public float rotationSensitivity = 0.1f;
+	public float speed = 0.0001f;
+	public GameObject boundingBoxCenter;
+	public GameObject boundingBoxBoundary;
+	public GameObject ARPlane;
 
 	public List<SnakeBody> bodyParts = new List<SnakeBody>();
-	private GameObject BoundingMgrObj;
-	private boundingMgr boundingMgr;
 	
 	void Start()
 	{
 		running = false;
-		BoundingMgrObj = GameObject.Find("BoundingMgr");
+		ARPlane = GameObject.Find("ARPlane");
+		boundingBoxCenter = GameObject.Find("BoundingBoxCenter");
+		boundingBoxBoundary = GameObject.Find("boundingBoxBoundary");
 	}
 
 	private Vector3 headV;
 
 	void FixedUpdate()
 	{
+
 		planeNorm = ARPlane.transform.up;
 		transform.forward = Vector3.Normalize( transform.forward - Vector3.Project( transform.forward, planeNorm.normalized ) );
 		if (photonView.isMine)
@@ -107,15 +111,15 @@ public class SnakeMove : Photon.MonoBehaviour {
 			currentRotation += rotationSensitivity * Time.deltaTime;
 			Debug.Log("turning right ...");
 		}
-
-		if ((Input.GetKey(KeyCode.A)) || (lrValue < 0.0f)){
-			currentRotation -= rotationSensitivity * Time.deltaTime;
-			Debug.Log("turning left ...");
-		
-		}
-		else if ((Input.GetKey(KeyCode.D)) || (lrValue > 0.0f)) {
-			currentRotation += rotationSensitivity * Time.deltaTime;
-			Debug.Log("turning right ...");
+		if(outOfBoundary) {
+			if ((Input.GetKey(KeyCode.A)) || (lrValue < 0.0f)){
+				currentRotation -= rotationSensitivity * Time.deltaTime;
+				Debug.Log("turning left ...");
+			}
+			else{
+				currentRotation += rotationSensitivity * Time.deltaTime;
+				Debug.Log("turning right ...");
+			}
 		}
 		
 		transform.position += transform.forward * speed * Time.deltaTime;
@@ -256,8 +260,6 @@ public class SnakeMove : Photon.MonoBehaviour {
 
 	// ----------------- ERIC ----------------- //
 
-	public GameObject boundingBoxCenter;
-	public GameObject ARPlane;
 	public float lrValue;
 
 	private Vector3 objFront;
@@ -265,8 +267,9 @@ public class SnakeMove : Photon.MonoBehaviour {
 	private const float turningVec = 230;
 	private Transform center;
 	private Vector3 dist, back, backPerpendic, planeNorm; 
-	private RaycastHit hitCenter;
+	private RaycastHit hitCenter, hitBoundary;
 	private bool hit;
+	private bool outOfBoundary;
 
 	void boundingTest() {
 		
@@ -283,14 +286,15 @@ public class SnakeMove : Photon.MonoBehaviour {
 		
 		// bounding
 		
-		if( !(Physics.Raycast(center.position, center.forward, out hitCenter)) ){
+		if( !(Physics.Raycast(center.position, center.forward, out hitCenter)) || !(Physics.Raycast(center.position, center.forward, out hitBoundary))){
 			lrValue = 0f;
 			Debug.Log("bouding box not complete ...");
 		}
 		else{
 			float x = hitCenter.point.x-transform.position.x;
 			float z = hitCenter.point.z-transform.position.z;
-			if( x*x + z*z > 100f) {
+			if( Mathf.Sqrt(x*x + z*z) > Vector3.Distance(hitBoundary.point, hitCenter.point)) {
+				outOfBoundary = true;
 				dist = (transform.position - hitCenter.point);
 				// back = objFront;
 				backPerpendic = Vector3.Project(dist, objFront) - dist;
@@ -299,6 +303,7 @@ public class SnakeMove : Photon.MonoBehaviour {
 			}
 			else{
 				Debug.Log("snake in center zone...");
+				outOfBoundary = false;
 				lrValue = 0f;
 			}
 		}
