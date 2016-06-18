@@ -47,7 +47,7 @@ public class SnakeMove : Photon.MonoBehaviour {
 			if (other.transform.tag == "NormalFood")
 			{
 				if (PhotonNetwork.isMasterClient)
-					PhotonNetwork.Destroy(other.gameObject);
+					PhotonNetwork.Destroy(other.gameObject.GetPhotonView().id);
 				else
 					photonView.RPC("destroyFood", PhotonTargets.Others, other.gameObject);
 				if (SizeUp(orbCounter) == false)
@@ -67,11 +67,11 @@ public class SnakeMove : Photon.MonoBehaviour {
 		}
 	}
 	[PunRPC]
-	void destroyFood(GameObject food)
+	void destroyFood(int foodID)
 	{
 		Debug.Log("RPC new food");
 		if (PhotonNetwork.isMasterClient)
-			PhotonNetwork.Destroy(food);
+			PhotonNetwork.Destroy(PhotonView.Find(foodID));
 	}
 
 	void Update () {
@@ -171,12 +171,12 @@ public class SnakeMove : Photon.MonoBehaviour {
 
 	// Leave new food from the position of the body parts that are dropped
 	[PunRPC]
-	void foodFromBodyParts(Vector3 pos, Quaternion rot)
+	void foodFromBodyParts()
 	{
 		Debug.Log("rpc bp");
 		if (PhotonNetwork.isMasterClient)
 		{
-			PhotonNetwork.InstantiateSceneObject("food", pos, rot, 0, null);
+			PhotonNetwork.InstantiateSceneObject("food", bodyParts[bodyParts.Count - 1].transform.position, Quaternion.identity, 0, null);
 		}
 	}
     
