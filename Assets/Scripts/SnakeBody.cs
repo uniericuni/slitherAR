@@ -8,7 +8,6 @@ public class SnakeBody : Photon.MonoBehaviour {
     public Material Cyan;
     public Material White;
     public Material Purple;
-	//public Transform localScale;
 	public float overTime;
 	public Transform head;
 
@@ -66,12 +65,14 @@ public class SnakeBody : Photon.MonoBehaviour {
 		{
 			stream.SendNext(transform.position);
 			stream.SendNext(transform.rotation);
+			stream.SendNext(transform.localScale);
 			stream.SendNext(colorCode);
 		}
 		else
 		{
 			transform.position = (Vector3)stream.ReceiveNext();
 			transform.rotation = (Quaternion)stream.ReceiveNext();
+			transform.localScale = (Vector3)stream.ReceiveNext();
 			colorCode = (int)stream.ReceiveNext();
 		}
 	}

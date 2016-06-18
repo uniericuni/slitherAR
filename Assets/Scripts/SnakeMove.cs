@@ -33,7 +33,7 @@ public class SnakeMove : Photon.MonoBehaviour {
 						bodyParts[0].AddPath(transform.position);
 					bodyParts[i].colorCode = i;
 					bodyParts[i].overTime = bodyPartOverTimeFollow;
-					//bodyParts[i].localScale = transform.localScale;
+					bodyParts[i].transform.localScale = transform.localScale;
 				}
 			}
 		}
@@ -79,7 +79,7 @@ public class SnakeMove : Photon.MonoBehaviour {
 		{
 			//ColorSnake();
 			Running();
-			//Scaling();
+			Scaling();
 		}
 		SnakeGlow (running);
 	}
@@ -108,13 +108,13 @@ public class SnakeMove : Photon.MonoBehaviour {
 	public float growthRate = 0.1f;
 	public float bodyPartOverTimeFollow = 0.19f;
 	bool SizeUp(int x)
-	{
+	{/*
 		try
 		{
 			if (x == growOnThisOrb[currentOrb])
 			{
 				currentOrb++;
-				return false;
+				return true;
 			}
 			else
 			{
@@ -124,7 +124,7 @@ public class SnakeMove : Photon.MonoBehaviour {
 		catch (System.Exception e)
 		{
 			print("No more growing from this point" + e.StackTrace.ToString());
-		}
+		}*/
 		return false;
 	}
 	
@@ -162,7 +162,7 @@ public class SnakeMove : Photon.MonoBehaviour {
 			PhotonNetwork.InstantiateSceneObject("food", lastBodyPart.position, Quaternion.identity, 0, null);
 		}			
 		else
-			photonView.RPC("foodFromBodyParts", PhotonTargets.Others, lastBodyPart.position, Quaternion.identity);
+			photonView.RPC("foodFromBodyParts", PhotonTargets.Others);
 
 		bodyParts.RemoveAt (lastIndex);
 		PhotonNetwork.Destroy(lastBodyPart.gameObject);
@@ -191,6 +191,7 @@ public class SnakeMove : Photon.MonoBehaviour {
 		for (int i = 0; i < growOnThisOrb.Length; i++) {
 			if (orbCounter >= growOnThisOrb [i]) {
 				scalingTrack [i] = !scalingTrack [i];
+				currentBodySize++;
 			}
 		}
 
@@ -219,12 +220,14 @@ public class SnakeMove : Photon.MonoBehaviour {
 		{
 			stream.SendNext(transform.position);
 			stream.SendNext(transform.rotation);
+			stream.SendNext(transform.localScale);
 			stream.SendNext(running);
 		}
 		else
 		{
 			transform.position = (Vector3)stream.ReceiveNext();
 			transform.rotation = (Quaternion)stream.ReceiveNext();
+			transform.localScale = (Vector3)stream.ReceiveNext();
 			running = (bool)stream.ReceiveNext();
 		}
 	}
