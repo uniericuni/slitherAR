@@ -9,8 +9,11 @@ public class SnakeMove : Photon.MonoBehaviour {
 	public float speed = 3.5f;
 
 	public List<SnakeBody> bodyParts = new List<SnakeBody>();
-	
-	void Start() { }
+
+	void Start()
+	{
+		running = false;
+	}
 
 	private Vector3 headV;
 
@@ -43,7 +46,10 @@ public class SnakeMove : Photon.MonoBehaviour {
 		{
 			if (other.transform.tag == "NormalFood")
 			{
-				PhotonNetwork.Destroy(other.gameObject);
+				if (PhotonNetwork.isMasterClient)
+					PhotonNetwork.Destroy(other.gameObject);
+				else
+					photonView.RPC("destroyFood", PhotonTargets.Others, other.gameObject);
 				if (SizeUp(orbCounter) == false)
 				{
 					orbCounter++;
@@ -59,6 +65,13 @@ public class SnakeMove : Photon.MonoBehaviour {
 				}
 			}
 		}
+	}
+	[PunRPC]
+	void destroyFood(GameObject food)
+	{
+		Debug.Log("RPC new food");
+		if (PhotonNetwork.isMasterClient)
+			PhotonNetwork.Destroy(food);
 	}
 
 	void Update () {
@@ -149,7 +162,7 @@ public class SnakeMove : Photon.MonoBehaviour {
 			PhotonNetwork.InstantiateSceneObject("food", lastBodyPart.position, Quaternion.identity, 0, null);
 		}			
 		else
-			photonView.RPC("foodFromBodyParts", PhotonTargets.Others, lastBodyPart.position, Quaternion.identity, lastBodyPart.gameObject);
+			photonView.RPC("foodFromBodyParts", PhotonTargets.Others, lastBodyPart.position, Quaternion.identity);
 
 		bodyParts.RemoveAt (lastIndex);
 		PhotonNetwork.Destroy(lastBodyPart.gameObject);
@@ -158,9 +171,9 @@ public class SnakeMove : Photon.MonoBehaviour {
 
 	// Leave new food from the position of the body parts that are dropped
 	[PunRPC]
-	void foodFromBodyParts(Vector3 pos, Quaternion rot, GameObject lastBodyPart)
+	void foodFromBodyParts(Vector3 pos, Quaternion rot)
 	{
-		console.log("rpc bp");
+		Debug.Log("rpc bp");
 		if (PhotonNetwork.isMasterClient)
 		{
 			PhotonNetwork.InstantiateSceneObject("food", pos, rot, 0, null);
