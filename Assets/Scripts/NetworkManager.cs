@@ -44,11 +44,10 @@ public class NetworkManager : MonoBehaviour {
 		PhotonNetwork.Destroy(food);
 	}
 
-	public GameObject snkBody;
 	public Transform instantiateBody(Vector3 pos, Quaternion rot)
 	{
 
-		snkBody = PhotonNetwork.Instantiate("SnakeBody", pos, rot, 0);
+		GameObject snkBody = PhotonNetwork.Instantiate("SnakeBody", pos, rot, 0);
 		snkBody.transform.SetParent(imageTarget.transform, false);
 		snkBody.transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
 		return snkBody.transform;

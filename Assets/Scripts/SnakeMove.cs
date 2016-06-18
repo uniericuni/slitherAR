@@ -43,6 +43,7 @@ public class SnakeMove : Photon.MonoBehaviour {
 				}
 			}
 		}
+		transform.localScale = new Vector3(0.1f,0.1f,0.1f);
 	}
 	     
 	// Add SnakeBody when head collides with food
