@@ -42,7 +42,7 @@ public class boundingMgr : MonoBehaviour {
 		}
 
 		// boundedObject = networkMgr -> snakehead;
-		objFront = boundedObject.transform.front;
+		objFront = boundedObject.transform.forward;
 		center = boundingBoxCenter.transform;
 		vertex1 = boundingBoxVertex1.transform;
 		vertex2 = boundingBoxVertex2.transform;

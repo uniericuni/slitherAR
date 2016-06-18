@@ -9,16 +9,22 @@ public class SnakeMove : Photon.MonoBehaviour {
 	public float speed = 3.5f;
 
 	public List<SnakeBody> bodyParts = new List<SnakeBody>();
+	private GameObject BoundingMgrObj;
+	private boundingMgr boundingMgr;
+	private float lrValue;
 
 	void Start()
 	{
 		running = false;
+		BoundingMgrObj = GameObject.Find("BoundingMgr");
+		boundingMgr = BoundingMgrObj.GetComponent<boundingMgr>();
 	}
 
 	private Vector3 headV;
 
 	void FixedUpdate()
 	{
+		lrValue = boundingMgr.lrValue;
 		if (photonView.isMine)
 		{
 			Move();
@@ -91,9 +97,9 @@ public class SnakeMove : Photon.MonoBehaviour {
 		Vector3 myPos = transform.position;
 		Quaternion myRot = transform.rotation;
 
-		if (Input.GetKey(KeyCode.A))
-			currentRotation -= rotationSensitivity * Time.deltaTime;
-		if (Input.GetKey(KeyCode.D))
+		if (Input.GetKey(KeyCode.A) || lrValue > 0.01)
+			currentRotation -= rotationSensitivity * Time.deltaTime;			
+		if (Input.GetKey(KeyCode.D) || lrValue < -0.01)
 			currentRotation += rotationSensitivity * Time.deltaTime;
 
 		transform.position += transform.forward * speed * Time.deltaTime;
