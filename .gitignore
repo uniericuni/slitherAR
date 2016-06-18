@@ -2,6 +2,7 @@
 *.meta
 *.unity
 *.orig
+*.a
 
 /[Ll]ibrary/
 /[Tt]emp/
