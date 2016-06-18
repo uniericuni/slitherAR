@@ -118,7 +118,7 @@ public class SnakeMove : Photon.MonoBehaviour {
 	public float bodyPartFollowTimeRunning = 0.1f;
 	public float bodyPartFollowTimeWalking = 0.19f;
 	void Running() {
-		//SnakeGlow (running);
+		SnakeGlow (running);
         if (bodyParts.Count > 2 
             && Input.GetMouseButtonDown(0)
             && !running) {
@@ -126,7 +126,7 @@ public class SnakeMove : Photon.MonoBehaviour {
 			running = true;
 			bodyPartOverTimeFollow = bodyPartFollowTimeRunning;
             InvokeRepeating("LoseBodyParts", 0f, 0.5f);
-        } else if (Input.GetMouseButtonUp(0)) {
+        } else if (Input.GetMouseButtonUp(0) || bodyParts.Count <= 2) {
 			speed = speedWhileWalking;
 			running = false;
 			bodyPartOverTimeFollow = bodyPartFollowTimeWalking;
@@ -181,13 +181,13 @@ public class SnakeMove : Photon.MonoBehaviour {
 		bodyPartFollowTimeRunning = bodyPartFollowTimeWalking / 2;
 	}
     
-    /*
+    
 	// Glow when running
 	void SnakeGlow(bool isRunning) {
 		foreach ( SnakeBody body in bodyParts) {
-            body.transform.FindChild("onFire").gameObject.SetActive(isRunning);
+            body.transform.FindChild("onfire").gameObject.SetActive(isRunning);
         }
-    }*/
+    }
 	
 
 	void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
