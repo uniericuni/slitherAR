@@ -82,7 +82,7 @@ public class SnakeMove : Photon.MonoBehaviour {
 			Running();
 			Scaling();
 		}
-		SnakeGlow (running);
+		//SnakeGlow (running);
 	}
 
 
@@ -131,7 +131,7 @@ public class SnakeMove : Photon.MonoBehaviour {
 	
 	
 	// Speed up
-	private bool running;
+	public bool running;
 	public float speedWhileRunning = 6.5f;
 	public float speedWhileWalking = 3.4f;
 	public float bodyPartFollowTimeRunning = 0.1f;

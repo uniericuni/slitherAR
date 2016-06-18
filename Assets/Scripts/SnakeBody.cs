@@ -39,9 +39,11 @@ public class SnakeBody : Photon.MonoBehaviour {
 		}
 		transform.localScale = Vector3.SmoothDamp(transform.localScale, head.gameObject.GetComponent<SnakeMove>().currentSize, ref headV, 0.5f);
 	}
-		void Update()
+	void Update()
 	{
 		Coloring();
+
+		transform.FindChild("onfire").gameObject.SetActive(head.gameObject.GetComponent<SnakeMove>().running);
 	}
 
 	private Vector3 movementVelocity;
