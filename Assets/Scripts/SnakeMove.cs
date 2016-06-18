@@ -5,7 +5,9 @@ using System.Collections.Generic;
 public class SnakeMove : Photon.MonoBehaviour {
 
 	private float currentRotation;
-	public float rotationSensitivity = 50.0f;
+	public float rotationSensitivity;
+	public float initialRotationSensitivity = 200.0f;
+	public float minRotationSensitivity = 80.0f;
 	public float speed = 3.5f;
 	public float score;
 
@@ -14,6 +16,7 @@ public class SnakeMove : Photon.MonoBehaviour {
 	void Start()
 	{
 		running = false;
+		rotationSensitivity = initialRotationSensitivity;
 	}
 
 	private Vector3 headV;
@@ -88,9 +91,19 @@ public class SnakeMove : Photon.MonoBehaviour {
 			//ColorSnake();
 			Running();
 			Scaling();
+			UpdateRotationSensitivity ();
 		}
 	}
 
+	void UpdateRotationSensitivity() {
+		if (rotationSensitivity > minRotationSensitivity) {
+			float delta = score / 2.0f;
+			if (delta < initialRotationSensitivity - minRotationSensitivity)
+				rotationSensitivity = initialRotationSensitivity - delta;
+			else
+				rotationSensitivity = minRotationSensitivity;
+		}
+	}
 
    // Movement by keys A & D
 	private void Move()
@@ -209,7 +222,7 @@ public class SnakeMove : Photon.MonoBehaviour {
 			1 + (currentBodySize * scaleSensitivity)
 		);
 
-		bodyPartFollowTimeWalking = currentBodySize / 100.0f + followTimeSensitivity;
+		bodyPartFollowTimeWalking = currentBodySize / 50.0f + followTimeSensitivity;
 		bodyPartFollowTimeRunning = bodyPartFollowTimeWalking / 2;
 	}
 
