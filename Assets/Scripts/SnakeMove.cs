@@ -33,7 +33,7 @@ public class SnakeMove : Photon.MonoBehaviour {
 						bodyParts[0].AddPath(transform.position);
 					bodyParts[i].colorCode = i;
 					bodyParts[i].overTime = bodyPartOverTimeFollow;
-					bodyParts[i].transform.localScale = transform.localScale;
+					//bodyParts[i].transform.localScale = transform.localScale;
 				}
 			}
 		}
@@ -59,8 +59,9 @@ public class SnakeMove : Photon.MonoBehaviour {
 					else
 						currentPos = bodyParts[bodyParts.Count - 1].transform.position;
 
-					SnakeBody newBodyPart = PhotonNetwork.Instantiate("SnakeBody", currentPos, Quaternion.identity, 0).GetComponent<SnakeBody>();
-					newBodyPart.head = transform;
+					object[] data= new object[1];
+					data[0] = (object)photonView.viewID;
+					SnakeBody newBodyPart = PhotonNetwork.Instantiate("SnakeBody", currentPos, Quaternion.identity, 0, data).GetComponent<SnakeBody>();
 					bodyParts.Add(newBodyPart);
 				}
 			}
@@ -104,7 +105,7 @@ public class SnakeMove : Photon.MonoBehaviour {
 	private int orbCounter;
 	private int currentOrb;
 	public int[] growOnThisOrb;
-	private Vector3 currentSize = Vector3.one;
+	public Vector3 currentSize = Vector3.one;
 	public float growthRate = 0.1f;
 	public float bodyPartOverTimeFollow = 0.19f;
 	bool SizeUp(int x)

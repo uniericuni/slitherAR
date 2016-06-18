@@ -9,7 +9,8 @@ public class SnakeBody : Photon.MonoBehaviour {
     public Material White;
     public Material Purple;
 	public float overTime;
-	public Transform head;
+	private int headID;
+	private Transform head;
 
 	private Queue<Vector3> Path;
 	private Renderer colorRenderer;
@@ -19,20 +20,26 @@ public class SnakeBody : Photon.MonoBehaviour {
 		overTime = 0.19f;
 		colorCode = 0;
 		colorRenderer = GetComponent<Renderer>();
-		head = GameObject.FindGameObjectWithTag("SnakeHead").gameObject.transform;
+
+		headID = (int)photonView.instantiationData[0];
+		head = PhotonView.Find(headID).transform;
+
 		transform.position = Vector3.SmoothDamp(transform.position, head.position, ref movementVelocity, overTime);
 		transform.LookAt(head.position);
 	}
 
 	//[Range(0.0f,1.0f)]
-
+	private Vector3 headV;
 	void FixedUpdate()
 	{
-		if(photonView.isMine)
-			if ( Path.Count > 0)
+		if (photonView.isMine)
+		{
+			if (Path.Count > 0)
 				MoveTo(Path.Dequeue());
+		}
+		transform.localScale = Vector3.SmoothDamp(transform.localScale, head.gameObject.GetComponent<SnakeMove>().currentSize, ref headV, 0.5f);
 	}
-	void Update()
+		void Update()
 	{
 		Coloring();
 	}
@@ -65,14 +72,14 @@ public class SnakeBody : Photon.MonoBehaviour {
 		{
 			stream.SendNext(transform.position);
 			stream.SendNext(transform.rotation);
-			stream.SendNext(transform.localScale);
+			//stream.SendNext(transform.localScale);
 			stream.SendNext(colorCode);
 		}
 		else
 		{
 			transform.position = (Vector3)stream.ReceiveNext();
 			transform.rotation = (Quaternion)stream.ReceiveNext();
-			transform.localScale = (Vector3)stream.ReceiveNext();
+			//transform.localScale = (Vector3)stream.ReceiveNext();
 			colorCode = (int)stream.ReceiveNext();
 		}
 	}
