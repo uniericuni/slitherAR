@@ -37,18 +37,6 @@ public class onPlane : MonoBehaviour {
 
 		string str = x.ToString() + " , " + y.ToString() + " , " + z.ToString();
 		Debug.Log(str);
-		
-		
-		/*planeNorm = Vector3.Normalize(battlePlane.transform.TransformPoint(new Vector3 (0f,1f,0f)));
-		planeOrigin = battlePlane.transform.TransformPoint(new Vector3 (0f,0f,0f));
-		x = planeNorm.x * (planeNorm.x-objPos.x);
-		z = planeNorm.z * (planeNorm.z-objPos.z);
-
-		y = planeOrigin.y + (x+z)/planeNorm.y;
-		objPos.y = y;
-		transform.position = objPos;
-		time += 0.1f;
-		transform.position = planeOrigin + new Vector3(planeNorm.x*time, planeNorm.y*time, planeNorm.z*time); */
 
 	}
 }

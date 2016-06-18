@@ -3,6 +3,7 @@
 *.unity
 *.orig
 *.a
+bfg.jar
 
 /[Ll]ibrary/
 /[Tt]emp/
