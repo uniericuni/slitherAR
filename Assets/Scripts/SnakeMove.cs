@@ -160,7 +160,7 @@ public class SnakeMove : Photon.MonoBehaviour {
 	[PunRPC]
 	void foodFromBodyParts(Vector3 pos, Quaternion rot, GameObject lastBodyPart)
 	{
-		console.log("rpc bp");
+		Debug.Log("rpc bp");
 		if (PhotonNetwork.isMasterClient)
 		{
 			PhotonNetwork.InstantiateSceneObject("food", pos, rot, 0, null);
