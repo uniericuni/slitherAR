@@ -1,7 +1,6 @@
-<<<<<<< HEAD
 fileFormatVersion: 2
-guid: c7dbcc19f34d54ff193a21225d28d6df
-timeCreated: 1466073528
+guid: 187bc16db49c644d4b767fe1fcb0bbf2
+timeCreated: 1466244164
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
@@ -11,23 +10,3 @@ MonoImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-||||||| merged common ancestors
-=======
-fileFormatVersion: 2
-<<<<<<< HEAD
-guid: 5fb8d9f9fc393ed48b5d14b71e04bf15
-timeCreated: 1466073486
-=======
-guid: c7dbcc19f34d54ff193a21225d28d6df
-timeCreated: 1466073528
->>>>>>> [Game] Added snake color and speed-up mechanism.
-licenseType: Free
-MonoImporter:
-  serializedVersion: 2
-  defaultReferences: []
-  executionOrder: 0
-  icon: {instanceID: 0}
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
->>>>>>> blah

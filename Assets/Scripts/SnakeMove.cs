@@ -11,22 +11,20 @@ public class SnakeMove : Photon.MonoBehaviour {
 	public List<SnakeBody> bodyParts = new List<SnakeBody>();
 	private GameObject BoundingMgrObj;
 	private boundingMgr boundingMgr;
-	private float lrValue;
-
+	
 	void Start()
 	{
 		running = false;
 		BoundingMgrObj = GameObject.Find("BoundingMgr");
-		boundingMgr = BoundingMgrObj.GetComponent<boundingMgr>();
 	}
 
 	private Vector3 headV;
 
 	void FixedUpdate()
 	{
-		lrValue = boundingMgr.lrValue;
 		if (photonView.isMine)
 		{
+			boundingTest();
 			Move();
 			transform.localScale = Vector3.SmoothDamp(transform.localScale, currentSize, ref headV, 0.5f);
 			if( bodyParts.Count > 0)
@@ -237,4 +235,61 @@ public class SnakeMove : Photon.MonoBehaviour {
 			running = (bool)stream.ReceiveNext();
 		}
 	}
+
+	// ----------------- ERIC ----------------- //
+
+	public GameObject boundingBoxCenter;
+	public GameObject ARPlane;
+	public float lrValue;
+
+	private Vector3 objFront;
+	private GameObject gameMgr;
+	private const float turningVec = 230;
+	private Transform center;
+	private Vector3 dist, back, backPerpendic, planeNorm; 
+	private RaycastHit hitCenter;
+	private bool hit;
+
+	void boundingTest() {
+		
+		// bounding box illustrating
+		if (!photonView.isMine){
+			lrValue = 0f;
+			return;
+		}
+		objFront = transform.forward;
+		center = boundingBoxCenter.transform;
+		planeNorm = ARPlane.transform.forward;
+
+		// debugging raycast draw
+		Debug.DrawRay(center.position, center.forward*10000f);
+		
+		// bounding
+		
+		if( !(Physics.Raycast(center.position, center.forward, out hitCenter)) ){
+			lrValue = 0f;
+			Debug.Log("bouding box not complete ...");
+		}
+		else{
+			float x = hitCenter.point.x-transform.position.x;
+			float z = hitCenter.point.z-transform.position.z;
+			if( x*x + z*z > 10f) {
+				Debug.Log("snake turning ...");
+				dist = (transform.position - hitCenter.point);
+				back = -1*dist - objFront;
+				backPerpendic = back - Vector3.Project(back, objFront);
+				lrValue = Vector3.Dot(Vector3.Cross(objFront, backPerpendic), planeNorm);
+				if(lrValue < -0.01)
+					Debug.Log("turning right ...");
+				else if(lrValue > 0.01)
+					Debug.Log("turning left ...");
+			}
+			else{
+				Debug.Log("snake in center zone...");
+				lrValue = 0f;
+			}
+		}
+
+	}
+
 }
