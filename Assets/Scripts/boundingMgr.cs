@@ -11,8 +11,9 @@ public class boundingMgr : MonoBehaviour {
 	public GameObject boundedObject;
 	public GameObject ARPlane;
 	public float lrValue;
-	public Vector3 vec;
-
+	
+	private Vector3 objFront;
+	private GameObject gameMgr;
 	private const float turningVec = 230;
 	private Transform center;
 	private Transform vertex1, vertex2, vertex3, vertex4;
@@ -25,6 +26,8 @@ public class boundingMgr : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
+
+		gameMgr = GameObject.Find("GameManager");
 	
 	}
 	
@@ -32,6 +35,14 @@ public class boundingMgr : MonoBehaviour {
 	void FixedUpdate () {
 		
 		// bounding box illustrating
+		NetworkManager networkMgr = gameMgr.GetComponent<NetworkManager>();
+		if( networkMgr == null){
+			Debug.Log("networkMgr not found ...");
+			return;
+		}
+
+		// boundedObject = networkMgr -> snakehead;
+		objFront = boundedObject.transform.forward;
 		center = boundingBoxCenter.transform;
 		vertex1 = boundingBoxVertex1.transform;
 		vertex2 = boundingBoxVertex2.transform;
@@ -55,18 +66,20 @@ public class boundingMgr : MonoBehaviour {
 			if( hitCenter.point.x!=boundedObject.transform.position.x || hitCenter.point.z!=boundedObject.transform.position.z ){
 				Debug.Log("snake turning ...");
 				dist = (boundedObject.transform.position - hitCenter.point);
-				back = -1*dist - vec;
-				backPerpendic = back - Vector3.Project(back, vec);
-				lrValue = Vector3.Dot(Vector3.Cross(vec, backPerpendic), planeNorm);
-				if(lrValue < 0)
+				back = -1*dist - objFront;
+				backPerpendic = back - Vector3.Project(back, objFront);
+				lrValue = Vector3.Dot(Vector3.Cross(objFront, backPerpendic), planeNorm);
+				if(lrValue < -0.01)
 					Debug.Log("turning right ...");
-				else
+				else if(lrValue > 0.01)
 					Debug.Log("turning left ...");
 			}
 			else{
 				Debug.Log("snake on center ...");
 			}
 		}
+
+
 	}
 	
 }
