@@ -68,7 +68,9 @@ public class SnakeMove : Photon.MonoBehaviour {
 			Running();
 			//Scaling();
 		}
+		SnakeGlow (running);
 	}
+
 
    // Movement by keys A & D
 	private void Move()
@@ -121,7 +123,6 @@ public class SnakeMove : Photon.MonoBehaviour {
 	public float bodyPartFollowTimeRunning = 0.1f;
 	public float bodyPartFollowTimeWalking = 0.19f;
 	void Running() {
-		SnakeGlow (running);
         if (bodyParts.Count > 2 
             && Input.GetMouseButtonDown(0)
             && !running) {
@@ -146,13 +147,12 @@ public class SnakeMove : Photon.MonoBehaviour {
 		if (PhotonNetwork.isMasterClient)
 		{
 			PhotonNetwork.InstantiateSceneObject("food", lastBodyPart.position, Quaternion.identity, 0, null);
-			PhotonNetwork.Destroy(lastBodyPart.gameObject);
 		}			
 		else
 			photonView.RPC("foodFromBodyParts", PhotonTargets.Others, lastBodyPart.position, Quaternion.identity, lastBodyPart.gameObject);
 
 		bodyParts.RemoveAt (lastIndex);
-		
+		PhotonNetwork.Destroy(lastBodyPart.gameObject);
 		orbCounter--;
 	}
 
@@ -160,10 +160,10 @@ public class SnakeMove : Photon.MonoBehaviour {
 	[PunRPC]
 	void foodFromBodyParts(Vector3 pos, Quaternion rot, GameObject lastBodyPart)
 	{
+		console.log("rpc bp");
 		if (PhotonNetwork.isMasterClient)
 		{
 			PhotonNetwork.InstantiateSceneObject("food", pos, rot, 0, null);
-			PhotonNetwork.Destroy(lastBodyPart.gameObject);
 		}
 	}
     
