@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 public class NetworkManager : MonoBehaviour {
 
+    private GameObject imageTarget;
 	private Text[] rankTexts;
     private string errorMessage;
     private string playerName;
@@ -13,6 +14,7 @@ public class NetworkManager : MonoBehaviour {
     void Start()
     {
         PhotonNetwork.ConnectUsingSettings("1.7");
+        imageTarget = GameObject.Find("ImageTarget");
     }
     void Update()
     {
@@ -39,7 +41,12 @@ public class NetworkManager : MonoBehaviour {
 
     void OnJoinedRoom()
     {
-        PhotonNetwork.Instantiate( "SnakeHead", transform.position, transform.rotation, 0); 
+        GameObject snkHead = PhotonNetwork.Instantiate( "SnakeHead", imageTarget.transform.position, imageTarget.transform.rotation, 0); 
+        snkHead.transform.SetParent(imageTarget.transform, false);
+        snkHead.transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
+        SnakeMove move = snkHead.GetComponent<SnakeMove>();
+        move.boundingBoxCenter = GameObject.Find("BoundingBoxCenter");
+        move.ARPlane = GameObject.Find("ARPlane");
     }
 
 	public void destroyFood(GameObject food)
@@ -48,7 +55,10 @@ public class NetworkManager : MonoBehaviour {
 	}
 	public Transform instantiateBody(Vector3 pos, Quaternion rot)
 	{
-		return PhotonNetwork.Instantiate("SnakeBody", pos, rot, 0).transform;
+		GameObject snkBody = PhotonNetwork.Instantiate("SnakeBody", pos, rot, 0).transform;
+        snkBody.transform.SetParent(imageTarget.transform, false);
+        snkBody.transform.localScale = new Vector3(0.01f,0.01f,0.01f);
+        return snkBody.transform;
 	}
 
 

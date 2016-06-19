@@ -10,6 +10,9 @@ public class SnakeMove : Photon.MonoBehaviour {
 	public float minRotationSensitivity = 80.0f;
 	public float speed = 3.5f;
 	public float score;
+    public GameObject boundingBoxCenter;
+    public GameObject boundingBoxBoundary;
+    public GameObject ARPlane;
 
 	public List<SnakeBody> bodyParts = new List<SnakeBody>();
 
@@ -17,14 +20,23 @@ public class SnakeMove : Photon.MonoBehaviour {
 	{
 		running = false;
 		rotationSensitivity = initialRotationSensitivity;
+        ARPlane = GameObject.Find("ARPlane");
+        boundingBoxCenter = GameObject.Find("BoundingBoxCenter");
+        boundingBoxBoundary = GameObject.Find("BoundingBoxBoundary");
 	}
 
 	private Vector3 headV;
 
+    private Vector3 planeNorm;
+
 	void FixedUpdate()
 	{
+        planeNorm = ARPlane.transform.up;
+        transform.forward = Vector3.Normalize(transform.forward - Vector3.Project(transform.forward, planeNorm.normalized));
+
 		if (photonView.isMine)
 		{
+            boundingTest();
 			Move();
 			transform.localScale = Vector3.SmoothDamp(transform.localScale, currentSize, ref headV, 0.5f);
 			if( bodyParts.Count > 0)
@@ -115,6 +127,16 @@ public class SnakeMove : Photon.MonoBehaviour {
 			currentRotation -= rotationSensitivity * Time.deltaTime;
 		if (Input.GetKey(KeyCode.D))
 			currentRotation += rotationSensitivity * Time.deltaTime;
+        if(outOfBoundary) {
+            if ((Input.GetKey(KeyCode.A)) || (lrValue < 0.0f)){
+                currentRotation -= rotationSensitivity * Time.deltaTime;
+                Debug.Log("turning left ...");
+            } 
+            else{
+                currentRotation += rotationSensitivity * Time.deltaTime;
+                Debug.Log("turning right ...");
+            }
+        }
 
 		transform.position += transform.forward * speed * Time.deltaTime;
 		transform.rotation = Quaternion.Euler(new Vector3(myRot.x, currentRotation, myRot.z));
@@ -266,5 +288,57 @@ public class SnakeMove : Photon.MonoBehaviour {
 			transform.localScale = (Vector3)stream.ReceiveNext();
 			//running = (bool)stream.ReceiveNext();
 		}
+	}
+
+	// ----------------- ERIC ----------------- //
+
+	public float lrValue;
+
+	private Vector3 objFront;
+	private GameObject gameMgr;
+	private const float turningVec = 230;
+	private Transform center;
+	private Vector3 dist, back, backPerpendic; 
+	private RaycastHit hitCenter, hitBoundary;
+	private bool hit;
+	private bool outOfBoundary;
+
+	void boundingTest() {
+		
+		// bounding box illustrating
+		if (!photonView.isMine){
+			lrValue = 0f;
+			return;
+		}
+		objFront = transform.forward;
+		center = boundingBoxCenter.transform;
+		
+		// debugging raycast draw
+		Debug.DrawRay(center.position, center.forward*10000f);
+		
+		// bounding
+		
+		if( !(Physics.Raycast(center.position, center.forward, out hitCenter)) || !(Physics.Raycast(center.position, center.forward, out hitBoundary))){
+			lrValue = 0f;
+			Debug.Log("bouding box not complete ...");
+		}
+		else{
+			float x = hitCenter.point.x-transform.position.x;
+			float z = hitCenter.point.z-transform.position.z;
+			if( Mathf.Sqrt(x*x + z*z) > Vector3.Distance(hitBoundary.point, hitCenter.point)) {
+				outOfBoundary = true;
+				dist = (transform.position - hitCenter.point);
+				// back = objFront;
+				backPerpendic = Vector3.Project(dist, objFront) - dist;
+				lrValue = Vector3.Dot(Vector3.Cross(objFront, backPerpendic), planeNorm);
+				Debug.Log("snake turning ... "+lrValue.ToString() + " |dist: "+dist.x.ToString() + ","+dist.y.ToString()+","+dist.z.ToString()+" |backPerpend: "+backPerpendic.x.ToString() + ","+backPerpendic.y.ToString()+","+backPerpendic.z.ToString() );
+			}
+			else{
+				Debug.Log("snake in center zone...");
+				outOfBoundary = false;
+				lrValue = 0f;
+			}
+		}
+
 	}
 }
