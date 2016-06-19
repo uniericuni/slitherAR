@@ -182,14 +182,17 @@ public class SnakeMove : Photon.MonoBehaviour {
 	public float bodyPartFollowTimeRunning = 0.1f;
 	public float bodyPartFollowTimeWalking = 0.19f;
 	void Running() {
+
+		int tCount = Input.touchCount;
         if (bodyParts.Count > 2 
             && Input.GetMouseButtonDown(0)
+            && tCount > 0
             && !running) {
 			speed = speedWhileRunning;
 			running = true;
 			bodyPartOverTimeFollow = bodyPartFollowTimeRunning;
             InvokeRepeating("LoseBodyParts", 0f, 0.5f);
-        } else if (Input.GetMouseButtonUp(0) || bodyParts.Count <= 2) {
+        } else if (Input.GetMouseButtonUp(0) || tCount==0 || bodyParts.Count <= 2) {
 			speed = speedWhileWalking;
 			running = false;
 			bodyPartOverTimeFollow = bodyPartFollowTimeWalking;
@@ -301,7 +304,7 @@ public class SnakeMove : Photon.MonoBehaviour {
 	private Vector3 objFront;
 	private GameObject gameMgr;
 	private const float turningVec = 230;
-	private Transform center;
+	private Transform center, boundary;
 	private Vector3 dist, back, backPerpendic; 
 	private RaycastHit hitCenter, hitBoundary;
 	private bool hit;
@@ -316,20 +319,24 @@ public class SnakeMove : Photon.MonoBehaviour {
 		}
 		objFront = transform.forward;
 		center = boundingBoxCenter.transform;
+		boundary = boundingBoxBoundary.transform;
 		
 		// debugging raycast draw
 		Debug.DrawRay(center.position, center.forward*10000f);
 		
 		// bounding
-		
-		if( !(Physics.Raycast(center.position, center.forward, out hitCenter)) || !(Physics.Raycast(center.position, center.forward, out hitBoundary))){
+		if( !(Physics.Raycast(center.position, center.forward, out hitCenter))){
+			lrValue = 0f;
+			Debug.Log("bouding box not complete ...");
+		}
+		else if( !(Physics.Raycast(boundary.position, boundary.forward, out hitBoundary)) ){
 			lrValue = 0f;
 			Debug.Log("bouding box not complete ...");
 		}
 		else{
 			float x = hitCenter.point.x-transform.position.x;
 			float z = hitCenter.point.z-transform.position.z;
-			if( Mathf.Sqrt(x*x + z*z) > Vector3.Distance(hitBoundary.point, hitCenter.point)) {
+			if( Mathf.Sqrt(x*x + z*z) > Vector3.Distance(hitBoundary.point, hitCenter.point) ){
 				outOfBoundary = true;
 				dist = (transform.position - hitCenter.point);
 				// back = objFront;
