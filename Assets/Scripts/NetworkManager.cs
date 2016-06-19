@@ -43,7 +43,6 @@ public class NetworkManager : MonoBehaviour {
     {
         GameObject snkHead = PhotonNetwork.Instantiate( "SnakeHead", imageTarget.transform.position, imageTarget.transform.rotation, 0); 
         snkHead.transform.SetParent(imageTarget.transform, false);
-        snkHead.transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
         SnakeMove move = snkHead.GetComponent<SnakeMove>();
         move.boundingBoxCenter = GameObject.Find("BoundingBoxCenter");
         move.ARPlane = GameObject.Find("ARPlane");
@@ -58,19 +57,20 @@ public class NetworkManager : MonoBehaviour {
 	{
 		GameObject snkBody = PhotonNetwork.Instantiate("SnakeBody", pos, rot, 0);
 		snkBody.transform.SetParent(imageTarget.transform, false);
-		snkBody.transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
 		return snkBody.transform;
 	}
 
 
     private void spawnFood()
     {
-        float spawnSeed = Random.Range(0,6);
+        float spawnSeed = Random.Range(0,100);
         string toSpawn;
-        if (spawnSeed < 3) toSpawn = "smallFood";
-        else if (spawnSeed < 5) toSpawn = "food";
+        if (spawnSeed < 20) toSpawn = "smallFood";
+        else if (spawnSeed < 95) toSpawn = "food";
         else toSpawn = "LargeFood";
-        Vector3 randPos = new Vector3(Random.Range(-30f, 30f), 0.6f, Random.Range(-30f, 30f));
-        PhotonNetwork.InstantiateSceneObject( toSpawn, randPos, Quaternion.identity, 0, null);
+        Vector3 randPos = new Vector3(Random.Range(-1.5f, 1.5f), 0.0f, Random.Range(-1.5f, 1.5f));
+        //PhotonNetwork.InstantiateSceneObject( toSpawn, randPos, Quaternion.identity, 0, null);
+        GameObject food = PhotonNetwork.InstantiateSceneObject( toSpawn, randPos, Quaternion.identity, 0, null);
+        food.transform.SetParent(imageTarget.transform, false);
     }
 }

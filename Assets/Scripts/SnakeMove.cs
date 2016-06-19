@@ -8,11 +8,12 @@ public class SnakeMove : Photon.MonoBehaviour {
 	public float rotationSensitivity;
 	public float initialRotationSensitivity = 200.0f;
 	public float minRotationSensitivity = 80.0f;
-	public float speed = 3.5f;
+	public float speed = 3.5f * 0.05f;
 	public float score;
     public GameObject boundingBoxCenter;
     public GameObject boundingBoxBoundary;
     public GameObject ARPlane;
+    public GameObject imageTarget;
 
 	public List<SnakeBody> bodyParts = new List<SnakeBody>();
 
@@ -23,6 +24,7 @@ public class SnakeMove : Photon.MonoBehaviour {
         ARPlane = GameObject.Find("ARPlane");
         boundingBoxCenter = GameObject.Find("BoundingBoxCenter");
         boundingBoxBoundary = GameObject.Find("BoundingBoxBoundary");
+        imageTarget = GameObject.Find("ImageTarget");
 	}
 
 	private Vector3 headV;
@@ -39,6 +41,7 @@ public class SnakeMove : Photon.MonoBehaviour {
             boundingTest();
 			Move();
 			transform.localScale = Vector3.SmoothDamp(transform.localScale, currentSize, ref headV, 0.5f);
+			//transform.localScale = transform.localScale/2;
 			if( bodyParts.Count > 0)
 			{
 				for (int i = bodyParts.Count-1; i >= 0; i--)
@@ -81,6 +84,7 @@ public class SnakeMove : Photon.MonoBehaviour {
 
 					for (int i = 0; i < (Mathf.RoundToInt(score) - Mathf.RoundToInt(oldScore)); i++) {
 						SnakeBody newBodyPart = PhotonNetwork.Instantiate ("SnakeBody", currentPos, Quaternion.identity, 0).GetComponent<SnakeBody> ();
+						newBodyPart.transform.SetParent(imageTarget.transform, false);
 						newBodyPart.head = transform;
 						bodyParts.Add (newBodyPart);
 					}
@@ -239,9 +243,9 @@ public class SnakeMove : Photon.MonoBehaviour {
 		}
 
 		currentSize = new Vector3(
-			1 + (currentBodySize * scaleSensitivity),
-			1 + (currentBodySize * scaleSensitivity),
-			1 + (currentBodySize * scaleSensitivity)
+			0.05f * (1 + (currentBodySize * scaleSensitivity)),
+			0.05f * (1 + (currentBodySize * scaleSensitivity)),
+			0.05f * (1 + (currentBodySize * scaleSensitivity))
 		);
 
 		bodyPartFollowTimeWalking = currentBodySize / 50.0f + followTimeSensitivity;
