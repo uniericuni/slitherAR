@@ -5,10 +5,11 @@ using System.Collections.Generic;
 
 public class NetworkManager : MonoBehaviour {
 
-	private GameObject imageTarget;
+    private GameObject imageTarget;
 	private Text[] rankTexts;
     private string errorMessage;
     private string playerName;
+    private float spawnTimer;
 
     void Start()
     {
@@ -17,6 +18,15 @@ public class NetworkManager : MonoBehaviour {
     }
     void Update()
     {
+        if (PhotonNetwork.isMasterClient)
+        {
+            spawnTimer += Time.deltaTime;
+            if (spawnTimer > 0.5f)
+            {
+                spawnFood();
+                spawnTimer = 0f;
+            }
+        }
     }
 
     void OnJoinedLobby()
@@ -36,7 +46,7 @@ public class NetworkManager : MonoBehaviour {
         snkHead.transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
         SnakeMove move = snkHead.GetComponent<SnakeMove>();
         move.boundingBoxCenter = GameObject.Find("BoundingBoxCenter");
-		move.ARPlane = GameObject.Find("ARPlane");
+        move.ARPlane = GameObject.Find("ARPlane");
     }
 
 	public void destroyFood(GameObject food)
@@ -46,28 +56,21 @@ public class NetworkManager : MonoBehaviour {
 
 	public Transform instantiateBody(Vector3 pos, Quaternion rot)
 	{
-
 		GameObject snkBody = PhotonNetwork.Instantiate("SnakeBody", pos, rot, 0);
 		snkBody.transform.SetParent(imageTarget.transform, false);
 		snkBody.transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
 		return snkBody.transform;
 	}
 
-	private void addScore(float s)
-	{
 
-	}
-	private void addBody(string n) { }
-	/*
-	[PunRPC]
-	void updateGMScore(float score)
-	{
-		GM.updateScore(PhotonNetwork.playerName, score);
-	}
-	[PunRPC]
-	void updateGMPlayers(List<string> names)
-	{
-		GM.updatePlayers(names);
-	}
-	*/
+    private void spawnFood()
+    {
+        float spawnSeed = Random.Range(0,6);
+        string toSpawn;
+        if (spawnSeed < 3) toSpawn = "smallFood";
+        else if (spawnSeed < 5) toSpawn = "food";
+        else toSpawn = "LargeFood";
+        Vector3 randPos = new Vector3(Random.Range(-30f, 30f), 0.6f, Random.Range(-30f, 30f));
+        PhotonNetwork.InstantiateSceneObject( toSpawn, randPos, Quaternion.identity, 0, null);
+    }
 }
