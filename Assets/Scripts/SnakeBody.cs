@@ -10,6 +10,7 @@ public class SnakeBody : Photon.MonoBehaviour {
     public Material Purple;
 	public float overTime;
 	public Transform head;
+	public bool running;
 
 	private Queue<Vector3> Path;
 	private Renderer colorRenderer;
@@ -35,6 +36,7 @@ public class SnakeBody : Photon.MonoBehaviour {
 	void Update()
 	{
 		Coloring();
+		transform.FindChild("onfire").gameObject.SetActive(running);
 	}
 
 	private Vector3 movementVelocity;
@@ -63,17 +65,19 @@ public class SnakeBody : Photon.MonoBehaviour {
 	{
 		if (stream.isWriting)
 		{
-			stream.SendNext(transform.position);
-			stream.SendNext(transform.rotation);
-			stream.SendNext(transform.localScale);
-			stream.SendNext(colorCode);
+			stream.SendNext (transform.position);
+			stream.SendNext (transform.rotation);
+			stream.SendNext (transform.localScale);
+			stream.SendNext (colorCode);
+			stream.SendNext (running);
 		}
 		else
 		{
-			transform.position = (Vector3)stream.ReceiveNext();
-			transform.rotation = (Quaternion)stream.ReceiveNext();
-			transform.localScale = (Vector3)stream.ReceiveNext();
-			colorCode = (int)stream.ReceiveNext();
+			transform.position = (Vector3)stream.ReceiveNext ();
+			transform.rotation = (Quaternion)stream.ReceiveNext ();
+			transform.localScale = (Vector3)stream.ReceiveNext ();
+			colorCode = (int)stream.ReceiveNext ();
+			running = (bool)stream.ReceiveNext ();
 		}
 	}
 }

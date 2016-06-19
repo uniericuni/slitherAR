@@ -38,12 +38,13 @@ public class SnakeMove : Photon.MonoBehaviour {
 				for (int i = bodyParts.Count-1; i >= 0; i--)
 				{
 					if (i > 0)
-						bodyParts[i].AddPath(bodyParts[i - 1].transform.position);
+						bodyParts [i].AddPath(bodyParts[i - 1].transform.position);
 					else
-						bodyParts[0].AddPath(transform.position);
-					bodyParts[i].colorCode = i;
-					bodyParts[i].overTime = bodyPartOverTimeFollow;
-					bodyParts[i].transform.localScale = transform.localScale;
+						bodyParts [0].AddPath(transform.position);
+					bodyParts [i].colorCode = i;
+					bodyParts [i].overTime = bodyPartOverTimeFollow;
+					bodyParts [i].transform.localScale = transform.localScale;
+					bodyParts [i].running = running;
 				}
 			}
 		}
@@ -92,7 +93,6 @@ public class SnakeMove : Photon.MonoBehaviour {
 			Running();
 			Scaling();
 		}
-		SnakeGlow (running);
 	}
 
 
@@ -233,15 +233,6 @@ public class SnakeMove : Photon.MonoBehaviour {
 		bodyPartFollowTimeWalking = currentBodySize / 100.0f + followTimeSensitivity;
 		bodyPartFollowTimeRunning = bodyPartFollowTimeWalking / 2;
 	}
-    
-    
-	// Glow when running
-	void SnakeGlow(bool isRunning) {
-		foreach ( SnakeBody body in bodyParts) {
-            body.transform.FindChild("onfire").gameObject.SetActive(isRunning);
-        }
-    }
-	
 
 	void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
 	{
@@ -250,14 +241,14 @@ public class SnakeMove : Photon.MonoBehaviour {
 			stream.SendNext(transform.position);
 			stream.SendNext(transform.rotation);
 			stream.SendNext(transform.localScale);
-			stream.SendNext(running);
+			//stream.SendNext(running);
 		}
 		else
 		{
 			transform.position = (Vector3)stream.ReceiveNext();
 			transform.rotation = (Quaternion)stream.ReceiveNext();
 			transform.localScale = (Vector3)stream.ReceiveNext();
-			running = (bool)stream.ReceiveNext();
+			//running = (bool)stream.ReceiveNext();
 		}
 	}
 
