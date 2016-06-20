@@ -25,19 +25,21 @@ public class NetworkManager : Photon.MonoBehaviour {
 
     void Start()
     {
-        //connectionFail.gameObject.SetActive(false);
+        connectionFail.gameObject.SetActive(false);
         PhotonNetwork.ConnectUsingSettings("1.7");
         imageTarget = GameObject.Find("ImageTarget");
         Score = new Hashtable();
+        resetButton.enabled = true;
         resetButton.onClick.AddListener(Start);
     }
 
     void OnFailedToConnectToPhoton(){
 
         Debug.Log("On Failure");
-        //Debug.Log("On Failed To Connect ..." + cause.ToString());
-        //connectionFail.gameObject.SetActive(true);
         PhotonNetwork.Disconnect();
+        resetButton.enabled = true;//
+        resetButton.onClick.AddListener(Start);
+        connectionFail.gameObject.SetActive(true);
 
     }
 
