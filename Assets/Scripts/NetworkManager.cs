@@ -6,6 +6,7 @@ using System.Collections.Generic;
 public class NetworkManager : Photon.MonoBehaviour {
 
     public Button startButton;
+    public Button reconnectingButton;
     public InputField nameInput; 
     public Text[] rankTexts;
     public Canvas ui;
@@ -23,12 +24,23 @@ public class NetworkManager : Photon.MonoBehaviour {
 
     void Start()
     {
+        Debug.Log("Reset ...");
         PhotonNetwork.ConnectUsingSettings("1.7");
         imageTarget = GameObject.Find("ImageTarget");
         Score = new Hashtable();
+        //reconnectingButton.onClick.AddListener(Start);
     }
+
+    void OnFailedToConnectToPhoton() {
+
+        PhotonNetwork.Disconnect();
+        PhotonNetwork.ConnectUsingSettings("1.7");
+
+    }
+
     void FixedUpdate()
     {
+
         updateRank();
     }
     void Update()
