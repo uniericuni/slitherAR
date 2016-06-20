@@ -76,8 +76,7 @@ public class SnakeMove : Photon.MonoBehaviour {
 				{
 					float oldScore = score;
 					score += other.GetComponent<FoodGrow> ().score;
-                    NM.updateScore(score);
-					orbCounter = Mathf.RoundToInt (score);
+					orbCounter = Mathf.RoundToInt(score);
 					Vector3 currentPos;
 					if (bodyParts.Count == 0)
 						currentPos = transform.position;
@@ -90,6 +89,7 @@ public class SnakeMove : Photon.MonoBehaviour {
 						newBodyPart.head = transform;
 						bodyParts.Add (newBodyPart);
 					}
+					NM.updateScore(score);
 				}
 			} else if (other.transform.tag == "SnakeBody" && !other.GetComponent<SnakeBody> ().photonView.isMine) {
 				CollideWithOtherBody ();

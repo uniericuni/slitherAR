@@ -21,6 +21,7 @@ public class ScoreManager : MonoBehaviour
         PhotonNetwork.ConnectUsingSettings("1.7");
         Score = new Hashtable();
     }
+    
     void Update()
     {
         if (PhotonNetwork.isMasterClient)

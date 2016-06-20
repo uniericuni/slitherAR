@@ -25,7 +25,7 @@ public class NetworkManager : Photon.MonoBehaviour {
 
     void Start()
     {
-        connectionFail.gameObject.SetActive(false);
+        connectionFail.gameObject.SetActive(true);
         PhotonNetwork.ConnectUsingSettings("1.7");
         imageTarget = GameObject.Find("ImageTarget");
         Score = new Hashtable();
@@ -37,9 +37,6 @@ public class NetworkManager : Photon.MonoBehaviour {
 
         Debug.Log("On Failure");
         PhotonNetwork.Disconnect();
-        resetButton.enabled = true;//
-        resetButton.onClick.AddListener(Start);
-        connectionFail.gameObject.SetActive(true);
 
     }
 
@@ -154,6 +151,7 @@ public class NetworkManager : Photon.MonoBehaviour {
         GameObject food = PhotonNetwork.InstantiateSceneObject( toSpawn, randPos, Quaternion.identity, 0, null);
         food.transform.SetParent(imageTarget.transform, false);
     }
+    
     public void updateScore (float score)
     {
         if (PhotonNetwork.isMasterClient)
@@ -161,6 +159,7 @@ public class NetworkManager : Photon.MonoBehaviour {
         else 
             photonView.RPC("updateMasterScore", PhotonTargets.MasterClient, score, playerName);
     }
+
     [PunRPC]
     void updateMasterScore(float score, string name)
     {
