@@ -62,9 +62,9 @@ public class NetworkManager : Photon.MonoBehaviour {
                 spawnFood();
                 spawnTimer = 0f;
             }
-            rankTexts[0].text = "1. " + first;
-            rankTexts[1].text = "2. " + second;
-            rankTexts[2].text = "3. " + third;
+            rankTexts[0].text = "1. " + first + " : " + Score[first];
+            rankTexts[1].text = "2. " + second + " : " + Score[second];
+            rankTexts[2].text = "3. " + third + " : " + Score[third];
         }
     }
 
