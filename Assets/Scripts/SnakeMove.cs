@@ -259,6 +259,7 @@ public class SnakeMove : Photon.MonoBehaviour {
 	}
 
 	void CollideWithOtherBody() {
+		Debug.Log("Collide");
 		for (int i = 0; i < bodyParts.Count; i++) {
 			Transform bodyPart = bodyParts [i].transform;
 
@@ -269,10 +270,10 @@ public class SnakeMove : Photon.MonoBehaviour {
 			}
 			PhotonNetwork.Destroy (bodyPart.gameObject);
 		}
-        NM.SnakeDead();
-		//if (PhotonNetwork.isMasterClient)
+        
 		PhotonNetwork.Destroy(this.gameObject);
 		bodyParts.Clear();
+		NM.SnakeDead();
 	}
 	// Leave new food from the position of the dead snakes
 	[PunRPC]

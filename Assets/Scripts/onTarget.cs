@@ -37,7 +37,7 @@ public class onTarget : MonoBehaviour {
 			}
 		}
 		else
-			Debug.Log("onTarget, bouding box not complete ...");
+			;//Debug.Log("onTarget, bouding box not complete ...");
 
 	}
 }

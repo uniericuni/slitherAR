@@ -22,15 +22,21 @@ public class NetworkManager : Photon.MonoBehaviour {
     private string first;
     private string second;
     private string third;
+    private float firstScore;
+    private float secondScore;
+    private float thirdScore;
 
     void Start()
     {
+        foreach(Text text in rankTexts){
+            text.gameObject.SetActive(false);
+        }
         connectionFail.gameObject.SetActive(true);
         PhotonNetwork.ConnectUsingSettings("1.7");
         imageTarget = GameObject.Find("ImageTarget");
-        Score = new Hashtable();
         resetButton.enabled = true;
         resetButton.onClick.AddListener(Start);
+        Score = new Hashtable();
     }
 
     void OnFailedToConnectToPhoton(){
@@ -42,8 +48,15 @@ public class NetworkManager : Photon.MonoBehaviour {
 
     void FixedUpdate()
     {
-        if (PhotonNetwork.isMasterClient)
+        if (PhotonNetwork.isMasterClient) {
             updateRank();
+            if (first != null)
+                firstScore = (float)Score[first];
+            if (second != null)
+                secondScore = (float)Score[second];
+            if (third != null)
+                thirdScore = (float)Score[third];
+        }
     }
 
     void Update()
@@ -56,16 +69,19 @@ public class NetworkManager : Photon.MonoBehaviour {
                 spawnFood();
                 spawnTimer = 0f;
             }
-            rankTexts[0].text = "#1  " + first + " " + Score[first];
-            if (second == null)
-                rankTexts[1].text = "";
-            else
-                rankTexts[1].text = "#2  " + second + " " + Score[second];
-            if (third == null)
-                rankTexts[2].text = "";
-            else
-                rankTexts[2].text = "#3  " + third + " " + Score[third];
         }
+        if (first == null)
+            rankTexts[0].text = "";
+        else
+            rankTexts[0].text = "#1  " + first + " " + firstScore;
+        if (second == null)
+            rankTexts[1].text = "";
+        else
+            rankTexts[1].text = "#2  " + second + " " + secondScore;
+        if (third == null)
+            rankTexts[2].text = "";
+        else
+            rankTexts[2].text = "#3  " + third + " " + thirdScore;
     }
 
     void OnJoinedLobby()
@@ -90,6 +106,9 @@ public class NetworkManager : Photon.MonoBehaviour {
         startButton.gameObject.SetActive(false);
         nameInput.gameObject.SetActive(false);
         resetButton.gameObject.SetActive(false);
+        foreach(Text text in rankTexts){
+            text.gameObject.SetActive(true);
+        }
 
     }
 
@@ -101,10 +120,13 @@ public class NetworkManager : Photon.MonoBehaviour {
         playerName = nameInput.text;
         PhotonNetwork.playerName = playerName;
         me.NM = GameObject.Find("GameManager").GetComponent<NetworkManager>();
-        foreach (PhotonPlayer player in PhotonNetwork.playerList)
-        {
-            Score.Add(player.name, 0f);
-        }
+        //Score = new Hashtable();
+        //if (PhotonNetwork.isMasterClient) {
+            foreach (PhotonPlayer player in PhotonNetwork.playerList)
+            {
+                Score.Add(player.name, 0f);
+            }
+        //}
 
         snkHead.transform.SetParent(imageTarget.transform, false);
         SnakeMove move = snkHead.GetComponent<SnakeMove>();
@@ -122,28 +144,45 @@ public class NetworkManager : Photon.MonoBehaviour {
 
     void OnPhotonPlayerDisconnected(PhotonPlayer otherPlayer)
     {
-        if(PhotonNetwork.isMasterClient)
+        if(PhotonNetwork.isMasterClient) {
             PhotonNetwork.DestroyPlayerObjects(otherPlayer);
+            Score.Remove(playerName);
+        }
     }
 
     public void SnakeDead()
     {
+        Debug.Log("blah");
         Score.Remove(playerName);
+        Debug.Log("blah");
         updateRank();
-        PhotonNetwork.SetMasterClient(PhotonNetwork.otherPlayers[0]);
-        photonView.RPC("passScore", PhotonTargets.MasterClient, Score);
+        Debug.Log("blah");
+        if (PhotonNetwork.isMasterClient) {
+            PhotonNetwork.SetMasterClient(PhotonNetwork.otherPlayers[0]);
+            foreach (string name in Score.Keys )
+                photonView.RPC("passScore", PhotonTargets.MasterClient, (float)Score[name], name);
+            //PhotonNetwork.DestroyPlayerObjects(PhotonNetwork.player);
+        }
+        Debug.Log("blah");
+        foreach(Text text in rankTexts){
+            text.gameObject.SetActive(false);
+        }
         PhotonNetwork.LeaveRoom();
     }
 
     [PunRPC]
-    
-    void passScore ( Hashtable score )
+    void passScore (float score, string name)
     {
-        Score = score;
+        /*if (Score.ContainsKey(name))
+            Score[name] = score;
+        else
+            Score.Add(name, score);*/
+        Score.Add(name, score);
     }
 
     void OnLeftRoom()
     {
+        Debug.Log("OnLeftRoom");
         startButton.gameObject.SetActive(true);
         nameInput.gameObject.SetActive(true);
         startButton.onClick.AddListener(JoinRoom);
@@ -186,6 +225,10 @@ public class NetworkManager : Photon.MonoBehaviour {
     [PunRPC]
     void updateMasterScore(float score, string name)
     {
+        /*if (Score.ContainsKey(name))
+            Score[name] = score;
+        else
+            Score.Add(name, score);*/
         Score[name] = score;
     }
     
@@ -194,15 +237,12 @@ public class NetworkManager : Photon.MonoBehaviour {
         List<string> ranking = new List<string>();
         foreach (string name in Score.Keys)
         {
-            int idx = 0;
             float playerScore = (float)Score[name];
-            for (int i = 0; i < ranking.Count; i++)
+            int idx = 0;
+            for (; idx < ranking.Count; idx++)
             {
-                if ((float)Score[ranking[i]] > playerScore)
-                {
-                    idx = i;
+                if ((float)Score[ranking[idx]] < playerScore)
                     break;
-                }
             }
             ranking.Insert(idx, name);
         }
@@ -216,17 +256,25 @@ public class NetworkManager : Photon.MonoBehaviour {
           
     void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
+        //Debug.Log("GGGGGGGGGGGGGGGGGGGGGGGG");
         if (stream.isWriting)
         {
             stream.SendNext(first);
             stream.SendNext(second);
             stream.SendNext(third);
+            stream.SendNext(firstScore);
+            stream.SendNext(secondScore);
+            stream.SendNext(thirdScore);
         }
         else
         {
             first = (string)stream.ReceiveNext();
             second = (string)stream.ReceiveNext();
             third = (string)stream.ReceiveNext();
+            firstScore = (float)stream.ReceiveNext();
+            secondScore = (float)stream.ReceiveNext();
+            thirdScore = (float)stream.ReceiveNext();
+            //Debug.Log(first);
         }
     }
 }
