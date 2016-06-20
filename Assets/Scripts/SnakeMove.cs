@@ -75,6 +75,7 @@ public class SnakeMove : Photon.MonoBehaviour {
 				{
 					float oldScore = score;
 					score += other.GetComponent<FoodGrow> ().score;
+                    NM.updateScore(score);
 					orbCounter = Mathf.RoundToInt (score);
 					Vector3 currentPos;
 					if (bodyParts.Count == 0)
