@@ -268,6 +268,7 @@ public class SnakeMove : Photon.MonoBehaviour {
 			}
 			PhotonNetwork.Destroy (bodyPart.gameObject);
 		}
+        NM.SnakeDead();
 		//if (PhotonNetwork.isMasterClient)
 		PhotonNetwork.Destroy(this.gameObject);
 		bodyParts.Clear();
