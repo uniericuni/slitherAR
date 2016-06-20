@@ -92,6 +92,19 @@ public class NetworkManager : Photon.MonoBehaviour {
         move.ARPlane = GameObject.Find("ARPlane");
     }
 
+    public void SnakeDead()
+    {
+        Score.Remove(playerName);
+        PhotonNetwork.LeaveRoom();
+    }
+
+    void OnLeftRoom()
+    {
+        startButton.gameObject.SetActive(true);
+        nameInput.gameObject.SetActive(true);
+        startButton.onClick.AddListener(JoinRoom);
+    }
+
 	public void destroyFood(GameObject food)
 	{
 		PhotonNetwork.Destroy(food);
@@ -122,7 +135,7 @@ public class NetworkManager : Photon.MonoBehaviour {
         if (PhotonNetwork.isMasterClient)
             Score[playerName] = score;
         else 
-            photonView.RPC("updateMsterScore", PhotonTargets.MasterClient, score, playerName);
+            photonView.RPC("updateMasterScore", PhotonTargets.MasterClient, score, playerName);
     }
     [PunRPC]
     void updateMasterScore(float score, string name)
