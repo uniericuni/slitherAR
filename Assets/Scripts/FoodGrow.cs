@@ -25,7 +25,7 @@ public class FoodGrow : MonoBehaviour {
 
     private Vector3 vel;
     void Update() {
-        lifeTimer -= Time.deltaTime;
+        lifeTimer -= Time.deltaTime/10;
         if(lifeTimer > 1 ) {
             targetScale = maxScale *= lifeTimer/10;
             transform.localScale = Vector3.Slerp( transform.localScale, targetScale, Time.deltaTime * 5);

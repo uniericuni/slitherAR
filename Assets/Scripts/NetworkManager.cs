@@ -42,7 +42,8 @@ public class NetworkManager : Photon.MonoBehaviour {
 
     void FixedUpdate()
     {
-        updateRank();
+        if (PhotonNetwork.isMasterClient)
+            updateRank();
     }
 
     void Update()
@@ -99,7 +100,7 @@ public class NetworkManager : Photon.MonoBehaviour {
         SnakeMove me = snkHead.GetComponent<SnakeMove>();
         playerName = nameInput.text;
         PhotonNetwork.playerName = playerName;
-        me.NM = this;
+        me.NM = GameObject.Find("GameManager").GetComponent<NetworkManager>();
         foreach (PhotonPlayer player in PhotonNetwork.playerList)
         {
             Score.Add(player.name, 0f);
@@ -113,10 +114,32 @@ public class NetworkManager : Photon.MonoBehaviour {
         //nameInput.gameObject.SetActive(false);
     }
 
-    public void SnakeDead()
+    /*public void SnakeDead()
     {
         Score.Remove(playerName);
         PhotonNetwork.LeaveRoom();
+    }*/
+
+    void OnPhotonPlayerDisconnected(PhotonPlayer otherPlayer)
+    {
+        if(PhotonNetwork.isMasterClient)
+            PhotonNetwork.DestroyPlayerObjects(otherPlayer);
+    }
+
+    public void SnakeDead()
+    {
+        Score.Remove(playerName);
+        updateRank();
+        PhotonNetwork.SetMasterClient(PhotonNetwork.otherPlayers[0]);
+        photonView.RPC("passScore", PhotonTargets.MasterClient, Score);
+        PhotonNetwork.LeaveRoom();
+    }
+
+    [PunRPC]
+    
+    void passScore ( Hashtable score )
+    {
+        Score = score;
     }
 
     void OnLeftRoom()

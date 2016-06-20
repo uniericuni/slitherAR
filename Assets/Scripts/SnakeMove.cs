@@ -26,6 +26,7 @@ public class SnakeMove : Photon.MonoBehaviour {
         boundingBoxCenter = GameObject.Find("BoundingBoxCenter");
         boundingBoxBoundary = GameObject.Find("BoundingBoxBoundary");
         imageTarget = GameObject.Find("ImageTarget");
+        NM = GameObject.Find("GameManager").GetComponent<NetworkManager>();
 	}
 
 	private Vector3 headV;
