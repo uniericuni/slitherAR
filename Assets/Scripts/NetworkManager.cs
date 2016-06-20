@@ -3,18 +3,33 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
-public class NetworkManager : MonoBehaviour {
+public class NetworkManager : Photon.MonoBehaviour {
+
+    public Button startButton;
+    public InputField nameInput; 
+    public Text[] rankTexts;
 
     private GameObject imageTarget;
-	private Text[] rankTexts;
+
     private string errorMessage;
     private string playerName;
     private float spawnTimer;
 
+    private Hashtable Score;
+    private string first;
+    private string second;
+    private string third;
+
     void Start()
     {
-        PhotonNetwork.ConnectUsingSettings("1.7");
+        while(!PhotonNetwork.ConnectUsingSettings("1.7")) {};
+        //PhotonNetwork.ConnectUsingSettings("1.7");
         imageTarget = GameObject.Find("ImageTarget");
+        Score = new Hashtable();
+    }
+    void FixedUpdate()
+    {
+        updateRank();
     }
     void Update()
     {
@@ -26,22 +41,51 @@ public class NetworkManager : MonoBehaviour {
                 spawnFood();
                 spawnTimer = 0f;
             }
+            rankTexts[0].text = "1. " + first;
+            rankTexts[1].text = "2. " + second;
+            rankTexts[2].text = "3. " + third;
         }
     }
 
     void OnJoinedLobby()
     {
+        /*
         RoomOptions roomOptions = new RoomOptions()
         {
             isVisible = false,
             maxPlayers = 20
         };
         PhotonNetwork.JoinOrCreateRoom( "master", roomOptions, TypedLobby.Default);
+        */
+        startButton.onClick.AddListener(JoinRoom);
+    }
+
+    void JoinRoom()
+    {
+        if(nameInput.text.Length > 0)
+        {
+            RoomOptions roomOptions = new RoomOptions()
+            {
+                isVisible = false,
+                maxPlayers = 20
+            };
+            PhotonNetwork.JoinOrCreateRoom("master", roomOptions, TypedLobby.Default);
+        }
+        startButton.enabled = false;
+        nameInput.enabled = false;
     }
 
     void OnJoinedRoom()
     {
         GameObject snkHead = PhotonNetwork.Instantiate( "SnakeHead", imageTarget.transform.position, imageTarget.transform.rotation, 0); 
+        playerName = nameInput.text;
+        PhotonNetwork.playerName = playerName;
+        snkHead.NM = this;
+        foreach (PhotonPlayer player in PhotonNetwork.playerList)
+        {
+            Score.Add(player.name, 0f);
+        }
+
         snkHead.transform.SetParent(imageTarget.transform, false);
         SnakeMove move = snkHead.GetComponent<SnakeMove>();
         move.boundingBoxCenter = GameObject.Find("BoundingBoxCenter");
@@ -72,5 +116,58 @@ public class NetworkManager : MonoBehaviour {
         //PhotonNetwork.InstantiateSceneObject( toSpawn, randPos, Quaternion.identity, 0, null);
         GameObject food = PhotonNetwork.InstantiateSceneObject( toSpawn, randPos, Quaternion.identity, 0, null);
         food.transform.SetParent(imageTarget.transform, false);
+    }
+    public void updateScore (float score)
+    {
+        if (PhotonNetwork.isMasterClient)
+            Score[playerName] = score;
+        else 
+            photonView.RPC("updateMsterScore", PhotonTargets.MasterClient, score, playerName);
+    }
+    [PunRPC]
+    void updateMasterScore(float score, string name)
+    {
+        Score[name] = score;
+    }
+    
+    private void updateRank()
+    {
+        List<string> ranking = new List<string>();
+        foreach (string name in Score.Keys)
+        {
+            int idx = 0;
+            float playerScore = (float)Score[name];
+            for (int i = 0; i < ranking.Count; i++)
+            {
+                if ((float)Score[ranking[i]] > playerScore)
+                {
+                    idx = i;
+                    break;
+                }
+            }
+            ranking.Insert(idx, name);
+        }
+        if( ranking.Count > 0)
+            first = ranking[0];
+        if (ranking.Count > 1)
+            second = ranking[1];
+        if (ranking.Count > 2)
+            third = ranking[2];
+    }
+          
+    void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        if (stream.isWriting)
+        {
+            stream.SendNext(first);
+            stream.SendNext(second);
+            stream.SendNext(third);
+        }
+        else
+        {
+            first = (string)stream.ReceiveNext();
+            second = (string)stream.ReceiveNext();
+            third = (string)stream.ReceiveNext();
+        }
     }
 }
