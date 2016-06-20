@@ -9,6 +9,7 @@ public class NetworkManager : Photon.MonoBehaviour {
     public Button resetButton;
     public InputField nameInput; 
     public Text[] rankTexts;
+    public Text connectionFail;
     public Canvas ui;
 
     private GameObject imageTarget;
@@ -24,25 +25,18 @@ public class NetworkManager : Photon.MonoBehaviour {
 
     void Start()
     {
+        //connectionFail.gameObject.SetActive(false);
         PhotonNetwork.ConnectUsingSettings("1.7");
         imageTarget = GameObject.Find("ImageTarget");
         Score = new Hashtable();
-        resetButton.gameObject.SetActive(false);
-        
+        resetButton.onClick.AddListener(Start);
     }
 
-    void Reset()
-    {
-        PhotonNetwork.ConnectUsingSettings("1.7");
-        imageTarget = GameObject.Find("ImageTarget");
-        Score = new Hashtable();
-    }
+    void OnFailedToConnectToPhoton(){
 
-    void OnFailedToConnectToPhoton(DisconnectCause cause){
-
-        Debug.Log("On Failed To Connect ..." + cause.ToString());
-        resetButton.gameObject.SetActive(true);
-        resetButton.onClick.AddListener(Reset);
+        Debug.Log("On Failure");
+        //Debug.Log("On Failed To Connect ..." + cause.ToString());
+        //connectionFail.gameObject.SetActive(true);
         PhotonNetwork.Disconnect();
 
     }
@@ -62,9 +56,15 @@ public class NetworkManager : Photon.MonoBehaviour {
                 spawnFood();
                 spawnTimer = 0f;
             }
-            rankTexts[0].text = "1. " + first + " : " + Score[first];
-            rankTexts[1].text = "2. " + second + " : " + Score[second];
-            rankTexts[2].text = "3. " + third + " : " + Score[third];
+            rankTexts[0].text = "#1  " + first + " " + Score[first];
+            if (second == null)
+                rankTexts[1].text = "";
+            else
+                rankTexts[1].text = "#2  " + second + " " + Score[second];
+            if (third == null)
+                rankTexts[2].text = "";
+            else
+                rankTexts[2].text = "#3  " + third + " " + Score[third];
         }
     }
 
@@ -72,6 +72,7 @@ public class NetworkManager : Photon.MonoBehaviour {
     {
         Debug.Log("OnJoinedLobby");
         startButton.onClick.AddListener(JoinRoom);
+        connectionFail.gameObject.SetActive(false);
     }
 
     void JoinRoom()
