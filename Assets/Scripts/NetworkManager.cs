@@ -8,6 +8,7 @@ public class NetworkManager : Photon.MonoBehaviour {
     public Button startButton;
     public InputField nameInput; 
     public Text[] rankTexts;
+    public Canvas ui;
 
     private GameObject imageTarget;
 
@@ -22,8 +23,7 @@ public class NetworkManager : Photon.MonoBehaviour {
 
     void Start()
     {
-        while(!PhotonNetwork.ConnectUsingSettings("1.7")) {};
-        //PhotonNetwork.ConnectUsingSettings("1.7");
+        PhotonNetwork.ConnectUsingSettings("1.7");
         imageTarget = GameObject.Find("ImageTarget");
         Score = new Hashtable();
     }
@@ -49,14 +49,6 @@ public class NetworkManager : Photon.MonoBehaviour {
 
     void OnJoinedLobby()
     {
-        /*
-        RoomOptions roomOptions = new RoomOptions()
-        {
-            isVisible = false,
-            maxPlayers = 20
-        };
-        PhotonNetwork.JoinOrCreateRoom( "master", roomOptions, TypedLobby.Default);
-        */
         startButton.onClick.AddListener(JoinRoom);
     }
 
@@ -71,16 +63,20 @@ public class NetworkManager : Photon.MonoBehaviour {
             };
             PhotonNetwork.JoinOrCreateRoom("master", roomOptions, TypedLobby.Default);
         }
-        startButton.enabled = false;
-        nameInput.enabled = false;
+        //startButton.enabled = false;
+        startButton.gameObject.SetActive(false);
+        //nameInput.enabled = false;
+        nameInput.gameObject.SetActive(false);
+        //ui.enabled = false;
     }
 
     void OnJoinedRoom()
     {
         GameObject snkHead = PhotonNetwork.Instantiate( "SnakeHead", imageTarget.transform.position, imageTarget.transform.rotation, 0); 
+        SnakeMove me = snkHead.GetComponent<SnakeMove>();
         playerName = nameInput.text;
         PhotonNetwork.playerName = playerName;
-        snkHead.NM = this;
+        me.NM = this;
         foreach (PhotonPlayer player in PhotonNetwork.playerList)
         {
             Score.Add(player.name, 0f);

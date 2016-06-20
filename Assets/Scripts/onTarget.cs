@@ -30,7 +30,7 @@ public class onTarget : MonoBehaviour {
 			transform.forward = hitCenter.normal;
 			if(transform.localScale.x <= 0.02f){
 				transform.localScale = initScale;
-				Debug.Log("scale reset");
+				//Debug.Log("scale reset");
 			}
 			else{
 				transform.localScale = Vector3.Slerp( transform.localScale, new Vector3(0f,0f,0f), Time.deltaTime);

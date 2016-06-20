@@ -14,6 +14,7 @@ public class SnakeMove : Photon.MonoBehaviour {
     public GameObject boundingBoxBoundary;
     public GameObject ARPlane;
     public GameObject imageTarget;
+    public NetworkManager NM;
 
 	public List<SnakeBody> bodyParts = new List<SnakeBody>();
 
